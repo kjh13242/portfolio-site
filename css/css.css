@@ -1,0 +1,236 @@
+@import url("font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+
+@font-face {
+    font-family: 'Arita-buri-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bright';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.4/Bright.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------------------------------- */
+/* 정의 */
+/* ---------------------------------- */
+
+a:link {
+    text-decoration: none;
+    color: white
+}
+
+a:visited {
+    text-decoration: none;
+    color: white
+}
+
+a:active {
+    text-decoration: none;
+    color: white
+}
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* ---------------------------------- */
+/* 메인 */
+/* ---------------------------------- */
+
+.commandcenter {
+    background-color: darkslategray;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Playfair Display';
+}
+
+.scroll {
+    position: absolute;
+    text-align: center;
+
+    color: white;
+
+    width: 100%;
+
+    margin-top: 25vh;
+    line-height: 1.4em;
+    text-shadow: 0px 2px 5px black;
+    font-size: 60pt;
+    font-family: 'Playfair Display';
+}
+
+.scroll2 {
+    position: absolute;
+    color: white;
+    font-size: 32pt;
+    margin-bottom: 2em;
+    margin-left: 60vw;
+}
+
+.mainimg {
+    position: flex;
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+    object-fit: cover;
+    z-index: -600;
+}
+
+.title {
+    font-size: 2em;
+    line-height: 1.4em;
+    color: white;
+    z-index: 1;
+    overflow: visible;
+    font-family: 'Arita-buri-SemiBold', serif;
+    padding: 14vh 0 0 6vw;
+    float: left;
+
+    height: 100%;
+}
+
+.title .protect {
+    float: left;
+}
+
+.title .protecteng {
+    padding: 0 0 0 46vw;
+    font-family: 'Playfair Display';
+
+}
+
+.mainlink {
+    position: absolute;
+    font-size: 1em;
+    line-height: 2em;
+    margin: 50vh 0 0 52vw;
+}
+
+/* ---------------------------------- */
+/* 1차 메뉴*/
+/* ---------------------------------- */
+
+/* 본문 */
+
+#gomain {
+    position: absolute;
+    margin: -1vh 0 0 5vw;
+    font-size: 10em;
+}
+
+/* 이미지 */
+
+.gallery-menu {
+    padding: 20vh 0 0 30vw;
+    color: white;
+}
+
+.img-1_text {
+    width: 100%;
+    font-size: 38pt;
+    margin-bottom: 10px;
+    padding-right: 1vw;
+
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    padding-bottom: 8px;
+}
+
+.img-1_subtext {
+    width: 100%;
+    font-size: 12pt;
+    margin-bottom: 70px;
+}
+
+.explainimg-group {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+
+.gomain-subtext {
+    position: absolute;
+    margin: 0 0 0 -28vw;
+    width: 18%;
+    color: white;
+    font-size: 0.9em;
+    line-height: 2em;
+    font-family: 'Noto Sans KR:100', sans-serif;
+}
+
+.explainimg {
+    width: 90%;
+    object-fit: cover;
+    margin-bottom: 0.5%;
+}
+
+.explaintext {
+    font-family: 'Arita-buri-SemiBold';
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 62%;
+    line-height: 1.8em;
+}
+
+iframe {
+    position: absolute;
+    margin: 0 0 0 -28vw;
+    width: 18%;
+    height: 600px;
+    overflow-y: hidden;
+}
+
+/* ---------------------------------- */
+/* 이미지, 영상 요소*/
+/* ---------------------------------- */
+
+.img {
+    width: 140vh;
+    float: right;
+    padding: 4vh;
+}
+
+.video {
+    width: 40%;
+    float: right;
+    padding: 4vh;
+}
+
+.videobcg {
+    position: flex;
+    overflow: hidden;
+    width: 90%;
+}
+
+.snsicon {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+/* ---------------------------------- */
+/* Footer */
+/* ---------------------------------- */
+
+footer {
+    position: absolute;
+    bottom: -100%;
+    font-size: 1em;
+    line-height: 2em;
+    margin: 0 0 8vh 52vw;
+}
