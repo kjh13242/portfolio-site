@@ -118,6 +118,13 @@ li {
     margin: 50vh 0 0 52vw;
 }
 
+.mainlinksub {
+    position: fixed;
+    font-size: 1em;
+    line-height: 2em;
+    margin: 20vh 0 0 5vw;
+}
+
 /* ---------------------------------- */
 /* 1차 메뉴*/
 /* ---------------------------------- */
@@ -125,9 +132,9 @@ li {
 /* 본문 */
 
 #gomain {
-    position: absolute;
+    position: fixed;
     margin: -1vh 0 0 5vw;
-    font-size: 10em;
+    font-size: 9em;
 }
 
 /* 이미지 */
@@ -137,28 +144,31 @@ li {
 }
 
 .img-1_text {
-    width: 100%;
-    font-size: 38pt;
+    font-size: 24pt;
     margin-bottom: 10px;
+
     padding-right: 1vw;
 
     border-bottom: 1px;
-    border-bottom-color: white;
+    border-bottom-color: #D3D3D3;
     border-bottom-style: solid;
     padding-bottom: 8px;
 }
 
 .img-1_subtext {
-    width: 100%;
-    font-size: 12pt;
+    font-size: 10pt;
     margin-bottom: 70px;
+}
+
+.explainimg-group-right {
+    margin-top: 10%;
+    white-space: nowrap;
+    overflow-x: visible;
 }
 
 .explainimg-group {
     margin-top: 10%;
-    margin-bottom: 10%;
 }
-
 
 .gomain-subtext {
     position: absolute;
@@ -170,17 +180,11 @@ li {
 }
 
 .explainimg {
-    width: 90%;
+    height: 60vh;
     object-fit: cover;
-    margin-bottom: 0.5%;
-    
-    border-color: darkslategray;
-    border-style: solid;
-    border: 1px;
-    
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
+    margin-right: 10px;
+
+    border: 2px solid #D3D3D3;
 }
 
 .explaintext {
@@ -219,12 +223,15 @@ iframe {
     position: flex;
     overflow: hidden;
     width: 90%;
+    float: left;
+    margin-right: 200px
 }
 
 .snsicon {
     font-size: 1.5em;
     margin-right: 0.5em;
 }
+
 
 /* ---------------------------------- */
 /* Footer */
