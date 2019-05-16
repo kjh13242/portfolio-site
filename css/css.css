@@ -36,7 +36,7 @@ a:active {
 
 a:hover {
     text-decoration: none;
-    color: red;
+    color: darkslategray
 }
 
 
@@ -114,7 +114,7 @@ li {
 .mainlink {
     position: absolute;
     font-size: 1em;
-    line-height: 2em;
+    line-height: 2.4em;
     margin: 50vh 0 0 52vw;
 }
 
@@ -232,15 +232,36 @@ iframe {
     margin-right: 0.5em;
 }
 
-
 /* ---------------------------------- */
-/* Footer */
+/* 에니메이션 */
 /* ---------------------------------- */
 
-footer {
-    position: absolute;
-    bottom: -100%;
-    font-size: 1em;
-    line-height: 2em;
-    margin: 0 0 8vh 52vw;
+a{
+  transition:.2s all; 
+}
+.mainlink:hover a{
+  filter:blur(3px);
+  opacity:.5;
+  transform: scale(.98);
+}
+.mainlink:hover a:hover{
+  transform:scale(1);
+  filter:blur(0px);
+  opacity:1;
+}
+
+
+
+.img-1_text {
+  transition:.2s all; 
+}
+.mainlink:hover .img-1_text{
+  filter:blur(3px);
+  opacity:.5;
+  transform: scale(.98);
+}
+.mainlink:hover .img-1_text:hover{
+  transform:scale(1);
+  filter:blur(0px);
+  opacity:1;
 }
