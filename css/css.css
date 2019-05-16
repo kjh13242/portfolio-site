@@ -263,7 +263,6 @@ a {
     transform: scale(1);
     filter: blur(0px);
     opacity: 1;
-    font-style: italic;
 }
 
 
@@ -277,7 +276,6 @@ a {
     transform: scale(1);
     filter: blur(0px);
     opacity: 1;
-    font-style: italic;
 }
 
 .img-1_subtext {
