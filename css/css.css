@@ -233,14 +233,27 @@ iframe {
 }
 
 /* ---------------------------------- */
+/* Footer */
+/* ---------------------------------- */
+
+footer {
+    position: absolute;
+    bottom: -100%;
+    font-size: 1em;
+    line-height: 2em;
+    margin: 0 0 8vh 52vw;
+}
+
+/* ---------------------------------- */
 /* 에니메이션 */
 /* ---------------------------------- */
 
 a{
   transition:.2s all; 
 }
+
 .mainlink:hover a{
-  filter:blur(3px);
+  filter:blur(1px);
   opacity:.5;
   transform: scale(.98);
 }
@@ -248,19 +261,32 @@ a{
   transform:scale(1);
   filter:blur(0px);
   opacity:1;
+    font-style: italic;
 }
 
 
+.mainlinksub:hover a{
+  filter:blur(1px);
+  opacity:.5;
+  transform: scale(.98);
+}
+.mainlinksub:hover a:hover{
+  transform:scale(1);
+  filter:blur(0px);
+  opacity:1;
+    font-style: italic;
+}
 
 .img-1_text {
   transition:.2s all; 
 }
-.mainlink:hover .img-1_text{
+
+.gallery-menu:hover .link-1{
   filter:blur(3px);
   opacity:.5;
   transform: scale(.98);
 }
-.mainlink:hover .img-1_text:hover{
+.gallery-menu:hover .link-1:hover{
   transform:scale(1);
   filter:blur(0px);
   opacity:1;
