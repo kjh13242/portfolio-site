@@ -160,24 +160,21 @@ li {
     margin-bottom: 70px;
 }
 
+.fixedtitle {
+    position: fixed;
+    width: inherit;
+}
+
 .explainimg-group-right {
-    margin-top: 10%;
+    margin-top: 20%;
     white-space: nowrap;
     overflow-x: visible;
 }
 
 .explainimg-group {
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
-.gomain-subtext {
-    position: absolute;
-    margin: 0 0 0 -28vw;
-    width: 18%;
-    font-size: 0.9em;
-    line-height: 2em;
-    font-family: 'Noto Sans KR:100', sans-serif;
-}
 
 .explainimg {
     height: 60vh;
@@ -250,11 +247,28 @@ footer {
 /* ---------------------------------- */
 
 a {
-    transition: .2s all;
+    transition: .1s all;
+}
+
+footer {
+    transition: 1s all;
+}
+
+
+.img-1_subtext {
+    transition: 1s all;
+}
+
+.img-1_text {
+    transition: .5s all;
+}
+
+.box {
+    transition: 1s all;
 }
 
 .mainlink:hover a {
-    filter: blur(1px);
+    filter: blur(0.5px);
     opacity: .5;
     transform: scale(.98);
 }
@@ -265,6 +279,17 @@ a {
     opacity: 1;
 }
 
+footer:hover a {
+    filter: blur(0.5px);
+    opacity: .5;
+    transform: scale(.98);
+}
+
+footer:hover a:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+}
 
 .mainlinksub:hover a {
     filter: blur(1px);
@@ -278,21 +303,13 @@ a {
     opacity: 1;
 }
 
-.img-1_subtext {
-    transition: 1s all;
-}
-
-.img-1_text {
-    transition: .5s all;
-}
-
-.link-1:hover .img-1_text {
+.gallery-menu:hover .link-1 {
     filter: blur(3px);
     opacity: .5;
     transform: scale(.98);
 }
 
-.link-1:hover .img-1_text {
+.gallery-menu:hover .link-1 {
     transform: scale(1);
     filter: blur(0px);
     opacity: 1;
