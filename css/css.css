@@ -36,7 +36,7 @@ a:active {
 
 a:hover {
     text-decoration: none;
-    color: darkslategray
+    color: red
 }
 
 
@@ -184,7 +184,8 @@ li {
     object-fit: cover;
     margin-right: 10px;
 
-    border: 2px solid #D3D3D3;
+    border: 1px solid #D3D3D3;
+
 }
 
 .explaintext {
@@ -222,9 +223,9 @@ iframe {
 .videobcg {
     position: flex;
     overflow: hidden;
-    width: 90%;
+    height: 60vh;
     float: left;
-    margin-right: 200px
+    margin-right: 14px
 }
 
 .snsicon {
@@ -248,46 +249,53 @@ footer {
 /* 에니메이션 */
 /* ---------------------------------- */
 
-a{
-  transition:.2s all; 
+a {
+    transition: .2s all;
 }
 
-.mainlink:hover a{
-  filter:blur(1px);
-  opacity:.5;
-  transform: scale(.98);
+.mainlink:hover a {
+    filter: blur(1px);
+    opacity: .5;
+    transform: scale(.98);
 }
-.mainlink:hover a:hover{
-  transform:scale(1);
-  filter:blur(0px);
-  opacity:1;
+
+.mainlink:hover a:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
     font-style: italic;
 }
 
 
-.mainlinksub:hover a{
-  filter:blur(1px);
-  opacity:.5;
-  transform: scale(.98);
+.mainlinksub:hover a {
+    filter: blur(1px);
+    opacity: .5;
+    transform: scale(.98);
 }
-.mainlinksub:hover a:hover{
-  transform:scale(1);
-  filter:blur(0px);
-  opacity:1;
+
+.mainlinksub:hover a:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
     font-style: italic;
+}
+
+.img-1_subtext {
+    transition: 1s all;
 }
 
 .img-1_text {
-  transition:.2s all; 
+    transition: .5s all;
 }
 
-.gallery-menu:hover .link-1{
-  filter:blur(3px);
-  opacity:.5;
-  transform: scale(.98);
+.link-1:hover .img-1_text {
+    filter: blur(3px);
+    opacity: .5;
+    transform: scale(.98);
 }
-.gallery-menu:hover .link-1:hover{
-  transform:scale(1);
-  filter:blur(0px);
-  opacity:1;
+
+.link-1:hover .img-1_text {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
 }
