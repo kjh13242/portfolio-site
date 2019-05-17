@@ -2306,7 +2306,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
     jQuery(document).ready(function($) {
-        $(".scroll").click(function(event) {
+        $(".monsieur").click(function(event) {
             event.preventDefault();
             $('html,body').animate({
                 scrollTop: $(this.hash).offset().top
@@ -2314,31 +2314,15 @@ if (typeof jQuery === 'undefined') {
         });
     });
 
-
-    jQuery(document).ready(function($) {
-        $(".scroll2").click(function(event) {
-            event.preventDefault();
-            $('html,body').animate({
-                scrollTop: $(this.hash).offset().top
-            }, 500);
-        });
-    });
-
-$("img.lazy").lazyload({
-  effect : "fadeIn"
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+     //console.log(scroll);
+    if (scroll >= 50) {
+        //console.log('a');
+        $(".fixedtitle").addClass("change");
+    } else {
+        //console.log('a');
+        $(".fixedtitle").removeClass("change");
+    }
 });
 
-$(document).ready(function() {
-    $(window).scroll( function(){
-        $('.explainimg').each( function(i){
-            
-            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            if( bottom_of_window > bottom_of_element ){
-                $(this).animate({'opacity':'1','margin-left':'0px'},1000);
-            }
-            
-        }); 
-    });
-});

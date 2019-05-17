@@ -19,16 +19,8 @@
 /* 정의 */
 /* ---------------------------------- */
 
-a:link {
-    text-decoration: none;
-    color: darkslategray
-}
-
-a:visited {
-    text-decoration: none;
-    color: darkslategray
-}
-
+a:link,
+a:visited,
 a:active {
     text-decoration: none;
     color: darkslategray
@@ -39,6 +31,9 @@ a:hover {
     color: red
 }
 
+a {
+    display: block;
+}
 
 ul,
 li {
@@ -47,21 +42,20 @@ li {
     list-style: none;
 }
 
-/* ---------------------------------- */
-/* 메인 */
-/* ---------------------------------- */
-
-.commandcenter {
+body {
     background-color: white;
     background-position: center;
     background-size: cover;
     font-family: 'Playfair Display';
 }
 
-.scroll {
+/* ---------------------------------- */
+/* 메인 */
+/* ---------------------------------- */
+
+.monsieur {
     position: absolute;
     text-align: center;
-
 
     width: 100%;
 
@@ -70,18 +64,15 @@ li {
     text-shadow: 0px 2px 5px black;
     font-size: 60pt;
     font-family: 'Playfair Display';
+    text-decoration: none;
+    color: white;
+
+    z-index: 900;
 }
 
-.scroll2 {
-    position: absolute;
-    font-size: 32pt;
-    margin-bottom: 2em;
-    margin-left: 60vw;
-}
-
-.mainimg {
+.mainbackground {
     position: flex;
-    height: 100%;
+    height: 100vh;
     width: 100%;
 
     text-align: center;
@@ -94,42 +85,23 @@ li {
     line-height: 1.4em;
     z-index: 1;
     overflow: visible;
-    font-family: 'Arita-buri-SemiBold', serif;
-    padding: 14vh 0 0 6vw;
-    float: left;
-
-    height: 100%;
-}
-
-.title .protect {
-    float: left;
-}
-
-.title .protecteng {
-    padding: 0 0 0 46vw;
     font-family: 'Playfair Display';
-
+    padding: 14vh 0 0 52vw;
+    float: left;
 }
 
 .mainlink {
     position: absolute;
     font-size: 1em;
-    line-height: 2.4em;
+    line-height: 1.2em;
     margin: 50vh 0 0 52vw;
 }
 
-.mainlinksub {
-    position: fixed;
-    font-size: 1em;
-    line-height: 2em;
-    margin: 20vh 0 0 5vw;
-}
-
 /* ---------------------------------- */
-/* 1차 메뉴*/
+/* 1차 메뉴 */
 /* ---------------------------------- */
 
-/* 본문 */
+/* 레프트 네비게이션 */
 
 #gomain {
     position: fixed;
@@ -137,7 +109,14 @@ li {
     font-size: 9em;
 }
 
-/* 이미지 */
+.mainlinksub {
+    position: fixed;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin: 20vh 0 0 5vw;
+}
+
+/* 목차 */
 
 .gallery-menu {
     padding: 20vh 0 0 30vw;
@@ -157,32 +136,39 @@ li {
 
 .img-1_subtext {
     font-size: 10pt;
-    margin-bottom: 70px;
+    margin-bottom: 90px;
 }
+
+/* 상단 타이틀 고정 */
 
 .fixedtitle {
     position: fixed;
     width: inherit;
 }
 
+.change {
+    opacity: 0;
+}
+
+/* ---------------------------------- */
+/* 컨텐츠 */
+/* ---------------------------------- */
+
+.explainimg-group,
 .explainimg-group-right {
     margin-top: 20%;
+}
+
+.explainimg-group-right {
     white-space: nowrap;
     overflow-x: visible;
 }
-
-.explainimg-group {
-    margin-top: 20%;
-}
-
 
 .explainimg {
     height: 60vh;
     object-fit: cover;
     margin-right: 10px;
-
     border: 1px solid #D3D3D3;
-
 }
 
 .explaintext {
@@ -193,29 +179,11 @@ li {
     line-height: 1.8em;
 }
 
-iframe {
-    position: absolute;
-    margin: 0 0 0 -28vw;
-    width: 18%;
-    height: 600px;
-    overflow-y: hidden;
-}
 
 /* ---------------------------------- */
 /* 이미지, 영상 요소*/
 /* ---------------------------------- */
 
-.img {
-    width: 140vh;
-    float: right;
-    padding: 4vh;
-}
-
-.video {
-    width: 40%;
-    float: right;
-    padding: 4vh;
-}
 
 .videobcg {
     position: flex;
@@ -226,6 +194,7 @@ iframe {
 }
 
 .snsicon {
+    float: left;
     font-size: 1.5em;
     margin-right: 0.5em;
 }
@@ -263,10 +232,6 @@ footer {
     transition: .5s all;
 }
 
-.box {
-    transition: 1s all;
-}
-
 .mainlink:hover a {
     filter: blur(0.5px);
     opacity: .5;
@@ -292,7 +257,7 @@ footer:hover a:hover {
 }
 
 .mainlinksub:hover a {
-    filter: blur(1px);
+    filter: blur(0.5px);
     opacity: .5;
     transform: scale(.98);
 }
@@ -303,14 +268,11 @@ footer:hover a:hover {
     opacity: 1;
 }
 
-.gallery-menu:hover .link-1 {
-    filter: blur(3px);
-    opacity: .5;
-    transform: scale(.98);
+
+.link-1:hover .img-1_text {
+    transform: translateX(2vw);
 }
 
-.gallery-menu:hover .link-1 {
-    transform: scale(1);
-    filter: blur(0px);
-    opacity: 1;
+.link-1:hover .img-1_subtext {
+    transform: translateX(3vw);
 }
