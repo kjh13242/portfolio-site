@@ -107,7 +107,7 @@ body {
     position: fixed;
     margin: -1vh 0 0 5vw;
     font-size: 9em;
-    z-index: 700;
+    z-index: 600;
 }
 
 .mainlinksub {
@@ -185,7 +185,6 @@ body {
     margin-top: 20%;
     margin-bottom: 5%;
     padding-bottom: 5%;
-    border-bottom: 1px solid lightgray;
     text-align: center;
 }
 
@@ -278,15 +277,6 @@ footer {
     opacity: 1;
 }
 
-footer:hover a {
-    filter: blur(0.5px);
-    opacity: .5;
-}
-
-footer:hover a:hover {
-    filter: blur(0px);
-    opacity: 1;
-}
 
 .mainlinksub:hover a {
     filter: blur(0.5px);
