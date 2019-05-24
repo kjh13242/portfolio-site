@@ -10,20 +10,59 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung|Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <!-- 배경 -->
 <style>
+    body {
+        background-color: #e0e0e0;
+    }
+
     .gallery-menu {
         padding-top: 4vh;
     }
+
+    .re {
+        position: absolute;
+        z-index: 500;
+        left: 70vw;
+        margin-top: 1200px;
+        width: 18vw;
+    }
+
+    .fogtext {
+        display: inline-block;
+        font-family: 'Arita-buri-SemiBold';
+        margin-bottom: 200px;
+        margin-top: 200px;
+
+        width: 60%;
+        line-height: 1.8em;
+        font-size: 24px;
+    }
+
+    .explainimg {
+        margin-bottom: 400px;
+    }
+
+    .pre3 {
+        display: block;
+        position: absolute;
+        width: 32vw;
+        left: 10vw;
+        margin-top: -560px;
+
+    }
+
 </style>
 
 <body class="commandcenter">
 
     <!--메인으로-->
-    <a id="gomain" href="product.html">º</a>
-
+    <a id="gomain" href="index.html">
+        <img class="gomain" src="images/%EB%AC%B4%EC%A0%9C-1.png">
+    </a>
     <!--본문-->
 
 
@@ -33,18 +72,29 @@
             <p class="img-1_text">Beyond the Fog</p>
             <p class="img-1_subtext">Art piece / With Fiskars, Finland, 2018</p>
         </div>
+
+        <div class="ykcon">
+            <img class="yklong" src="images/Index/product/fiskars.png"><br>
+            <img class="yklong" src="images/Index/product/Aalto.png">
+        </div>
     </div>
 
     <div class="explainimg-group">
 
-        <video class="videobcg" preload="auto" autoplay="true" loop="loop" volume="5" controls="controls">
+        <p class="fogtext">We got a problem.</p>
+        <img class="re" src="images/Index/product/fog/re.png">
+
+        <img class="explainimg" src="images/Index/product/fog/pre1.jpg">
+        <img class="explainimg" src="images/Index/product/fog/pre2.jpg">
+        <img class="pre3" src="images/Index/product/fog/pre3.png">
+
+        <video class="videobcg" preload="auto" loop="loop" volume="5" controls="controls">
             <source src="images/Index/product/fog/001%20intro%20door%20fornt.mp4" type="video/mp4">
         </video>
+        <p>From there we found a mountain,
+            that made with disintegrated pieces.
 
-        <p class="fogtext">We got a problem. broken dishes</p>
-
-        <img class="explainimg" src="images/Index/product/fog/type1.jpg">
-        <img class="explainimg" src="images/Index/product/fog/type2.jpg">
+            BEYOND THE FOG</p>
         <img class="explainimg" src="images/Index/product/fog/type3.jpg">
     </div>
 
@@ -53,6 +103,36 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    /* 스크롤 탐지 */
+    $(window).scroll(function() {
+        var $el = $('.re');
+
+        if ($(this).scrollTop() >= 200) $el.addClass('scrolltransx');
+        else $el.removeClass('scrolltransx');
+
+        if ($(this).scrollTop() >= 500) $el.addClass('scrollblur');
+        else $el.removeClass('scrollblur');
+    });
+
+    $(window).scroll(function() {
+        var $el = $('.fogtext');
+
+        if ($(this).scrollTop() >= 100) $el.addClass('dis');
+        else $el.removeClass('dis');
+
+    });
+
+    $(window).scroll(function() {
+        var $el = $('.pre3');
+
+        if ($(this).scrollTop() >= 1000) $el.addClass('dis2');
+        else $el.removeClass('dis2');
+
+    });
+
+</script>
 
 <!--
 <footer>

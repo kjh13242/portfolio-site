@@ -8,12 +8,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Bright';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.4/Bright.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 /* ---------------------------------- */
 /* 정의 */
@@ -105,9 +99,12 @@ body {
 
 #gomain {
     position: fixed;
-    margin: -1vh 0 0 5vw;
-    font-size: 9em;
+    margin: 5vh 0 0 5vw;
     z-index: 600;
+}
+
+.gomain {
+    height: 50px;
 }
 
 .mainlinksub {
@@ -125,6 +122,9 @@ body {
 
 .link-1 {
     margin-bottom: 140px;
+
+    width: 100%;
+    overflow: hidden;
 }
 
 .img-1_text {
@@ -176,6 +176,27 @@ body {
     opacity: 0;
 }
 
+.ykcon {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    opacity: 0.8;
+    font-size: 9pt;
+    text-align: center;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+}
+
+.yk {
+    height: 4vh;
+    margin-bottom: 10px;
+}
+
+.yklong {
+    width: 8vw;
+    margin-bottom: 20px;
+}
+
 /* ---------------------------------- */
 /* 컨텐츠 */
 /* ---------------------------------- */
@@ -190,25 +211,8 @@ body {
 
 .explainimg {
     object-fit: cover;
-    width: 60vw;
-}
-
-.explaintext {
-    display: inline-block;
-    font-family: 'Arita-buri-SemiBold';
-    margin-top: 150px;
-    margin-bottom: 150px;
-    width: 60%;
-    line-height: 1.8em;
-}
-
-.fogtext {
-    display: inline-block;
-    font-family: 'Arita-buri-SemiBold';
-    margin-bottom: 200px;
-    width: 60%;
-    line-height: 1.8em;
-    font-size: 24px;
+    width: 80vw;
+    margin-bottom: 40px;
 }
 
 /* ---------------------------------- */
@@ -217,7 +221,7 @@ body {
 
 
 .videobcg {
-    width: 60vw;
+    width: 100%;
     margin-bottom: 200px;
 }
 
@@ -226,7 +230,6 @@ body {
     font-size: 1.5em;
     margin-right: 0.5em;
 }
-
 
 /* ---------------------------------- */
 /* Footer */
@@ -262,6 +265,7 @@ footer {
 }
 
 .img-1_text {
+    overflow-x: hidden;
     transition: .5s all;
 }
 
@@ -314,4 +318,28 @@ footer {
 
 .link-1:hover .menuimg {
     opacity: 1;
+}
+
+.re {
+    transition: 5s all;
+}
+
+.re.scrolltransx {
+    transform: translatey(-700px)
+}
+
+.re.scrollblur {
+    filter: blur(8px)
+}
+
+.fogtext {
+    transition: 2s all;
+}
+
+.fogtext.dis {
+    filter: blur(5px);
+}
+
+.pre3.dis2 {
+    filter: blur(5px);
 }
