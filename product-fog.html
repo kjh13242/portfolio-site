@@ -52,9 +52,31 @@
         width: 32vw;
         left: 10vw;
         margin-top: -560px;
-
     }
 
+    .beyondthefog {
+        z-index: 500;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 5vw;
+    }
+
+    .videobcg {
+        transition: 2s all;
+
+        margin-top: 300px;
+        filter: blur(10px);
+        opacity: 0.2;
+    }
+
+    .fog2 {
+        transition: 0.5s all;
+
+        margin-left: 25%;
+        font-size: 20px;
+        filter: blur(5px)
+    }
 </style>
 
 <body class="commandcenter">
@@ -70,7 +92,7 @@
     <div class="gallery-menu">
         <div class="fixedtitle">
             <p class="img-1_text">Beyond the Fog</p>
-            <p class="img-1_subtext">Art piece / With Fiskars, Finland, 2018</p>
+            <p class="img-1_subtext">2018 ART PIECE / Team Project with Mingyu Seo, Fiskars, Finland</p>
         </div>
 
         <div class="ykcon">
@@ -87,14 +109,18 @@
         <img class="explainimg" src="images/Index/product/fog/pre1.jpg">
         <img class="explainimg" src="images/Index/product/fog/pre2.jpg">
         <img class="pre3" src="images/Index/product/fog/pre3.png">
+        <p class="fog2">The mist clears away.</p>
+
 
         <video class="videobcg" preload="auto" loop="loop" volume="5" controls="controls">
             <source src="images/Index/product/fog/001%20intro%20door%20fornt.mp4" type="video/mp4">
         </video>
-        <p>From there we found a mountain,
-            that made with disintegrated pieces.
 
-            BEYOND THE FOG</p>
+        <p>From there we found a mountain, that made with disintegrated pieces.</p>
+        <div class="beyondthefog">
+            <p>BEYOND THE FOG</p>
+        </div>
+
         <img class="explainimg" src="images/Index/product/fog/type3.jpg">
     </div>
 
@@ -110,10 +136,7 @@
         var $el = $('.re');
 
         if ($(this).scrollTop() >= 200) $el.addClass('scrolltransx');
-        else $el.removeClass('scrolltransx');
-
         if ($(this).scrollTop() >= 500) $el.addClass('scrollblur');
-        else $el.removeClass('scrollblur');
     });
 
     $(window).scroll(function() {
@@ -124,20 +147,30 @@
 
     });
 
+
     $(window).scroll(function() {
-        var $el = $('.pre3');
-
-        if ($(this).scrollTop() >= 1000) $el.addClass('dis2');
-        else $el.removeClass('dis2');
-
+        var scroll = $(window).scrollTop();
+        //console.log(scroll);
+        if (scroll >= 2000) {
+            $(".pre3").addClass("dis2");
+        } else {
+            $(".pre3").removeClass("dis2");
+        }
     });
 
-</script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 2000) {
+            $(".fog2").addClass("bright");
+        }
+        if (scroll >= 3300) {
+            $(".videobcg").addClass("bright");
 
-<!--
-<footer>
-  <p>Jinhyuk Kwon<br>User experience designer</p>
-</footer>
--->
+        } else {
+            $(".fog2").removeClass("bright");
+
+        }
+    });
+</script>
 
 </html>
