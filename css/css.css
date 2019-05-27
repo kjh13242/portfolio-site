@@ -346,12 +346,21 @@ footer {
     filter: blur(2px);
 }
 
+.videobcg.videofog {
+    filter: blur(10px);
+    opacity: 0.2;
+}
+
 .videobcg.bright {
     filter: blur(0px);
     opacity: 1;
 }
 
-.fog2.bright {
+.fog2.bright2 {
     filter: blur(0px);
     opacity: 1;
+}
+
+.dish1.dishfog {
+    opacity: 0.7;
 }
