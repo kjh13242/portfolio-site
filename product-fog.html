@@ -81,38 +81,12 @@
         margin-bottom: 100px;
     }
 
-    .dish1,
-    .dish2 {
-        left: 50%;
-        transform: translatex(-50%);
-        width: 40%;
-        position: absolute;
-        top: 1720px;
-        filter: brightness(90%);
-        opacity: 0.4;
-    }
-
-    .dish1 {
-        filter: blur(2px);
-        transition: 1s all;
-        z-index: 1;
-        opacity: 0;
-    }
-
     .graph {
-        position: absolute;
-        left: 50%;
-        transform: translatex(-50%);
-        top: 1740px;
-
+        text-align: center;
         margin-bottom: 400px;
-        z-index: 100;
+        transition: 6s ease-out;
     }
 
-    .blank {
-        width: 100%;
-        height: 600px;
-    }
 </style>
 
 <body class="commandcenter">
@@ -145,11 +119,9 @@
         <img class="explainimg" src="images/Index/product/fog/pre1.jpg">
 
 
-        <img class="dish1" src="images/Index/product/fog/1.png">
-        <img class="dish2" src="images/Index/product/fog/2.png">
         <p class="graph">84.6% of people are not aware of ceramic factory wastes<br>(39 people has answered the survey)</p>
-
-        <div class="blank"></div>
+        <div class="linegraph"></div>
+        <div class="linegraph2"></div>
 
         <img class="explainimg" src="images/Index/product/fog/pre2.jpg">
         <img class="pre3" src="images/Index/product/fog/pre3.png">
@@ -224,10 +196,10 @@
 
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll >= 1500) {
-            $(".dish1").addClass("dishfog");
+        if (scroll >= 1800) {
+            $(".graph").addClass("glow");
         } else {
-            $(".dish1").removeClass("dishfog");
+            $(".graph").removeClass("glow");
         }
     });
 </script>

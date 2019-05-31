@@ -17,17 +17,56 @@
 
 <!-- 배경 -->
 <style>
-    .gallery-menu {
-        padding-top: 4vh;
-    }
-
-    .commandcenter {
+    body {
         font-family: "Playfair Display"
     }
-    
-    .explainimg-group {
-        text-align: left;
-        margin: 0;
+
+    a:link,
+    a:visited,
+    a:active {
+        text-decoration: none;
+        color: gray
+    }
+
+    .mine {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px;
+        margin-left: 250px;
+
+        width: 300px;
+        height: 500px;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .gallery-menu2 {
+        position: absolute;
+        margin-left: 200px;
+        margin-top: 12%;
+        z-index: 500;
+        overflow-x: hidden;
+    }
+
+    .explaintext {
+        float: left;
+        margin-right: 200px;
+        overflow-x: hidden;
+    }
+
+    .explaintext2 {
+        float: left;
+        margin-right: 200px;
+        overflow-x: hidden;
+    }
+
+    .sns {
+        position: fixed;
+        margin-left: 200px;
+        margin-bottom: 10vh;
+
+        bottom: 0;
     }
 </style>
 
@@ -35,72 +74,61 @@
 
     <!--메인으로-->
     <a id="gomain" href="index.html">
-    <img class="gomain" src="images/%EB%AC%B4%EC%A0%9C-1.png">
+        <img class="gomain" src="images/%EB%AC%B4%EC%A0%9C-1.png">
     </a>
-    <!--본문-->
-    <div class="mainlinksub">
-        <a href="research.html">RESEARCH</a><br>
-        <a class="box" href="product.html">PRODUCT</a><br>
-        <a class="box" href="webapp.html">WEB/APP</a><br>
-        <a class="box" href="editorial.html">EDITORIAL</a><br>
-        <a class="box" href="aboutme.html">-</a>
-        <div id="target"></div>
+    <div class="sns">
+        <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14"><i class="fa fa-facebook-f"></i></a>
+        <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/"><i class="fa fa-linkedin"></i></a>
+        <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas"><i class="fa fa-behance"></i></a>
+        <a class="snsicon" href="https://www.instagram.com/moday_floating/"><i class="fa fa-instagram"></i></a>
+        <a class="snsicon" href="mailto:kjh13242@naver.com"><i class="fa fa-envelope-square"></i></a>
     </div>
+    <img class="mine" src="images/mine.jpg">
 
     <!--메뉴-->
-    <div class="gallery-menu">
+    <div class="gallery-menu2">
 
         <p class="img-1_text">Jinhyuk Kwon</p>
-        <p class="img-1_subtext">Resercher, Graphic designer / 1991 -</p>
+        <p class="explaintext">Resercher, Graphic designer / 1991 -</p>
 
-        <div class="explainimg-group">
+        <p class="explaintext2">
+            kjh13242@naver.com<br>
+            +82 1099095393<br><br><br>
+        </p>
 
-            <p class="explaintext">
+        <p class="explaintext">
+            EDUCATION <br><br>
+            IDAS, Hongik University, South Korea / Master of Digital Media <br>
+            2017 - <br><br>
 
-                kjh13242@naver.com<br>
-                +82 1099095393<br><br><br>
-                <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14"><i class="fa fa-facebook-f"></i></a>
-                <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/"><i class="fa fa-linkedin"></i></a>
-                <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas"><i class="fa fa-behance"></i></a>
-                <a class="snsicon" href="https://www.instagram.com/moday_floating/"><i class="fa fa-instagram"></i></a>
-                <a class="snsicon" href="mailto:kjh13242@naver.com"><i class="fa fa-envelope-square"></i></a>
+            Aalto University, Finland / Exchange student - COID <br>
+            2017 Fall - Winter <br><br>
 
+            Kunsan National University, South Korea / BA, Industrial Design <br>
+            2010 - 2016 <br><br>
 
-                <br><br><br><br>
+            Damyang technical high school, South Korea / Architecture <br>
+            2008 - 2010
+        </p>
 
-                EDUCATION <br><br>
-                IDAS, Hongik University, South Korea / Master of Digital Media <br>
-                2017 - <br><br>
+        <p class="explaintext2">
+            WORK EXPERIENCE <br><br>
 
-                Aalto University, Finland / Exchange student - COID <br>
-                2017 Fall - Winter <br><br>
+            Gwangju Institute of Science and Technology, South Korea <br>
+            Resercher in Smart 3D Printing Laboratory <br>
+            2016 - 2017
+        </p>
 
-                Kunsan National University, South Korea / BA, Industrial Design <br>
-                2010 - 2016 <br><br>
+        <p class="explaintext2">
+            PERSONAL SKILL <br><br>
 
-                Damyang technical high school, South Korea / Architecture <br>
-                2008 - 2010
-                <br><br><br><br>
-
-                WORK EXPERIENCE <br><br>
-
-                Gwangju Institute of Science and Technology, South Korea <br>
-                Resercher in Smart 3D Printing Laboratory <br>
-                2016 - 2017
-                <br><br><br><br>
-
-                PERSONAL SKILL <br><br>
-
-                Indesign <br>
-                Illustrator <br>
-                Photoshop <br>
-                Adobe XD <br>
-                3ds max <br>
-                Sketch up <br>
-            </p>
-
-        </div>
-
+            Indesign <br>
+            Illustrator <br>
+            Photoshop <br>
+            Adobe XD <br>
+            3ds max <br>
+            Sketch up <br>
+        </p>
     </div>
 
 </body>
