@@ -18,7 +18,8 @@
 <!-- 배경 -->
 <style>
     body {
-        font-family: "Playfair Display"
+        font-family: "Playfair Display";
+
     }
 
     a:link,
@@ -28,34 +29,36 @@
         color: gray
     }
 
+    a:hover {
+        text-decoration: none;
+        color: black
+    }
+
+
     .mine {
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 50%;
         margin-top: -250px;
-        margin-left: 250px;
+        margin-left: -150px;
 
         width: 300px;
         height: 500px;
         object-fit: cover;
-        z-index: 1;
+        z-index: -1;
     }
 
     .gallery-menu2 {
+        display: flex;
+        white-space: nowrap;
+
         position: absolute;
         margin-left: 200px;
-        margin-top: 12%;
+        margin-top: 22vw;
         z-index: 500;
-        overflow-x: hidden;
     }
 
     .explaintext {
-        float: left;
-        margin-right: 200px;
-        overflow-x: hidden;
-    }
-
-    .explaintext2 {
         float: left;
         margin-right: 200px;
         overflow-x: hidden;
@@ -65,8 +68,23 @@
         position: fixed;
         margin-left: 200px;
         margin-bottom: 10vh;
-
+        z-index: 900;
         bottom: 0;
+    }
+
+    .mine2 {
+        height: 200px;
+        width: 500px;
+        object-fit: cover;
+        position: flex;
+        margin-left: 400px;
+        margin-top: -50px;
+    }
+
+    .img-1_text {
+        position: fixed;
+        margin-left: 200px;
+        margin-top: 12%;
     }
 </style>
 
@@ -76,6 +94,7 @@
     <a id="gomain" href="index.html">
         <img class="gomain" src="images/%EB%AC%B4%EC%A0%9C-1.png">
     </a>
+
     <div class="sns">
         <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14"><i class="fa fa-facebook-f"></i></a>
         <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/"><i class="fa fa-linkedin"></i></a>
@@ -83,52 +102,58 @@
         <a class="snsicon" href="https://www.instagram.com/moday_floating/"><i class="fa fa-instagram"></i></a>
         <a class="snsicon" href="mailto:kjh13242@naver.com"><i class="fa fa-envelope-square"></i></a>
     </div>
+
+
     <img class="mine" src="images/mine.jpg">
 
+
+
+
     <!--메뉴-->
+
+    <p class="img-1_text">Jinhyuk Kwon</p>
+
     <div class="gallery-menu2">
+        <p class="explaintext">Resercher,<br> Graphic designer <br><br> 1991 -</p>
 
-        <p class="img-1_text">Jinhyuk Kwon</p>
-        <p class="explaintext">Resercher, Graphic designer / 1991 -</p>
-
-        <p class="explaintext2">
+        <p class="explaintext">
             kjh13242@naver.com<br>
             +82 1099095393<br><br><br>
         </p>
 
         <p class="explaintext">
             EDUCATION <br><br>
-            IDAS, Hongik University, South Korea / Master of Digital Media <br>
-            2017 - <br><br>
+            IDAS, Hongik University / Master of Digital Media <br>
+            2017 - , South Korea<br><br>
 
-            Aalto University, Finland / Exchange student - COID <br>
-            2017 Fall - Winter <br><br>
+            Aalto University / Exchange student - COID <br>
+            2017 Fall - Winter, Finland <br><br>
 
-            Kunsan National University, South Korea / BA, Industrial Design <br>
-            2010 - 2016 <br><br>
+            Kunsan National University / BA, Industrial Design <br>
+            2010 - 2016, South Korea <br><br>
 
-            Damyang technical high school, South Korea / Architecture <br>
-            2008 - 2010
+            Damyang technical high school / Architecture <br>
+            2008 - 2010, South Korea
         </p>
 
-        <p class="explaintext2">
+        <p class="explaintext">
             WORK EXPERIENCE <br><br>
 
-            Gwangju Institute of Science and Technology, South Korea <br>
+            Gwangju Institute of Science and Technology<br>
             Resercher in Smart 3D Printing Laboratory <br>
-            2016 - 2017
+            2016 - 2017, South Korea
         </p>
 
-        <p class="explaintext2">
-            PERSONAL SKILL <br><br>
+        <p class="explaintext">
+            CERTIFICATE<br><br>
 
-            Indesign <br>
-            Illustrator <br>
-            Photoshop <br>
-            Adobe XD <br>
-            3ds max <br>
-            Sketch up <br>
+            Engineer Visual Communication Design<br>
+            2018, South Korea<br><br>
+            Craftsman Architectural Painting<br>
+            2009, South Korea
         </p>
+        <img class="mine2" src="images/mine2.jpg">
+
     </div>
 
 </body>
@@ -137,10 +162,25 @@
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-<!--
-<footer>
-  <p>Jinhyuk Kwon<br>User experience designer</p>
-</footer>
--->
+<script>
+    (function() {
+        function scrollHorizontally(e) {
+            e = window.event || e;
+            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+            document.documentElement.scrollLeft -= (delta * 40); // Multiplied by 40
+            document.body.scrollLeft -= (delta * 40); // Multiplied by 40
+            e.preventDefault();
+        }
+        if (window.addEventListener) {
+            // IE9, Chrome, Safari, Opera
+            window.addEventListener("mousewheel", scrollHorizontally, false);
+            // Firefox
+            window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+        } else {
+            // IE 6/7/8
+            window.attachEvent("onmousewheel", scrollHorizontally);
+        }
+    })();
+</script>
 
 </html>
