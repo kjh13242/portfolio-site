@@ -8,79 +8,467 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/css.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung|Playfair+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung|Playfair+Display|Noto+Sans+KR:100,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b2fdac603.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <script type="text/javascript" src="js/fullpage.js"></script>
 </head>
 
 <style>
-    .a1 a {
-        text-decoration: none;
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        background-color: black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: black;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: white;
+    }
+
+    a:hover {
         color: white;
+        transition: 1s all;
+        text-decoration: underline;
+    }
+
+    body {
+        background-color: #111111;
+        overflow-x: hidden;
+
+    }
+
+    /* ---------------------------------- */
+    /*-- MODAY --*/
+    /* ---------------------------------- */
+
+    .toptext {
+        position: absolute;
+        font-size: 4em;
+        line-height: 1.4em;
+        overflow: hidden;
+        font-family: 'Playfair Display';
+        margin: 0 0 0 5vw;
+        color: white;
+
+        -webkit-animation: fadeInLeft 2s;
+        animation: fadeInLeft 2s;
+    }
+
+    .tx1 {
+        margin-top: 1em;
+        animation-delay: .2s;
+    }
+
+    .tx2 {
+        margin-top: 2.4em;
+        animation-delay: .4s;
+    }
+
+    .tx3 {
+        margin-top: 3.6em;
+        animation-delay: .6s;
+    }
+
+    .tx4 {
+        margin-top: 5em;
+        animation-delay: .8s;
+    }
+
+    .tx5 {
+        margin-top: 6.4em;
+        animation-delay: 1s;
+    }
+
+    .toptextsub {
+        position: absolute;
+        font-size: 1em;
+        font-family: 'Noto Sans KR';
+        margin: 65vh 0 0 5vw;
+        line-height: 1.8em;
+        color: gray;
+        font-weight: 100;
+    }
+
+    @-webkit-keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .fadeInLeft {
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+    }
+
+    /* ---------------------------------- */
+    /*-- 2-3 페이지 레이아웃 --*/
+    /* ---------------------------------- */
+
+    .section {}
+
+    .boxlink {
+        margin: 0 0 0 30vw;
+        width: 60vw;
+        height: 60vh;
+    }
+
+    .name {
+        position: absolute;
+        margin: 0 0 0 5vw;
+
+        font-size: 2em;
+        font-weight: 100;
+        font-family: "Playfair Display";
+        letter-spacing: .01em;
+        line-height: 1.2em;
+        color: white;
+
+        transition: .3s all;
+    }
+
+    .namesub {
+        position: absolute;
+        font-size: 1em;
+        font-family: 'Noto Sans KR';
+        margin: 20vh 0 0 5vw;
+        line-height: 1.8em;
+        color: gray;
+        font-weight: 100;
+    }
+
+    .boximg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        filter: grayscale(1);
+    }
+
+    video {
+        width: 60vw;
+        height: 60vh;
+        object-fit: cover;
+        object-position: top;
+        filter: grayscale(1);
+    }
+
+    /* ---------------------------------- */
+    /*-- 스크롤 --*/
+    /* ---------------------------------- */
+
+    .scroll {
+        position: absolute;
+        bottom: 6vh;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: sdb 2s infinite;
+        animation: sdb 2s infinite;
+        box-sizing: border-box;
+    }
+
+    .scroll2 {
+        position: absolute;
+        bottom: 4vh;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -webkit-transform: rotate(-225eg);
+        transform: rotate(-225deg);
+        -webkit-animation: sdb2 2s infinite;
+        animation: sdb2 2s infinite;
+        box-sizing: border-box;
+    }
+
+    @-webkit-keyframes sdb {
+        0% {
+            -webkit-transform: rotate(-45deg) translate(0, 0);
+        }
+
+        20% {
+            -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+        }
+
+        40% {
+            -webkit-transform: rotate(-45deg) translate(0, 0);
+        }
+    }
+
+    @keyframes sdb {
+        0% {
+            transform: rotate(-45deg) translate(0, 0);
+        }
+
+        20% {
+            transform: rotate(-45deg) translate(-10px, 10px);
+        }
+
+        40% {
+            transform: rotate(-45deg) translate(0, 0);
+        }
+    }
+
+    @-webkit-keyframes sdb2 {
+        0% {
+            -webkit-transform: rotate(-225deg) translate(0, 0);
+        }
+
+        20% {
+            -webkit-transform: rotate(-225deg) translate(-10px, 10px);
+        }
+
+        40% {
+            -webkit-transform: rotate(-225deg) translate(0, 0);
+        }
+    }
+
+    @keyframes sdb2 {
+        0% {
+            transform: rotate(-225deg) translate(0, 0);
+        }
+
+        20% {
+            transform: rotate(-225deg) translate(-10px, 10px);
+        }
+
+        40% {
+            transform: rotate(-225deg) translate(0, 0);
+        }
+    }
+
+    /* ---------------------------------- */
+    /*-- sns --*/
+    /* ---------------------------------- */
+
+    .navi {
+        position: fixed;
+        width: 400px;
+        height: 8vh;
+        bottom: 0;
+        margin-left: 5vw;
+
+        z-index: 1;
+    }
+
+    .snsicon {
+        font-size: 1.6em;
+        font-family: 'Playfair Display';
+        float: left;
+    }
+
+    .snsemail {
+        position: absolute;
+        margin: 6px 0 0 200px;
+        font-size: 1em;
+        letter-spacing: 0.04em;
+        font-family: 'Playfair Display';
+    }
+
+    /* ---------------------------------- */
+    /*-- 아카이브 --*/
+    /* ---------------------------------- */
+
+    .archive {
+        position: fixed;
+        right: -20px;
+        top: 50%;
+
+        font-family: 'Playfair Display';
+        font-size: 1em;
+
+        transform: rotate(90deg);
+        transition: 1s all;
+
+        z-index: 999;
+    }
+
+    .archivet {
+        color: gray;
+        float: left;
+        margin-right: 20px;
+    }
+
+    /* ---------------------------------- */
+    /*-- 오른쪽 하단 메뉴 --*/
+    /* ---------------------------------- */
+
+    .menu {
+        position: fixed;
+        bottom: 5vh;
+        right: 3vw;
+
+        z-index: 999;
+    }
+
+    .menubar {
+        margin-top: 10px;
+        width: 30px;
+        height: 1px;
+        background: gray;
+        transition: 1s all;
+    }
+
+    .m1 {
+        width: 16px;
+    }
+
+    .m2 {
+        width: 23px;
+    }
+
+    /* ---------------------------------- */
+    /*-- 배경 --*/
+    /* ---------------------------------- */
+
+    .mineimg {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        opacity: 0.1;
+        z-index: -1;
     }
 </style>
 
-<!-- 배경 -->
+<header>
+    <div class="navi">
+        <div class="sns">
+            <a class="snsicon" href="aboutme.html">
+                <i class="far fa-user"></i></a>
+            <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14">
+                <i class="fab fa-facebook-f"></i></a>
+            <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/"> <i class="fab fa-linkedin-in"></i></a>
+            <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas">
+                <i class="fab fa-behance"></i></a>
+            <a class="snsicon" href="https://www.instagram.com/moday_floating/">
+                <i class="fab fa-instagram"></i></a>
+            <a class="snsemail" href="mailto:kjh13242@naver.com">kjh13242@naver.com</a>
+        </div>
+    </div>
 
-<body class="commandcenter">
-
-    <!--메인으로-->
-    <!--<a id="gomain" href="index.html">º</a>-->
-    <a id="gomain" href="index.html">
-        <img class="gomain" src="images/%EB%AC%B4%EC%A0%9C-1.png">
+    <a class="menu" href="">
+        <div class="menubar m1"></div>
+        <div class="menubar m2"></div>
+        <div class="menubar m3"></div>
     </a>
 
+    <a class="archive" href="research.html">
+        <div class="archivet t1">A</div>
+        <div class="archivet t2">R</div>
+        <div class="archivet t3">C</div>
+        <div class="archivet t4">H</div>
+        <div class="archivet t5">I</div>
+        <div class="archivet t6">V</div>
+        <div class="archivet t7">E</div>
+    </a>
+</header>
 
-    <!-- 밑으로 내려가는 MODAY -->
+<body>
+    <div id="fullpage">
 
-    <div class="a1">
-        <a href="#target" class="monsieur">Monsieur<br> or<br> Dried Atmospheric Youth</a>
+        <div class="section">
+            <p class="toptext tx1">Monsieur</p>
+            <p class="toptext tx2">or</p>
+            <p class="toptext tx3">Dried</p>
+            <p class="toptext tx4">Atmospheric</p>
+            <p class="toptext tx5">Youth</p>
+
+            <p class="toptextsub">Design resercher<br>Jinhyuk Kwon</p>
+            <img class="mineimg" src="images/mine2.jpg">
+            <div class="scroll"></div>
+        </div>
+
+        <div class="section">
+            <p class="name">Project Epsilon</p>
+            <p class="namesub">프로젝트 엡실론<br>2018 Laptop</p>
+
+            <a class="boxlink" href="product-epsilon.html">
+                <img class="boximg" data-src="images/Index/product/epsilon/main.jpg">
+            </a>
+            <div class="scroll"></div>
+        </div>
+
+        <div class="section">
+            <p class="name">Beyond the Fog</p>
+            <p class="namesub">안개를 넘어<br>2018 Artpiece</p>
+
+            <a class="boxlink" href="product-fog.html">
+                <video id="movies" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true" muted="muted">
+                    <source data-src="images/Index/product/fog/001%20intro%20door%20fornt.mp4#t=26:00, 1:30:00" type="video/mp4"></video>
+            </a>
+            <div class="scroll"></div>
+        </div>
+
+        <div class="section">
+            <p class="name">The seed of<br>Typographic</p>
+            <p class="namesub">타이포 그라피 도구 - 글씨<br>2017 Application</p>
+
+            <a class="boxlink" href="webapp-seed.html">
+                <img class="boximg" data-src="images/Index/webapp/seed/app17.jpg">
+            </a>
+            <div class="scroll"></div>
+        </div>
+
+
+        <div class="box section">
+            <p class="name">Forth<br>Dimension<br>Simulator</p>
+            <p class="namesub">형상변형 시뮬레이터<br>2017 Software</p>
+
+            <a class="boxlink" href="research-3d.html">
+                <img class="boximg" data-src="images/Index/research/3d/simul.jpg">
+            </a>
+            <div class="scroll2"></div>
+        </div>
     </div>
 
-    <!-- 상단 배경 -->
-
-    <img class="mainbackground" src="images/a.jpg">
-
-    <!-- 메인 -->
-
-    <div class="title">
-        <p class="protecteng">Protect me<br>From What I want</p>
-    </div>
-
-    <!-- 메뉴 -->
-    <div class="mainlink">
-        <a class="box" href="research.html">RESEARCH</a><br>
-        <a class="box" href="product.html">PRODUCT</a><br>
-        <a class="box" href="webapp.html">WEB/APP</a><br>
-        <a class="box" href="editorial.html">EDITORIAL</a><br>
-        <a class="box" href="aboutme.html">I am designer.</a><br><br>
-
-        <a class="box" href="art.html">ARTISTIC</a>
-
-        <div id="target"></div>
-    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+                autoScrolling: true,
+                lazyLoading: true,
+            });
+        });
+    </script>
 
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-
-
-<footer>
-    <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14">
-        <i class="fa fa-facebook-f"></i></a>
-    <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/">
-        <i class="fa fa-linkedin"></i></a>
-    <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas">
-        <i class="fa fa-behance"></i></a>
-    <a class="snsicon" href="https://www.instagram.com/moday_floating/">
-        <i class="fa fa-instagram"></i></a>
-    <a class="snsicon" href="mailto:kjh13242@naver.com">
-        <i class="fa fa-envelope-square"></i></a>
-</footer>
 
 </html>

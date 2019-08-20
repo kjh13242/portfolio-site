@@ -19,10 +19,6 @@
         background-color: #16171c;
     }
 
-    .gallery-menu {
-        padding-top: 4vh;
-    }
-
     .explainimg {
         object-fit: cover;
         width: 80vw;
@@ -37,6 +33,39 @@
     .yktxt {
         opacity: 0.6;
     }
+
+    .TEXT {
+        overflow: hidden;
+
+        user-select: none;
+        position: flex;
+        font-size: 14rem;
+        line-height: 18rem;
+        background: black;
+
+        width: 100vw;
+        height: 94vh;
+
+        padding: 100px;
+        color: white;
+        opacity: 1;
+
+        animation-name: move;
+        animation-duration: 5s;
+    }
+
+    .table {
+        font-family: 'Noto Sans KR';
+        display: inline-block;
+        border: 1px solid white;
+        font-size: 10pt;
+        line-height: 14pt;
+        padding: 10px;
+    }
+    
+    .bodytext {
+        
+    }
 </style>
 
 <body class="commandcenter">
@@ -47,13 +76,18 @@
     </a>
     <!--본문-->
 
+    <div class="TEXT">
+        <p class="TEXTP1">The</p>
+        <p class="TEXTP2">Pale Blue Dot</p>
+
+        <div class="table">
+            <p class="bodytext">Project Epsilon</p>
+            <p class="bodytext">노트북 / 2018 / Mingyu Seo / Finland</p>
+        </div>
+    </div>
 
     <!--메뉴-->
     <div class="gallery-menu">
-        <div class="fixedtitle">
-            <p class="img-1_text">Project Epsilon</p>
-            <p class="img-1_subtext">2018 LAPTOP / Team Project with Mingyu Seo, Finland</p>
-        </div>
 
         <div class="ykcon">
             <a href="https://www.yankodesign.com/2019/01/03/move-over-touch-bar/?fbclid=IwAR2DbJOatG-5Am-RJCRwh4MDsc8l9Ck6jIbzpQxMPkvrazE33hcpAH2KLtE">
@@ -87,6 +121,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 
 <!--
 <footer>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MODAY</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/css.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung|Playfair+Display|Noto+Sans+KR:400,700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4b2fdac603.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+</head>
+
+<style>
+    a:link,
+    a:visited,
+    a:active {
+        font-family: "Noto Sans KR";
+        color: black;
+    }
+
+    a:hover {}
+
+    header {
+        background-color: white;
+    }
+
+    body {
+        background-color: #f2f2f3;
+    }
+
+    .topnavi {
+        position: fixed;
+        width: 100%;
+        height: 140px;
+        top: 0;
+        left: 0;
+
+        z-index: 2;
+    }
+
+    .leftnavi {
+        position: fixed;
+        background-color: white;
+        width: 80px;
+        height: 100%;
+        top: 0;
+
+        z-index: 1;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 40px;
+
+        grid-template-rows: repeat(2, 45vh);
+        grid-row-gap: 40px;
+
+        transition: 3s all;
+
+        margin: 34vh 20px 0px 140px;
+    }
+
+    .boximg {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .box {
+        border-radius: 6px;
+        box-shadow: 2px 2px 10px #dcdcdc;
+        background-color: #fff9f5;
+        border: 1px solid #cccccc;
+    }
+
+    .con1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .con2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .con3 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .con4 {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .con5 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .con6 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .con7 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .con8 {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .con9 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+
+    /* ---------------------------------- */
+    /*-- 이미지 --*/
+    /* ---------------------------------- */
+
+    .logo {
+        position: inherit;
+        top: 40px;
+        left: 140px;
+        height: 50px;
+    }
+
+    .toplink {
+        position: fixed;
+        top: 70px;
+        left: 60vw;
+        font-family: "Noto Sans KR";
+        font-weight: 700;
+    }
+
+    .toplinkpoint {
+        display: inline;
+        margin-right: 30px;
+    }
+
+    .toplinkpoint2 {
+        position: fixed;
+        top: 70px;
+        font-family: "Noto Sans KR";
+        font-weight: 700;
+        display: inline;
+        left: 96vw;
+    }
+
+    /* ---------------------------------- */
+    /*-- 이미지 타이틀 --*/
+    /* ---------------------------------- */
+
+    .name {
+        position: absolute;
+        text-align: left;
+        font-size: 4em;
+        font-weight: 700;
+        
+        margin: 20px 0 0 20px;
+        line-height: 1.2em;
+        opacity: 0;
+        color: white;
+
+    }
+
+    .snsicon {
+        margin-bottom: 16px;
+        float: none;
+        color: gray;
+        font-size: 1.8em;
+    }
+
+    .sns {
+        position: absolute;
+        top: 34vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    video {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+    }
+</style>
+
+<header>
+    <div class="topnavi">
+        <img class="logo" src="images/logo.png">
+        <div class="toplink">
+            <a class="toplinkpoint" href="index.html">추천</a>
+            <a class="toplinkpoint" href="">전체</a>
+            <a class="toplinkpoint" href="">연구</a>
+            <a class="toplinkpoint" href="">제품</a>
+            <a class="toplinkpoint" href="">어플</a>
+            <a class="toplinkpoint" href="">편집</a>
+        </div>
+
+        <a class="toplinkpoint2" href=""><i class="fas fa-adjust"></i>
+        </a>
+    </div>
+
+    <div class="leftnavi">
+        <div class="sns">
+            <a class="snsicon" href="mailto:kjh13242@naver.com">
+                <i class="fa fa-envelope-square"></i></a>
+            <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14">
+                <i class="fab fa-facebook-square"></i></a>
+            <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/"> <i class="fab fa-linkedin"></i></a>
+            <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas">
+                <i class="fab fa-behance-square"></i></a>
+            <a class="snsicon" href="https://www.instagram.com/moday_floating/">
+                <i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="list">
+
+       
+       
+       
+        <a class="box con1" href="product-epsilon.html">
+            <p class="name">EPSILON</p>
+            <img class="boximg" src="images/Index/product/epsilon/main.jpg">
+
+        </a>
+
+        <a class="box con2" href="product-epsilon.html">
+            <p class="name">BEYOND<br>THE<br>FOG</p>
+
+            <img class="boximg" src="images/piece.jpg">
+
+            <!--
+            <video id="movies" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true" muted="muted">
+                <source src="images/Index/product/fog/001%20intro%20door%20fornt.mp4#t=26:00, 1:30:00" type="video/mp4"></video>
+-->
+        </a>
+
+        <a class="box con3" href="product-epsilon.html">
+            <p class="name">글씨</p>
+            <img class="boximg" src="images/Index/webapp/seed/app17.jpg">
+        </a>
+
+        <a class="box con4" href="product-epsilon.html">
+            <p class="name">4D<br>시뮬레이터</p>
+            <img class="boximg" src="images/Index/research/3d/simul.jpg">
+        </a>
+
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+</html>

@@ -1,17 +1,23 @@
 @import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
-
-@font-face {
-    font-family: 'Arita-buri-SemiBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 
 /* ---------------------------------- */
 /* 정의 */
 /* ---------------------------------- */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
 
 a:link,
 a:visited,
@@ -46,51 +52,24 @@ body {
 /* ---------------------------------- */
 /* 메인 */
 /* ---------------------------------- */
-
-.monsieur {
-    position: absolute;
-    text-align: center;
-
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-
-    line-height: 1.4em;
-    text-shadow: 0px 2px 5px black;
-
-    font-size: 60pt;
-    font-family: 'Playfair Display';
-    text-decoration: none;
-    color: white;
-
-    z-index: 900;
-}
-
-.mainbackground {
-    position: flex;
-    height: 100vh;
-    width: 100%;
-
-    text-align: center;
-    object-fit: cover;
-    z-index: 800;
+.AR {
+    font-weight: bold;
+    letter-spacing: 1.3px;
 }
 
 .title {
+
     font-size: 2em;
     line-height: 1.4em;
-    z-index: 1;
-    overflow: visible;
+    overflow: hidden;
     font-family: 'Playfair Display';
-    padding: 14vh 0 0 52vw;
     float: left;
 }
 
 .mainlink {
-    position: absolute;
     font-size: 1em;
     line-height: 1.2em;
-    margin: 50vh 0 0 52vw;
+    margin: 200px 0 0 0;
 }
 
 /* ---------------------------------- */
@@ -169,11 +148,6 @@ body {
 
 /* 상단 타이틀 고정 */
 
-.fixedtitle {
-    position: fixed;
-    width: inherit;
-    z-index: 500;
-}
 
 .change {
     opacity: 0;
@@ -206,7 +180,6 @@ body {
 
 .explainimg-group {
     position: absolute;
-    margin-top: 20vw;
     margin-bottom: 5%;
     padding-bottom: 5%;
     text-align: center;
@@ -235,22 +208,24 @@ body {
     margin-bottom: 200px;
 }
 
+.snsg {
+    margin-top: 4px;
+    margin-left: 20px;
+}
+
 .snsicon {
     float: left;
     font-size: 1.5em;
     margin-right: 0.5em;
 }
 
-/* ---------------------------------- */
-/* Footer */
-/* ---------------------------------- */
-
-footer {
-    position: absolute;
-    bottom: -100%;
-
-    margin: 0 0 8vh 52vw;
+.download {
+    display: inline-block;
 }
+
+/* ---------------------------------- */
+/* bottom */
+/* ---------------------------------- */
 
 /* ---------------------------------- */
 /* 에니메이션 */
@@ -279,19 +254,6 @@ footer {
     transition: .5s all;
 }
 
-.mainlink:hover a {
-    filter: blur(0.5px);
-    opacity: .5;
-    transform: scale(.98);
-}
-
-.mainlink:hover a:hover {
-    transform: scale(1);
-    filter: blur(0px);
-    opacity: 1;
-}
-
-
 .mainlinksub:hover a {
     filter: blur(0.5px);
     opacity: .5;
@@ -318,7 +280,6 @@ footer {
     transform: translateX(4vw);
     background-color: white;
     color: gray;
-
 }
 
 .link-1:hover .img-1_subtext2 {
@@ -375,4 +336,69 @@ footer {
     filter: blur(5px);
     opacity: 0;
     transform: translateX(-200px)
+}
+
+.yklong:hover {
+    transition: 1s all;
+    filter: grayscale(0);
+}
+
+
+
+
+.boximg, #movies {
+    transition: .3s all;
+}
+
+.boxlink:hover .boximg {
+    filter: grayscale(0);
+    transform: scale(1.03);
+}
+
+.boxlink:hover #movies {
+    filter: grayscale(0);
+    transform: scale(1.03);
+}
+
+.boxlink:hover .name {
+    font-size: 3.2vw;
+}
+
+.menu:hover .menubar {
+    background-color: white;
+    width: 30px;
+}
+
+.archive:hover .t1 {
+    color: white;
+}
+
+.archive:hover .t2 {
+    color: white;
+    transition-duration: .2s;
+}
+
+.archive:hover .t3 {
+    color: white;
+    transition-duration: .4s;
+}
+
+.archive:hover .t4 {
+    color: white;
+    transition-duration: .6s;
+}
+
+.archive:hover .t5 {
+    color: white;
+    transition-duration: .8s;
+}
+
+.archive:hover .t6 {
+    color: white;
+    transition-duration: 1s;
+}
+
+.archive:hover .t7 {
+    color: white;
+    transition-duration: 1.2s;
 }
