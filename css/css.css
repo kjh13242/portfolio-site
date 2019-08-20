@@ -197,7 +197,9 @@ body {
     margin-bottom: -5%;
     padding-bottom: -5%;
 }
-
+.fixedtitle {
+    opacity: 0;
+}
 /* ---------------------------------- */
 /* 이미지, 영상 요소*/
 /* ---------------------------------- */
@@ -346,7 +348,8 @@ footer {
 
 
 
-.boximg, #movies {
+.boximg,
+#movies {
     transition: .3s all;
 }
 
