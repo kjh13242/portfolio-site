@@ -23,7 +23,7 @@ a:link,
 a:visited,
 a:active {
     text-decoration: none;
-    color: darkslategray
+    color: gray
 }
 
 a:hover {
@@ -197,9 +197,11 @@ body {
     margin-bottom: -5%;
     padding-bottom: -5%;
 }
+
 .fixedtitle {
     opacity: 0;
 }
+
 /* ---------------------------------- */
 /* 이미지, 영상 요소*/
 /* ---------------------------------- */
@@ -370,6 +372,19 @@ footer {
 .menu:hover .menubar {
     background-color: white;
     width: 30px;
+}
+
+.menu:active {
+    padding: 50px;
+    border: 50vh solid white;
+    overflow: hidden;
+}
+
+.menu:active .m4 {
+    background-color: white;
+    height: 50vh;
+    width: 50vw;
+    margin: 0;
 }
 
 .archive:hover .t1 {
