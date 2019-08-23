@@ -19,6 +19,10 @@
 </head>
 
 <style>
+    html.open {
+        overflow: hidden;
+    }
+
     ::-webkit-scrollbar {
         width: 0px;
         height: 0px;
@@ -332,20 +336,32 @@
     /*-- 오른쪽 하단 메뉴 --*/
     /* ---------------------------------- */
 
-    .menu {
-        position: fixed;
+    .btn {
+        position: absolute;
         bottom: 5vh;
         right: 3vw;
         width: 30px;
         height: 30px;
+        z-index: 1;
+        cursor: pointer;
+        padding: 0;
+    }
 
+    .close {
+        position: absolute;
+        bottom: 5vh;
+        right: 3vw;
+        width: 30px;
+        height: 30px;
         z-index: 999;
+        cursor: pointer;
+        padding: 0;
+        transition: .2s all;
     }
 
     .menubar {
-        position: fixed;
-        right: 4vw;
-        bottom: 40px;
+        position: absolute;
+        bottom: 0;
 
         width: 30px;
         height: 1px;
@@ -354,24 +370,76 @@
     }
 
     .m1 {
-        bottom: 60px;
+        bottom: 20px;
         width: 16px;
     }
 
     .m2 {
-        bottom: 50px;
+        bottom: 10px;
         width: 23px;
     }
 
-    .menubarfull {
-        position: fixed;
-        bottom: 0;
-        right: -100vw;
+    .x1 {
+        position: absolute;
+        bottom: 10px;
+
+        width: 30px;
+        height: 1px;
+        transform: rotate(-45deg);
+        background-color: white;
+    }
+
+    .x2 {
+        position: absolute;
+        bottom: 10px;
+
+        width: 30px;
+        height: 1px;
+        transform: rotate(45deg);
+        background-color: white;
+    }
+
+    #menu {
         width: 100vw;
         height: 100vh;
-        background-color: aliceblue;
-        transition: 1s all;
-        z-index: 500;
+        position: fixed;
+        top: 0px;
+        right: -100vw;
+        z-index: 10;
+        border: 1px solid #c9c9c9;
+        background-color: black;
+        text-align: center;
+        transition: All 0.2s ease;
+        -webkit-transition: All 0.2s ease;
+        -moz-transition: All 0.2s ease;
+        -o-transition: All 0.2s ease;
+    }
+
+    .gallery-menu {
+        padding: 8vh 0 0 6vw;
+        text-align: left;
+    }
+    .img-1_text{
+        border: 0;
+    }
+
+    #menu.open {
+        right: 0px;
+    }
+
+    .page_cover.open {
+        display: block;
+    }
+
+    .page_cover {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 4;
+        display: none;
     }
 
     /* ---------------------------------- */
@@ -384,10 +452,12 @@
         object-fit: cover;
         opacity: 0.1;
         z-index: -500;
+        pointer-events: none;
     }
 </style>
 
 <header>
+
     <div class="navi">
         <div class="sns">
             <a class="snsicon" href="aboutme.html">
@@ -403,12 +473,53 @@
         </div>
     </div>
 
-    <a class="menu" href="#">
+    <div class="btn">
         <div class="menubar m1"></div>
         <div class="menubar m2"></div>
         <div class="menubar m3"></div>
-        <div class="menubarfull"></div>
-    </a>
+    </div>
+    <div onclick="history.back();" class="page_cover"></div>
+    <div id="menu">
+        <div class="gallery-menu">
+
+            <a class="link-1" href="product-epsilon.html">
+                <img class="menuimg" src="images/Index/product/epsilon/b1.jpg">
+
+                <p class="img-1_text">Project Epsilon</p>
+                <p class="img-1_subtext">2018 LAPTOP</p>
+                <p class="img-1_subtext2">Team Project with Mingyu Seo, Finland</p>
+            </a>
+
+            <a class="link-1" href="product-fog.html">
+                <img class="menuimg" src="images/Index/product/fog/b1.jpg">
+
+                <p class="img-1_text">Beyond the Fog</p>
+
+            </a>
+
+            <a class="link-1" href="product-torch.html">
+                <img class="menuimg" src="images/Index/product/torch/b1.jpg">
+
+                <p class="img-1_text">Torch, Bonfire</p>
+                <p class="img-1_subtext">2018 LIGHT</p>
+                <p class="img-1_subtext2">Inolux, Finland</p>
+            </a>
+
+            <a class="link-1" href="product-echo.html">
+                <img class="menuimg" src="images/Index/product/echo/b1.jpg">
+
+                <p class="img-1_text">Echo</p>
+                <p class="img-1_subtext">2018 ADUINO WIND BELL</p>
+                <p class="img-1_subtext">IDAS Hongik University</p>
+            </a>
+
+        </div>
+        <div onclick="history.back();" class="close">
+            <div class="x1"></div>
+            <div class="x2"></div>
+        </div>
+    </div>
+
 
     <a class="archive" href="research.html">
         <div class="archivet t1">A</div>
@@ -489,6 +600,18 @@
                 lazyLoading: true,
             });
         });
+    </script>
+    <script>
+        $(".btn").click(function() {
+            $("#menu,.page_cover,html").addClass("open");
+            window.location.hash = "#open";
+        });
+
+        window.onhashchange = function() {
+            if (location.hash != "#open") {
+                $("#menu,.page_cover,html").removeClass("open");
+            }
+        };
     </script>
 
 </body>
