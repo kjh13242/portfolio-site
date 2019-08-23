@@ -278,7 +278,6 @@ footer {
     color: red;
     opacity: 0.85;
     border-bottom: 1px solid gray;
-    display: inline;
 }
 
 .link-1:hover .img-1_subtext {
