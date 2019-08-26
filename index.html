@@ -415,13 +415,23 @@
         -o-transition: All 0.2s ease;
     }
 
-    .gallery-menu {
-        padding: 8vh 0 0 6vw;
-        text-align: left;
+    .hmmenu {
+        display: inline;
+        background-color: blue;
     }
 
-    .img-1_text {
-        border: 0;
+    .hmlink {
+        display: inline-block;
+        margin: 40px;
+        font-size: 32pt;
+        color: white;
+        transition: 1s all;
+    }
+
+    .hmlink:hover .hmtxt {
+        transform: translateX(1vw);
+        color: red;
+        opacity: 0.85;
     }
 
     #menu.open {
@@ -481,25 +491,13 @@
     </div>
     <div onclick="history.back();" class="page_cover"></div>
     <div id="menu">
-        <div class="gallery-menu">
-
-            <a class="link-1" href="product-epsilon.html">
-                <p class="img-1_text">Project Epsilon</p>
-            </a>
-
-            <a class="link-1" href="product-fog.html">
-                <p class="img-1_text">Beyond the Fog</p>
-
-            </a>
-
-            <a class="link-1" href="product-torch.html">
-                <p class="img-1_text">Torch, Bonfire</p>
-            </a>
-
-            <a class="link-1" href="product-echo.html">
-                <p class="img-1_text">Echo</p>
-            </a>
-
+        <div class="hmmenu">
+            <a class="hmlink" href="index.html">Home</a>
+            <a class="hmlink" href="product-epsilon.html">Project Epsilon</a>
+            <a class="hmlink" href="product-fog.html">Beyond the Fog</a>
+            <a class="hmlink" href="product-torch.html">The seed of Typographic</a>
+            <a class="hmlink" href="product-echo.html">Forth Dimension Simulator</a>
+            <a class="hmlink" href="product-echo.html">About me</a>
         </div>
         <div onclick="history.back();" class="close">
             <div class="x1"></div>
