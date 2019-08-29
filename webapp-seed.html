@@ -27,6 +27,37 @@
         width: 100vw;
         margin-bottom: 80px;
     }
+
+    .bluedot {
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translatex(-50%);
+
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        border: 1px solid #0016EE;
+        background: white;
+
+        animation: 1s ease;
+        animation-name: filldot;
+    }
+
+    @keyframes filldot {
+
+        50% {
+            background: linear-gradient(to top, #0016EE 50%, white 50%);
+        }
+
+        100% {
+            background: linear-gradient(to top, #0016EE 100%, white 0%);
+        }
+    }
+
+    .ex2 {
+        margin-top: 600px;
+    }
 </style>
 
 <body class="commandcenter">
@@ -47,7 +78,9 @@
     </div>
 
     <div class="explainimg-group">
-        <img class="explainimg" src="images/Index/webapp/seed/%ED%8F%AC%EC%8A%A4%ED%84%B0%20a1%201.jpg">
+        <div class="bluedot"></div>
+
+        <img class="explainimg ex2" src="images/Index/webapp/seed/%ED%8F%AC%EC%8A%A4%ED%84%B0%20a1%201.jpg">
         <img class="explainimg" src="images/Index/webapp/seed/app1.jpg">
         <img class="explainimg" src="images/Index/webapp/seed/app2.jpg">
         <img class="explainimg" src="images/Index/webapp/seed/app3.jpg">
@@ -66,8 +99,6 @@
         <img class="explainimg" src="images/Index/webapp/seed/app16.jpg">
         <img class="explainimg" src="images/Index/webapp/seed/app17.jpg">
         <img class="explainimg2" src="images/Index/webapp/seed/1p.jpg">
-
-
     </div>
 
 </body>
