@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/css.css">
-    
-     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Song+Myung|Playfair+Display|Noto+Sans+KR:100,400,700&display=swap" rel="stylesheet">
 
@@ -17,6 +15,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <script type="text/javascript" src="js/fullpage.js"></script>
+    <script src="https://kit.fontawesome.com/4b2fdac603.js"></script>
+
 </head>
 
 <body>
@@ -494,7 +494,9 @@
         <div onclick="history.back();" class="page_cover"></div>
         <div id="menu">
             <div class="hmmenu">
-                <a class="hmlink" href="index.html"><p>Home</p></a>
+                <a class="hmlink" href="index.html">
+                    <p>Home</p>
+                </a>
                 <a class="hmlink" href="product-epsilon.html">Project Epsilon</a>
                 <a class="hmlink" href="product-fog.html">Beyond the Fog</a>
                 <a class="hmlink" href="webapp-seed.html">The seed of Typographic</a>
@@ -539,7 +541,7 @@
             <p class="namesub">프로젝트 엡실론<br>2018 Laptop</p>
 
             <a class="boxlink" href="product-epsilon.html">
-                <img class="boximg" data-src="images/Index/product/epsilon/main.jpg">
+                <img class="boximg" src="images/Index/product/epsilon/main.jpg">
             </a>
             <div class="scroll"></div>
         </div>
@@ -550,7 +552,7 @@
 
             <a class="boxlink" href="product-fog.html">
                 <video id="movies" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true" muted="muted" loop="loop">
-                    <source data-src="images/Index/product/fog/001 intro door fornt cut.mp4" type="video/mp4"></video>
+                    <source src="images/Index/product/fog/001 intro door fornt cut.mp4" type="video/mp4"></video>
             </a>
             <div class="scroll"></div>
         </div>
@@ -560,7 +562,7 @@
             <p class="namesub">타이포 그라피 도구 - 글씨<br>2017 Application</p>
 
             <a class="boxlink" href="webapp-seed.html">
-                <img class="boximg" data-src="images/Index/webapp/seed/app17.jpg">
+                <img class="boximg" src="images/Index/webapp/seed/app17.jpg">
             </a>
             <div class="scroll"></div>
         </div>
@@ -571,7 +573,7 @@
             <p class="namesub">형상변형 시뮬레이터<br>2017 Software</p>
 
             <a class="boxlink" href="research-3d.html">
-                <img class="boximg" data-src="images/Index/research/3d/simul.jpg">
+                <img class="boximg" src="images/Index/research/3d/simul.jpg">
             </a>
             <div class="scroll2"></div>
         </div>
@@ -586,7 +588,7 @@
                 autoScrolling: true,
                 lazyLoading: false,
             });
-            
+
             $(".btn").click(function() {
                 $("#menu,.page_cover,html").addClass("open");
                 window.location.hash = "#open";
@@ -597,19 +599,18 @@
                     $("#menu,.page_cover,html").removeClass("open");
                 }
             };
-            
+
             $(window).on('mousewheel', function(event) {
                 var sectionData = fullpage_api.getActiveSection() || {};
-                
+
                 if (sectionData.isLast && isLastSection) {
-                    fullpage_api.moveTo(1);   
+                    fullpage_api.moveTo(1);
                 }
-                
+
                 isLastSection = sectionData.isLast
             })
         });
     </script>
-<!--    <script src="https://kit.fontawesome.com/4b2fdac603.js"></script>-->
 
 </body>
 
