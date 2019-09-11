@@ -575,18 +575,31 @@
             <a class="boxlink" href="research-3d.html">
                 <img class="boximg" src="images/Index/research/3d/simul.jpg">
             </a>
-            <div class="scroll2"></div>
+            <div class="scroll2" onclick="gotoFirstSession()"></div>
         </div>
     </div>
 
     <script>
         var isLastSection = false;
+        var timeout = null;
+
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 //options here
                 licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
                 autoScrolling: true,
                 lazyLoading: false,
+                onLeave: function(origin, destination, direction){
+                    var fullpageData = fullpage_api.getFullpageData() || {};
+                    clearTimeout(timeout);
+                    if (destination.isLast) {
+                        timeout = setTimeout(function() {
+                            isLastSection = true;
+                        }, (fullpageData.scrollingSpeed || 700) * 2);
+                    } else {
+                        isLastSection = false;
+                    }
+                },
             });
 
             $(".btn").click(function() {
@@ -600,16 +613,14 @@
                 }
             };
 
-            $(window).on('mousewheel', function(event) {
-                var sectionData = fullpage_api.getActiveSection() || {};
-
-                if (sectionData.isLast && isLastSection) {
-                    fullpage_api.moveTo(1);
-                }
-
-                isLastSection = sectionData.isLast
-            })
+            $(window).on('wheel', function(event) {
+                if (isLastSection) gotoFirstSession();
+            });
         });
+
+        function gotoFirstSession() {
+            fullpage_api.moveTo(1);
+        };
     </script>
 
 </body>
