@@ -152,3 +152,17 @@
 
     z-index: 300;
 }
+
+.toptext {
+    position: absolute;
+    font-size: 1.2em;
+    font-family: 'Playfair Display';
+    top: 6vh;
+    left: 5vw;
+    line-height: 1.4em;
+    font-weight: 100;
+    font-weight: 100;
+    z-index: 500;
+    color: black;
+    transition: 1s ease-out;
+}

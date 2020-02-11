@@ -47,7 +47,7 @@ body {
 /* ---------------------------------- */
 
 .toptext {
-    position: absolute;
+    position: fixed;
     font-size: 1.2em;
     font-family: 'Playfair Display';
     top: 6vh;
