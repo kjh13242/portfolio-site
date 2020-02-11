@@ -1,0 +1,154 @@
+.boxlink {
+    height: 50vh;
+    width: 50vw;
+    background-color: white;
+    z-index: 999;
+}
+
+.name {
+    position: relative;
+    display: inline-block;
+
+    margin-left: 50%;
+    transform: translate(-50%);
+
+
+    font-size: 3em;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    text-align: center;
+
+    letter-spacing: .04em;
+    line-height: 1.2em;
+
+    color: black;
+    padding-top: 10px;
+    border-top: 2px white solid;
+
+    transition: 1s all;
+    animation: line 3s;
+    animation-fill-mode: forwards;
+
+}
+
+@-webkit-keyframes line {
+    100% {
+        border-top: 2px black solid;
+    }
+}
+
+.namesub {
+    position: relative;
+    display: inline-block;
+
+    margin-top: 30vh;
+    margin-left: 50%;
+    width: 100%;
+
+    transform: translate(-50%);
+
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    line-height: 1.6em;
+    color: black;
+
+    opacity: 0;
+
+    transition: 1s all;
+    animation: txth1 5s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes txth1 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.namemiddle {
+    position: relative;
+    margin-top: 48vh;
+
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2vh;
+
+    opacity: 0;
+
+    transition: 1s all;
+    animation: txth1 5s;
+    animation-fill-mode: forwards;
+}
+
+.boximg {
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    width: 50vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: -999;
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+}
+
+/* ---------------------------------- */
+/*-- 스크롤 --*/
+/* ---------------------------------- */
+
+.scroll {
+    position: absolute;
+    top: 90vh;
+    left: 50vw;
+    height: 0;
+    box-sizing: border-box;
+
+    width: 1px;
+    z-index: 999;
+    background-color: white;
+    -webkit-animation: sdb 3s infinite;
+    animation: sdb 3s infinite;
+}
+
+@-webkit-keyframes sdb {
+
+    20% {}
+
+    40% {
+        height: 10vh;
+        top: 90vh;
+    }
+
+    100% {
+        height: 0;
+        top: 100vh;
+    }
+
+}
+
+.scrolltxt {
+    position: absolute;
+    left: 52vw;
+    bottom: 0;
+    height: 8vh;
+    margin: 0;
+    padding: 0;
+
+    color: white;
+
+    font-size: 1em;
+    font-style: italic;
+    letter-spacing: .4em;
+
+    z-index: 300;
+}

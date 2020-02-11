@@ -1,0 +1,597 @@
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pangram';
+    src: url('fonts/Pangram-Regular.ttf');
+}
+
+html.open {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    transition: 1s all;
+}
+
+body {
+    overflow-x: hidden;
+
+}
+
+/* ---------------------------------- */
+/*-- MODAY --*/
+/* ---------------------------------- */
+
+.toptext {
+    position: absolute;
+    font-size: 1.2em;
+    font-family: 'Playfair Display';
+    top: 6vh;
+    left: 5vw;
+    line-height: 1.4em;
+    font-weight: 100;
+    font-weight: 100;
+    z-index: 500;
+    color: white;
+    transition: 1s ease-out;
+}
+
+
+/* ---------------------------------- */
+/*-- 2-3 페이지 레이아웃 --*/
+/* ---------------------------------- */
+
+.box {
+    background-color: black;
+}
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+
+    font-size: 5em;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    text-align: center;
+
+    letter-spacing: 0.2em;
+    line-height: 1.2em;
+
+    color: white;
+    border-top: 2px white solid;
+    padding-top: 10px;
+    transition: 1s ease-out;
+}
+
+.namesub {
+    position: absolute;
+    top: 45%;
+    left: 5vw;
+
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    line-height: 1.2em;
+    color: white;
+    font-weight: 400;
+    transition: .3s all;
+    background-color: black;
+    padding: 10px 80px 30px 10px;
+}
+
+.namemiddle {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.boximg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: -999;
+}
+
+video {
+    width: 60vw;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(1);
+}
+
+/* ---------------------------------- */
+/*-- box section --*/
+/* ---------------------------------- */
+
+.boxh1con {
+    position: absolute;
+    top: 21vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 64vw;
+}
+
+.boxh1 {
+    position: relative;
+    overflow: hidden;
+    width: 20vw;
+    height: 58vh;
+    margin: 0 6vw 0 6vw;
+    float: left;
+}
+
+.boxh1img {
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+    width: 100%;
+    transition: .5s linear;
+    filter: blur(100px);
+}
+
+.boxh1txt {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 14%;
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.2em;
+    letter-spacing: .06em;
+    z-index: 2;
+    transition: 1s ease-out;
+}
+
+.h1sub {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    line-height: 1.2em;
+    letter-spacing: .06em;
+    z-index: 2;
+    transition: 1s ease-out;
+
+    bottom: 8%;
+    font-size: 1.1em;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+}
+
+
+.mtxt {
+    color: black;
+}
+
+.grayimg {
+    filter: brightness(.3);
+}
+
+/* ---------------------------------- */
+/*-- 스크롤 --*/
+/* ---------------------------------- */
+
+.scroll {
+    position: absolute;
+    top: 90vh;
+    left: 50vw;
+    height: 0;
+    box-sizing: border-box;
+
+    width: 1px;
+    z-index: 2;
+    background-color: white;
+    -webkit-animation: sdb 3s infinite;
+    animation: sdb 3s infinite;
+}
+
+@-webkit-keyframes sdb {
+
+    20% {}
+
+    40% {
+        height: 10vh;
+        top: 90vh;
+    }
+
+    100% {
+        height: 0;
+        top: 100vh;
+    }
+
+}
+
+.scrolltxt {
+    position: fixed;
+    left: 52vw;
+    bottom: 0;
+    height: 8vh;
+    margin: 0;
+    padding: 0;
+
+    color: white;
+
+    font-size: 1em;
+    font-style: italic;
+    letter-spacing: .4em;
+
+    z-index: 300;
+}
+
+/* ---------------------------------- */
+/*-- sns --*/
+/* ---------------------------------- */
+
+.navi {
+    position: fixed;
+    height: 8vh;
+    bottom: 0;
+    margin-left: 5vw;
+    z-index: 500;
+    font-size: 1em;
+    letter-spacing: .1em;
+    transition: 1s ease-out;
+}
+
+.snsicon {
+    float: left;
+    margin-right: 10px;
+}
+
+/* ---------------------------------- */
+/*-- 아카이브 --*/
+/* ---------------------------------- */
+
+.archive {
+    font-family: 'Playfair Display';
+    font-size: 5em;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: 1s all;
+    z-index: 500;
+}
+
+.archivet {
+    color: black;
+    float: left;
+    margin-right: 20px;
+    animation: glow 3s infinite;
+}
+
+@keyframes glow {
+    50% {
+    text-shadow: 0 0 .02em, 0 0 .1em;
+    }
+
+    100% {
+    }
+}
+
+/* ---------------------------------- */
+/*-- 오른쪽 하단 메뉴 --*/
+/* ---------------------------------- */
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 5vw;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+    cursor: pointer;
+    padding: 0;
+
+    transition: 1s ease-out;
+}
+
+.closebtn {
+    position: absolute;
+    top: 50%;
+    left: 5vw;
+    width: 25px;
+    height: 25px;
+    z-index: 999;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: .2s all;
+}
+
+.menubar {
+    position: absolute;
+    bottom: 0;
+
+    width: 30px;
+    height: 3px;
+    background: white;
+    transition: 1s all;
+}
+
+.m1 {
+    bottom: 20px;
+    width: 16px;
+}
+
+.m2 {
+    bottom: 10px;
+    width: 23px;
+}
+
+.x1 {
+    position: absolute;
+    bottom: 10px;
+
+    transform: rotate(-45deg);
+}
+
+.x2 {
+    position: absolute;
+    bottom: 10px;
+
+    transform: rotate(45deg);
+}
+
+.btn:hover .m1 {
+    width: 30px
+}
+
+.btn:hover .m2 {
+    width: 30px
+}
+
+#menu {
+    position: fixed;
+    left: -100vw;
+    height: 100vh;
+    z-index: 499;
+    background-color: black;
+    transition: All 1s ease;
+    -webkit-transition: All 0.2s ease;
+    -moz-transition: All 0.2s ease;
+    -o-transition: All 0.2s ease;
+    overflow-y: auto;
+}
+
+.menubox {
+    margin-top: 25vh;
+    margin-left: 25vw;
+    width: 75vw;
+    height: 50vh;
+}
+
+.hmlink {
+    width: 25vw;
+    font-size: 2em;
+    color: white;
+    transition: 1s all;
+    margin-bottom: 20px;
+}
+
+.hmlinkimg {
+    position: absolute;
+    top: 0;
+    left: 70vw;
+    width: 30vw;
+    height: 100vh;
+
+    object-fit: cover;
+    object-position: top;
+    opacity: 0;
+}
+
+#menu.open {
+    left: 0px;
+}
+
+.page_cover.open {
+    display: block;
+}
+
+.page_cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 4;
+    display: none;
+}
+
+#pagevideo {
+    width: 100vw;
+    height: 100vh;
+    z-index: -999;
+}
+
+.boxposition {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+}
+
+.name:hover {
+    opacity: .9;
+    text-shadow: 0 0 .1em, 0 0 .6em;
+}
+
+
+/* ---------------------------------- */
+/*-- 인트로 --*/
+/* ---------------------------------- */
+
+.welcome-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.content-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Playfair Display";
+}
+
+.fly-in-text {
+    list-style: none;
+}
+
+.fly-in-text li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 5em;
+    color: black;
+    opacity: 1;
+    transition: all 3s ease;
+}
+
+.fly-in-text li:nth-child(5) {
+    margin-right: 0;
+}
+
+.enter-button {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+        
+    color: black;
+    
+    opacity: 1;
+    margin-top: 30px;
+      
+    border: 1px white solid;
+    
+    transition: all 1s ease 3s;
+    
+    
+}
+
+.enter-button:hover {
+    color: black;
+    border-bottom: 1px black solid;
+}
+
+.content-hidden .fly-in-text li {
+    opacity: 0;
+}
+
+.content-hidden .fly-in-text li:nth-child(1) {
+    transform: translate3d(-60px, 0, 0);
+}
+
+.content-hidden .fly-in-text li:nth-child(2) {
+    transform: translate3d(-30px, 0, 0);
+}
+
+.content-hidden .fly-in-text li:nth-child(3) {
+    transform: translate3d(0px, 0, 0);
+}
+
+.content-hidden .fly-in-text li:nth-child(4) {
+    transform: translate3d(30px, 0, 0);
+}
+
+.content-hidden .fly-in-text li:nth-child(5) {
+    transform: translate3d(60px, 0, 0);
+}
+
+.content-hidden .enter-button {
+    opacity: 0;
+    transform: translate3d(0, -30px 0);
+}
+
+/* ---------------------------------- */
+/* 빛나는효과 */
+/* ---------------------------------- */
+
+
+.boxh1:hover {
+    border: 1px white solid;
+    box-shadow: 0 0 .2em gray, 0 0 .6em gray;
+}
+
+.boxh1:hover .boxh1img {
+    opacity: .6;
+    transform: scale(1.04);
+    filter: blur(0);
+}
+
+.boxh1:hover .boxh1txt {
+    text-shadow: 0 0 .1em, 0 0 .6em;
+}
+
+.archivet {
+    text-shadow: 0 0 .1em, 0 0 .6em;
+    opacity: 1;
+}
+
+.navi:hover a {
+    opacity: .6
+}
+
+.navi:hover a:hover {
+    opacity: 1;
+    text-shadow: 0 0 .1em, 0 0 .6em;
+}
+
+.toptext:hover {
+    text-shadow: 0 0 .1em, 0 0 .6em;
+
+}
+
+.hmlink:hover .hmlinkimg {
+    opacity: 1;
+}
+
+.menubox:hover a:hover {
+    opacity: 1;
+    text-shadow: 0 0 .1em, 0 0 .6em;
+}
+
+.menubox:hover a {
+    opacity: .4
+}
+
+.moday:hover {
+    text-shadow: 0 0 .1em, 0 0 .6em;
+}

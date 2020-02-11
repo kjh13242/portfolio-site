@@ -7,484 +7,21 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/indexcss.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Song+Myung|Playfair+Display|Noto+Sans+KR:100,400,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noto+Sans+KR:100,400,700|Roboto:700|Playfair+Display:400,500&display=swap&subset=korean" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <script type="text/javascript" src="js/fullpage.js"></script>
-    <script src="https://kit.fontawesome.com/4b2fdac603.js"></script>
 
 </head>
 
 <body>
-    <style>
-        html.open {
-            overflow: hidden;
-        }
-
-        ::-webkit-scrollbar {
-            width: 0px;
-            height: 0px;
-            background-color: black;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: black;
-        }
-
-        ::-webkit-scrollbar-track {
-            background-color: white;
-        }
-
-        a:hover {
-            color: white;
-            transition: 1s all;
-        }
-
-        body {
-            background-color: #111111;
-            overflow-x: hidden;
-
-        }
-
-        /* ---------------------------------- */
-        /*-- MODAY --*/
-        /* ---------------------------------- */
-
-        .toptext {
-            position: absolute;
-            font-size: 4em;
-            line-height: 1.4em;
-            overflow: hidden;
-            font-family: 'Playfair Display';
-            margin: 0 0 0 5vw;
-            color: white;
-            z-index: 900;
-
-            -webkit-animation: fadeInLeft 2s;
-            animation: fadeInLeft 2s;
-        }
-
-        .tx1 {
-            margin-top: 1em;
-            animation-delay: .2s;
-        }
-
-        .tx2 {
-            margin-top: 2.4em;
-            animation-delay: .4s;
-        }
-
-        .tx3 {
-            margin-top: 3.8em;
-            animation-delay: .6s;
-        }
-
-        .tx4 {
-            margin-top: 5.2em;
-            animation-delay: .8s;
-        }
-
-        .tx5 {
-            margin-top: 6.6em;
-            animation-delay: 1s;
-        }
-
-        .toptextsub {
-            position: absolute;
-            font-size: 1em;
-            font-family: 'Noto Sans KR';
-            top: 65vh;
-            left: 5vw;
-            line-height: 1.8em;
-            color: gray;
-            font-weight: 100;
-            z-index: 500;
-        }
-
-        @-webkit-keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                -webkit-transform: translate3d(-100%, 0, 0);
-                transform: translate3d(-100%, 0, 0);
-            }
-
-            to {
-                opacity: 1;
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-            }
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                -webkit-transform: translate3d(-100%, 0, 0);
-                transform: translate3d(-100%, 0, 0);
-            }
-
-            to {
-                opacity: 1;
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-            }
-        }
-
-        .fadeInLeft {
-            -webkit-animation-name: fadeInLeft;
-            animation-name: fadeInLeft;
-        }
-
-        /* ---------------------------------- */
-        /*-- 2-3 페이지 레이아웃 --*/
-        /* ---------------------------------- */
-
-        .section {}
-
-        .boxlink {
-            margin: 0 0 0 30vw;
-            width: 60vw;
-            height: 60vh;
-        }
-
-        .name {
-            position: absolute;
-            margin: 0 0 0 5vw;
-
-            font-size: 2em;
-            font-weight: 100;
-            font-family: "Playfair Display";
-            letter-spacing: .01em;
-            line-height: 1.2em;
-            color: white;
-
-            transition: .3s all;
-        }
-
-        .namesub {
-            position: absolute;
-            font-size: 1em;
-            font-family: 'Noto Sans KR';
-            margin: 20vh 0 0 5vw;
-            line-height: 1.8em;
-            color: gray;
-            font-weight: 100;
-        }
-
-        .boximg {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            filter: grayscale(1);
-        }
-
-        video {
-            width: 60vw;
-            height: 60vh;
-            object-fit: cover;
-            object-position: center;
-            filter: grayscale(1);
-        }
-
-        /* ---------------------------------- */
-        /*-- 스크롤 --*/
-        /* ---------------------------------- */
-
-        .scroll {
-            position: absolute;
-            bottom: 6vh;
-            left: 50%;
-            width: 24px;
-            height: 24px;
-            margin-left: -12px;
-            border-left: 1px solid #fff;
-            border-bottom: 1px solid #fff;
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            -webkit-animation: sdb 2s infinite;
-            animation: sdb 2s infinite;
-            box-sizing: border-box;
-        }
-
-        .scroll2 {
-            position: absolute;
-            bottom: 4vh;
-            left: 50%;
-            width: 24px;
-            height: 24px;
-            margin-left: -12px;
-            border-left: 1px solid #fff;
-            border-bottom: 1px solid #fff;
-            -webkit-transform: rotate(-225eg);
-            transform: rotate(-225deg);
-            -webkit-animation: sdb2 2s infinite;
-            animation: sdb2 2s infinite;
-            box-sizing: border-box;
-        }
-
-        @-webkit-keyframes sdb {
-            0% {
-                -webkit-transform: rotate(-45deg) translate(0, 0);
-            }
-
-            20% {
-                -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-            }
-
-            40% {
-                -webkit-transform: rotate(-45deg) translate(0, 0);
-            }
-        }
-
-        @keyframes sdb {
-            0% {
-                transform: rotate(-45deg) translate(0, 0);
-            }
-
-            20% {
-                transform: rotate(-45deg) translate(-10px, 10px);
-            }
-
-            40% {
-                transform: rotate(-45deg) translate(0, 0);
-            }
-        }
-
-        @-webkit-keyframes sdb2 {
-            0% {
-                -webkit-transform: rotate(-225deg) translate(0, 0);
-            }
-
-            20% {
-                -webkit-transform: rotate(-225deg) translate(-10px, 10px);
-            }
-
-            40% {
-                -webkit-transform: rotate(-225deg) translate(0, 0);
-            }
-        }
-
-        @keyframes sdb2 {
-            0% {
-                transform: rotate(-225deg) translate(0, 0);
-            }
-
-            20% {
-                transform: rotate(-225deg) translate(-10px, 10px);
-            }
-
-            40% {
-                transform: rotate(-225deg) translate(0, 0);
-            }
-        }
-
-        /* ---------------------------------- */
-        /*-- sns --*/
-        /* ---------------------------------- */
-
-        .navi {
-            position: fixed;
-            width: 400px;
-            height: 8vh;
-            bottom: 0;
-            margin-left: 5vw;
-
-            z-index: 1;
-        }
-
-        .snsicon {
-            font-size: 1.6em;
-            font-family: 'Playfair Display';
-            float: left;
-        }
-
-        .snsemail {
-            position: absolute;
-            margin: 6px 0 0 200px;
-            font-size: 1em;
-            letter-spacing: 0.04em;
-            font-family: 'Playfair Display';
-        }
-
-        /* ---------------------------------- */
-        /*-- 아카이브 --*/
-        /* ---------------------------------- */
-
-        .archive {
-            position: fixed;
-            right: -20px;
-            top: 50%;
-
-            font-family: 'Playfair Display';
-            font-size: 1em;
-
-            transform: rotate(90deg);
-            transition: 1s all;
-            z-index: 500;
-
-        }
-
-        .archivet {
-            color: gray;
-            float: left;
-            margin-right: 20px;
-        }
-
-        /* ---------------------------------- */
-        /*-- 오른쪽 하단 메뉴 --*/
-        /* ---------------------------------- */
-
-        .btn {
-            position: absolute;
-            bottom: 5vh;
-            right: 3vw;
-            width: 30px;
-            height: 30px;
-            z-index: 1;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .close {
-            position: absolute;
-            bottom: 5vh;
-            right: 3vw;
-            width: 30px;
-            height: 30px;
-            z-index: 999;
-            cursor: pointer;
-            padding: 0;
-            transition: .2s all;
-        }
-
-        .menubar {
-            position: absolute;
-            bottom: 0;
-
-            width: 30px;
-            height: 1px;
-            background: gray;
-            transition: 1s all;
-        }
-
-        .m1 {
-            bottom: 20px;
-            width: 16px;
-        }
-
-        .m2 {
-            bottom: 10px;
-            width: 23px;
-        }
-
-        .x1 {
-            position: absolute;
-            bottom: 10px;
-
-            width: 30px;
-            height: 1px;
-            transform: rotate(-45deg);
-            background-color: white;
-        }
-
-        .x2 {
-            position: absolute;
-            bottom: 10px;
-
-            width: 30px;
-            height: 1px;
-            transform: rotate(45deg);
-            background-color: white;
-        }
-
-        #menu {
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: 0px;
-            right: -100vw;
-            z-index: 10;
-            border: 1px solid #c9c9c9;
-            background-color: black;
-            text-align: center;
-            transition: All 0.2s ease;
-            -webkit-transition: All 0.2s ease;
-            -moz-transition: All 0.2s ease;
-            -o-transition: All 0.2s ease;
-            overflow-y: auto;
-        }
-
-        .hmmenu {
-            display: inline;
-        }
-
-        .hmlink {
-            display: block;
-            margin: 8vh;
-            font-size: 32pt;
-            color: white;
-            transition: 1s all;
-        }
-
-        .hmlink:hover .hmtxt {
-            transform: translateX(1vw);
-            color: red;
-            opacity: 0.85;
-        }
-
-        #menu.open {
-            right: 0px;
-        }
-
-        .page_cover.open {
-            display: block;
-        }
-
-        .page_cover {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 4;
-            display: none;
-        }
-
-        /* ---------------------------------- */
-        /*-- 배경 --*/
-        /* ---------------------------------- */
-
-        .mineimg {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            opacity: 0.1;
-            z-index: -500;
-            pointer-events: none;
-        }
-    </style>
-
     <header>
-
-        <div class="navi">
-            <div class="sns">
-                <a class="snsicon" href="aboutme.html">
-                    <i class="far fa-user"></i></a>
-                <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14">
-                    <i class="fab fa-facebook-f"></i></a>
-                <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/"> <i class="fab fa-linkedin-in"></i></a>
-                <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas">
-                    <i class="fab fa-behance"></i></a>
-                <a class="snsicon" href="https://www.instagram.com/moday_floating/">
-                    <i class="fab fa-instagram"></i></a>
-                <a class="snsemail" href="mailto:kjh13242@naver.com">kjh13242@naver.com</a>
-            </div>
-        </div>
 
         <div class="btn">
             <div class="menubar m1"></div>
@@ -492,91 +29,180 @@
             <div class="menubar m3"></div>
         </div>
         <div onclick="history.back();" class="page_cover"></div>
+
         <div id="menu">
-            <div class="hmmenu">
-                <a class="hmlink" href="index.html">
-                    <p>Home</p>
-                </a>
-                <a class="hmlink" href="product-epsilon.html">Project Epsilon</a>
-                <a class="hmlink" href="product-fog.html">Beyond the Fog</a>
-                <a class="hmlink" href="webapp-seed.html">The seed of Typographic</a>
-                <a class="hmlink" href="research-3d.html">Forth Dimension Simulator</a>
-                <a class="hmlink" href="aboutme.html">About me</a>
+            <div class="menubox">
+                <a class="hmlink" href="product-holdrive.html">HOLDRIVE
+                    <img class="hmlinkimg" src="images/holdrive.jpg"></a>
+
+                <a class="hmlink" href="product-epsilon.html">Project Epsilon
+                    <img class="hmlinkimg" src="images/Index/product/epsilon/main.jpg"></a>
+
+                <a class="hmlink" href="product-fog.html">Beyond the Fog
+                    <img class="hmlinkimg" src="images/Index/product/fog/main.png"></a>
+
+                <a class="hmlink" href="product-torch.html">Torch
+                    <img class="hmlinkimg" src="images/Index/product/torch/long%20shot%202%20fire.jpg"></a>
+
+                <a class="hmlink" href="editorial-light.html">Bring the light
+                    <img class="hmlinkimg" src="images/Index/editorial/light/light.jpg"></a>
+
+                <a class="hmlink" href="research-3d.html">Forth Dimension Simulator
+                    <img class="hmlinkimg" src="images/Index/research/3d/simul.jpg"></a>
+
+                <a class="hmlink" href="webapp-seed.html">The seed of Typography
+                    <img class="hmlinkimg" src="images/Index/webapp/seed/app17.jpg"></a>
+
+
+                <a class="hmlink" href="product.html">ARCHIVE</a>
+
             </div>
-            <div onclick="history.back();" class="close">
-                <div class="x1"></div>
-                <div class="x2"></div>
+            <div onclick="history.back();" class="closebtn">
+                <div class="menubar x1"></div>
+                <div class="menubar x2"></div>
             </div>
         </div>
 
+        <a class="toptext" href="index.html">Jinhyuk Kwon</a>
 
-        <a class="archive" href="research.html">
-            <div class="archivet t1">A</div>
-            <div class="archivet t2">R</div>
-            <div class="archivet t3">C</div>
-            <div class="archivet t4">H</div>
-            <div class="archivet t5">I</div>
-            <div class="archivet t6">V</div>
-            <div class="archivet t7">E</div>
-        </a>
+        <div class="navi">
+            <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14">FACEBOOK /</a>
+            <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/">LINKED IN /</a>
+            <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas">BEHANCE /</a>
+            <a class="snsicon" href="https://www.instagram.com/moday_floating/">INSTAGRAM /</a>
+            <a class="snsicon" href="mailto:kjh13242@naver.com">MAIL</a>
+        </div>
+
+        <p class="scrolltxt">SCROLL</p>
     </header>
 
     <div id="fullpage">
-
         <div class="section">
-            <p class="toptext tx1">Monsieur</p>
-            <p class="toptext tx2">or</p>
-            <p class="toptext tx3">Dried</p>
-            <p class="toptext tx4">Atmospheric</p>
-            <p class="toptext tx5">Youth</p>
+            <div class="welcome-section content-hidden">
+                <div class="content-wrap">
+                    <ul class="fly-in-text">
+                        <li>M</li>
+                        <li>O</li>
+                        <li>D</li>
+                        <li>A</li>
+                        <li>Y</li>
+                    </ul>
+                    <a href="#" class="enter-button">I'm ready to explore</a>
+                </div>
+            </div>
+            <a class="boxlink">
+                <p class="namemiddle">New Project</p>
+                <a class="name" href="research-holdrive.html">HOLDRIVE</a>
+                <img class="boximg grayimg" src="images/holdrive.jpg">
+                <!--<video data-autoplay class="boximg" id="movies"  autobuffer="true" muted="muted" loop="loop">
+                    <source data-src="images/HOLDRIVE-jinhyuk%20kwon.mp4" type="video/mp4"></video>-->
 
-            <a class="toptextsub" href="aboutme.html">Design resercher<br>Jinhyuk Kwon</a>
 
-            <img class="mineimg" src="images/mine2.jpg">
-            <div class="scroll"></div>
-        </div>
-
-        <div class="section">
-            <p class="name">Project Epsilon</p>
-            <p class="namesub">프로젝트 엡실론<br>2018 Laptop</p>
-
-            <a class="boxlink" href="product-epsilon.html">
-                <img class="boximg" src="images/Index/product/epsilon/main.jpg">
             </a>
             <div class="scroll"></div>
         </div>
-
-        <div class="section">
-            <p class="name">Beyond the Fog</p>
-            <p class="namesub">안개를 넘어<br>2018 Art piece</p>
-
-            <a class="boxlink" href="product-fog.html">
-                <video id="movies" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true" muted="muted" loop="loop">
-                    <source src="images/Index/product/fog/001 intro door fornt cut.mp4" type="video/mp4"></video>
-            </a>
-            <div class="scroll"></div>
-        </div>
-
-        <div class="section">
-            <p class="name">The seed of<br>Typographic</p>
-            <p class="namesub">타이포 그라피 도구 - 글씨<br>2017 Application</p>
-
-            <a class="boxlink" href="webapp-seed.html">
-                <img class="boximg" src="images/Index/webapp/seed/app17.jpg">
-            </a>
-            <div class="scroll"></div>
-        </div>
-
 
         <div class="box section">
-            <p class="name">Forth<br>Dimension<br>Simulator</p>
-            <p class="namesub">형상변형 시뮬레이터<br>2017 Software</p>
+            <div class="boxh1con">
 
-            <a class="boxlink" href="research-3d.html">
-                <img class="boximg" src="images/Index/research/3d/simul.jpg">
-            </a>
-            <div class="scroll2" onclick="gotoFirstSession()"></div>
+                <a class="boxh1" href="product-epsilon.html">
+                    <p class="boxh1txt">Project<br>Epsilon</p>
+                    <img class="boxh1img" data-src="images/Index/product/epsilon/main.jpg">
+                    <p class="h1sub">프로젝트 앱실론</p>
+                </a>
+
+                <a class="boxh1" href="product-fog.html">
+                    <p class="boxh1txt">Beyond<br>the<br>fog</p>
+                    <video class="boxh1img" id="movies" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true" muted="muted" loop="loop">
+                        <source data-src="images/Index/product/fog/001 intro door fornt cut.mp4" type="video/mp4"></video>
+                    <p class="h1sub">안개를 넘어</p>
+                </a>
+            </div>
+
+            <div class="scroll"></div>
         </div>
+
+        <div class="box section">
+
+            <div class="boxh1con">
+
+                <a class="boxh1" href="product-torch.html">
+                    <p class="boxh1txt">Torch</p>
+                    <img class="boxh1img" src="images/Index/product/torch/long%20shot%202%20fire.jpg">
+                    <p class="h1sub">횃불</p>
+                </a>
+
+                <a class="boxh1" href="editorial-light.html">
+                    <p class="boxh1txt">Bring<br>the<br>light</p>
+                    <img class="boxh1img" src="images/Index/editorial/light/light.jpg">
+                    <p class="h1sub">빛을 가져오다</p>
+                </a>
+
+            </div>
+
+            <div class="scroll"></div>
+
+        </div>
+
+        <div class="box section">
+
+            <div class="boxh1con">
+
+                <a class="boxh1" href="research-3d.html">
+                    <p class="boxh1txt">4D<br>Simulator</p>
+                    <img class="boxh1img" src="images/Index/research/3d/simul.jpg">
+                    <p class="h1sub">4차원 형상변형 시뮬레이터</p>
+                </a>
+
+                <a class="boxh1" href="webapp-seed.html">
+                    <p class="boxh1txt">Seed<br>of<br>Typography</p>
+                    <img class="boxh1img" src="images/Index/webapp/seed/app17.jpg">
+                    <p class="h1sub">글씨</p>
+                </a>
+
+            </div>
+
+            <div class="scroll"></div>
+        </div>
+
+        <div class="box section">
+            <a class="archive" href="research.html">
+                <div class="archivet t1">A</div>
+                <div class="archivet t2">R</div>
+                <div class="archivet t3">C</div>
+                <div class="archivet t4">H</div>
+                <div class="archivet t5">I</div>
+                <div class="archivet t6">V</div>
+                <div class="archivet t7">E</div>
+
+            </a>
+
+            <video id="movies" onmouseover="this.play()" autoplay="true" autobuffer="true" muted="muted" loop="loop" style="position: absolute; top: 30vh; left: 25vw; width: 50vw; height: 40vh;">
+                <source data-src="images/Index/art/sky.mp4" type="video/mp4"></video>
+
+
+            <div class="scroll"></div>
+        </div>
+
+        <div class="section">
+            <video data-autoplay class="boximg" id="movies" autobuffer="true" muted="muted" loop="loop">
+                <source data-src="images/Index/art/trail.mp4" type="video/mp4"></video>
+
+            <div class="maincredit">
+
+            </div>
+
+            <a class="moday" style="position: absolute; 
+            left: 50%; top: 50%;
+            transform: translate(-50%) translateY(-50%); 
+
+            font-size: 14em; 
+            color: white;" href="aboutme.html">Moday</a>
+
+            <div class="scroll" onclick="gotoFirstSession()"></div>
+
+        </div>
+
     </div>
 
     <script>
@@ -588,8 +214,8 @@
                 //options here
                 licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
                 autoScrolling: true,
-                lazyLoading: false,
-                onLeave: function(origin, destination, direction){
+                lazyLoading: true,
+                onLeave: function(origin, destination, direction) {
                     var fullpageData = fullpage_api.getFullpageData() || {};
                     clearTimeout(timeout);
                     if (destination.isLast) {
@@ -621,6 +247,22 @@
         function gotoFirstSession() {
             fullpage_api.moveTo(1);
         };
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            var welcomeSection = $('.welcome-section'),
+                enterButton = welcomeSection.find('.enter-button');
+
+            setTimeout(function() {
+                welcomeSection.removeClass('content-hidden');
+            }, 800);
+
+            enterButton.on('click', function(e) {
+                e.preventDefault();
+                welcomeSection.addClass('content-hidden').fadeOut();
+            });
+        });
     </script>
 
 </body>

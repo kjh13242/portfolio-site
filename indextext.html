@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MODAY</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/explaincss.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noto+Sans+KR:100,400,700|Roboto:700|Playfair+Display:400,500&display=swap&subset=korean" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <script type="text/javascript" src="js/fullpage.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <div class="btn">
+            <div class="menubar m1"></div>
+            <div class="menubar m2"></div>
+            <div class="menubar m3"></div>
+        </div>
+        <div onclick="history.back();" class="page_cover"></div>
+
+        <div id="menu">
+            <a class="hmlink" href="index.html">Home</a><br>
+            <a class="hmlink" href="product-epsilon.html">Project Epsilon</a><br>
+            <a class="hmlink" href="product-fog.html">Beyond the Fog</a><br>
+            <a class="hmlink" href="webapp-seed.html">The seed of Typographic</a><br>
+            <a class="hmlink" href="research-3d.html">Forth Dimension Simulator</a><br>
+            <a class="hmlink" href="aboutme.html">About me</a>
+
+            <div onclick="history.back();" class="close">
+                <div class="x1"></div>
+                <div class="x2"></div>
+            </div>
+        </div>
+
+        <a class="toptext" href="aboutme.html">Jinhyuk Kwon</a>
+
+        <div class="navi">
+            <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14">FACEBOOK /</a>
+            <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/">LINKED IN /</a>
+            <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas">BEHANCE /</a>
+            <a class="snsicon" href="https://www.instagram.com/moday_floating/">INSTAGRAM /</a>
+            <a class="snsicon" href="mailto:kjh13242@naver.com">MAIL</a>
+            
+            <p class="scrolltxt">SCROLL</p>
+        </div>
+    </header>
+
+    <div id="fullpage">
+        <div class="section">
+
+        <div class="boxlink">
+            <p class="namemiddle">프로젝트 앱실론
+            <p class="name" href="product-epsilon.html">Project Epsilon
+                <p class="namesub">2018 Laptop | With Mingyu Seo | 2019 JAN Yanko design Published
+
+        </div>
+
+        <img class="boximg" src="images/Index/product/epsilon/main.jpg">
+
+        <div class="scroll"></div>
+    </div>
+
+        <div class="section">
+
+         
+    <div class="explainimg-group">
+        <img class="explainimg" src="images/Index/product/epsilon/1.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/2.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/3.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/4.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/5.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/6.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/7.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/8.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/9.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/10.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/11.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/12.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/13.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/14.jpg">
+        <img class="explainimg" src="images/Index/product/epsilon/15.jpg">
+        <div class="infotxt">
+            <p class="img-1_text">Project Epsilon</p>
+            <p class="img-1_subtext">2018 LAPTOP</p>
+            <p class="img-1_subtext2">Team Project with Mingyu Seo, Finland</p>
+        </div>
+    </div>
+
+            <div class="scroll"></div>
+        </div>
+
+    </div>
+
+    <script>
+        var isLastSection = false;
+        var timeout = null;
+
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+                autoScrolling: true,
+                lazyLoading: true,
+                onLeave: function(origin, destination, direction) {
+                    var fullpageData = fullpage_api.getFullpageData() || {};
+                    clearTimeout(timeout);
+                    if (destination.isLast) {
+                        timeout = setTimeout(function() {
+                            isLastSection = true;
+                        }, (fullpageData.scrollingSpeed || 700) * 2);
+                    } else {
+                        isLastSection = false;
+                    }
+                },
+            });
+
+            $(".btn").click(function() {
+                $("#menu,.page_cover,html").addClass("open");
+                window.location.hash = "#open";
+            });
+
+            window.onhashchange = function() {
+                if (location.hash != "#open") {
+                    $("#menu,.page_cover,html").removeClass("open");
+                }
+            };
+
+            $(window).on('wheel', function(event) {
+                if (isLastSection) gotoFirstSession();
+            });
+        });
+
+        function gotoFirstSession() {
+            fullpage_api.moveTo(1);
+        };
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            var welcomeSection = $('.welcome-section'),
+                enterButton = welcomeSection.find('.enter-button');
+
+            setTimeout(function() {
+                welcomeSection.removeClass('content-hidden');
+            }, 800);
+
+            enterButton.on('click', function(e) {
+                e.preventDefault();
+                welcomeSection.addClass('content-hidden').fadeOut();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

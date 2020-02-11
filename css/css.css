@@ -23,7 +23,6 @@ a:link,
 a:visited,
 a:active {
     text-decoration: none;
-    color: gray
 }
 
 a:hover {
@@ -179,7 +178,6 @@ body {
 /* ---------------------------------- */
 
 .explainimg-group {
-    position: absolute;
     margin-bottom: 5%;
     padding-bottom: 5%;
     text-align: center;
@@ -213,17 +211,6 @@ body {
 .videobcg {
     width: 100%;
     margin-bottom: 200px;
-}
-
-.snsg {
-    margin-top: 4px;
-    margin-left: 20px;
-}
-
-.snsicon {
-    float: left;
-    font-size: 1.5em;
-    margin-right: 0.5em;
 }
 
 .download {
@@ -271,6 +258,7 @@ footer {
     transform: scale(1);
     filter: blur(0px);
     opacity: 1;
+    color: black
 }
 
 
@@ -357,38 +345,7 @@ footer {
     transition: .3s all;
 }
 
-.boxlink:hover .boximg {
-    filter: grayscale(0);
-    transform: scale(1.03);
-}
-
-.boxlink:hover #movies {
-    filter: grayscale(0);
-    transform: scale(1.03);
-}
-
-.boxlink:hover .name {
-    font-size: 3.2vw;
-}
-
 .btn:hover .menubar {
-    background-color: white;
-}
-
-.btn:hover .m1 {
-    width: 30px
-}
-
-.btn:hover .m2 {
-    width: 30px
-}
-
-.close:hover .x1 {
-    box-shadow: 0 5px 15px white;
-}
-
-.close:hover .x2 {
-    box-shadow: 0 5px 15px white;
 }
 
 .archive:hover .t1 {
@@ -424,3 +381,5 @@ footer {
     color: white;
     transition-duration: 1.2s;
 }
+
+.archive {transition: 1s ease-out;}

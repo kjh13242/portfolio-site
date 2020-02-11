@@ -108,7 +108,7 @@
         options = deepExtend({
             //navigation
             menu: false,
-            anchors:[],
+            anchors:['firstPage', 'secondPage', 'thirdPage'],
             lockAnchors: false,
             navigation: false,
             navigationPosition: 'right',
@@ -138,7 +138,7 @@
             offsetSections: false,
             resetSliders: false,
             fadingEffect: false,
-            normalScrollElements: null,
+            normalScrollElements: '#element2',
             scrollOverflow: false,
             scrollOverflowReset: false,
             scrollOverflowHandler: window.fp_scrolloverflow ? window.fp_scrolloverflow.iscrollHandler : null,
