@@ -1,8 +1,10 @@
 .boxlink {
-    height: 50vh;
+    position: absolute;
+    top:0;
+    height: 100vh;
     width: 50vw;
     background-color: white;
-    z-index: 999;
+    z-index: 1;
 }
 
 .name {
@@ -92,14 +94,12 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
-    z-index: -999;
+    z-index: 2;
 }
 
 .section {
     height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-
+    width: 100;
 }
 
 /* ---------------------------------- */
@@ -109,7 +109,7 @@
 .scroll {
     position: absolute;
     top: 90vh;
-    left: 50vw;
+    left: 51vw;
     height: 0;
     box-sizing: border-box;
 
