@@ -137,15 +137,15 @@ video {
     top: 21vh;
     left: 50%;
     transform: translate(-50%);
-    width: 64vw;
+    width: 100vw;
 }
 
 .boxh1 {
     position: relative;
     overflow: hidden;
-    width: 20vw;
+    width: 40vw;
     height: 58vh;
-    margin: 0 6vw 0 6vw;
+    margin: 0 5vw 0 5vw;
     float: left;
 }
 

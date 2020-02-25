@@ -25,41 +25,17 @@
 
     .explainimg2 {
         object-fit: cover;
-        width: 100vw;
+        width: 96vw;
         margin-bottom: 80px;
     }
-
-    .bluedot {
-        position: absolute;
-        top: 200px;
-        left: 50%;
-        transform: translatex(-50%);
-
-        width: 20px;
-        height: 20px;
-        border-radius: 20px;
-        border: 1px solid #0016EE;
-        background: linear-gradient(to top, #0016EE 100%, white 0%);
-
-        animation: 1s ease;
-        animation-name: filldot;
-    }
-
-    @keyframes filldot {
-
-        50% {
-            background: linear-gradient(to top, #0016EE 50%, white 50%);
-        }
-
-        100% {
-            background: linear-gradient(to top, #0016EE 100%, white 0%);
-        }
-    }
-
-    .ex2 {
-        margin-top: 600px;
-    }
 </style>
+
+<div class="bigPictureWrapper">
+    <div class="bigPicture">
+    </div>
+</div>
+
+
 <div class="section">
 
     <div class="boxlink">
@@ -80,10 +56,6 @@
 
     <!--메뉴-->
     <div class="gallery-menu">
-        <div class="fixedtitle">
-            <p class="img-1_text">The Seed of typography</p>
-            <p class="img-1_subtext">App / HICCA with IDAS, 2017</p>
-        </div>
 
         <div class="ykcon">
             <img class="yk" src="images/Index/webapp/seed/logo.png">
@@ -116,15 +88,20 @@
 
 </body>
 
+  
+    <a class="gobutton gotop" style="bottom: 90px;" href="#">
+        <div class="arrow" style="transform: rotate(-135deg);
+-webkit-transform: rotate(-135deg);"></div>
+    </a>
+
+    <a onclick="goBack()" class="gobutton" href="#" >
+        <div class="arrow" style="transform: rotate(135deg);
+-webkit-transform: rotate(135deg);"></div>
+    </a>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="js/fadeout.js"></script>
-
-<!--
-<footer>
-  <p>Jinhyuk Kwon<br>User experience designer</p>
-</footer>
--->
 
 </html>

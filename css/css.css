@@ -145,33 +145,6 @@ body {
     object-position: top;
 }
 
-/* 상단 타이틀 고정 */
-
-
-.change {
-    opacity: 0;
-}
-
-.ykcon {
-    position: absolute;
-    top: 50px;
-    right: 80px;
-    opacity: 0.8;
-    font-size: 9pt;
-    text-align: center;
-    font-family: 'Source Sans Pro';
-    font-weight: 600;
-}
-
-.yk {
-    height: 4vh;
-    margin-bottom: 10px;
-}
-
-.yklong {
-    width: 8vw;
-    margin-bottom: 20px;
-}
 
 /* ---------------------------------- */
 /* 컨텐츠 */
@@ -190,7 +163,7 @@ body {
 
 .explainimg {
     object-fit: cover;
-    width: 60vw;
+    width: 80vw;
     margin-bottom: 40px;
 }
 
@@ -208,6 +181,7 @@ body {
 .infotxt {
     margin-top: 160px;
 }
+
 /* ---------------------------------- */
 /* 이미지, 영상 요소*/
 /* ---------------------------------- */
@@ -350,8 +324,7 @@ footer {
     transition: .3s all;
 }
 
-.btn:hover .menubar {
-}
+.btn:hover .menubar {}
 
 .archive:hover .t1 {
     color: white;
@@ -387,4 +360,37 @@ footer {
     transition-duration: 1.2s;
 }
 
-.archive {transition: 1s ease-out;}
+.archive {
+    transition: 1s ease-out;
+}
+
+/*-----------------------------------
+이미지 확대
+--------------------------------*/
+
+.bigPictureWrapper {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.5);
+    overflow: scroll;
+}
+
+.bigPicture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: black;
+
+}
+
+.bigPicture img {
+    height: 90vh;
+}

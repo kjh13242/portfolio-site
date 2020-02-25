@@ -4,14 +4,15 @@
     height: 100vh;
     width: 50vw;
     background-color: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 .name {
-    position: relative;
+    position: absolute;
     display: inline-block;
 
-    margin-left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%);
 
 
@@ -40,11 +41,12 @@
 }
 
 .namesub {
-    position: relative;
+    position: absolute;
     display: inline-block;
 
-    margin-top: 30vh;
-    margin-left: 50%;
+    bottom: 5vh;
+    left: 50%;
+
     width: 100%;
 
     transform: translate(-50%);
@@ -71,7 +73,7 @@
 
 .namemiddle {
     position: relative;
-    margin-top: 48vh;
+    margin-top: 46vh;
 
     font-size: 1em;
     font-family: 'Noto Sans KR';
@@ -94,20 +96,20 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
-    z-index: 2;
+    z-index: 1;
+
+    transform: translate(-6px);
+
 }
 
 .section {
     height: 100vh;
-    width: 100vw;
     transition: 1s all;
 }
 
 .section.section0 {
-    opacity: 0;    margin-top: -20vh;
-
-    width: 100vw;
-
+    opacity: 0;
+    margin-top: -50vh;
 }
 
 
@@ -178,4 +180,58 @@
 
 .nav-up {
     top: -40px;
+}
+
+.gobutton {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: black;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 2px;
+    margin: 16px 0 0 16px;
+    transition: 1s all;
+}
+
+.gobutton:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.gallery-menu {
+    width: 98vw;
+    height: 300px;
+    padding: 0;
+}
+
+.ykcon {
+    font-size: 9pt;
+    text-align: center;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;    margin-top: 60px;
+
+}
+
+.yk {
+    height: 80px;
+}
+
+.yklong {
+    width: 8vw;
+    margin-bottom: 20px;
+}
+
+.yktxt  {
+    color: black;
 }

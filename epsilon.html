@@ -28,6 +28,11 @@
         color: white;
     }
 </style>
+<div class="bigPictureWrapper">
+    <div class="bigPicture">
+    </div>
+</div>
+
 
 <div class="section">
     <div class="boxlink">
@@ -62,10 +67,6 @@
             <div class="scroll"></div>
         </div>
 
-        <!--메인으로-->
-        <a id="gomain" href="index.html">
-            <img class="gomain" src="images/%EB%AC%B4%EC%A0%9C-1.png">
-        </a>
 
         <!--메뉴-->
         <div class="gallery-menu">
@@ -79,38 +80,38 @@
         </div>
 
 
-        <div class="section">
 
-            <div class="explainimg-group">
-                <img class="explainimg" src="images/Index/product/epsilon/1.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/2.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/3.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/4.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/5.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/6.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/7.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/8.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/9.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/10.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/11.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/12.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/13.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/14.jpg">
-                <img class="explainimg" src="images/Index/product/epsilon/15.jpg">
-            </div>
+        <div class="explainimg-group">
+            <img class="explainimg" src="images/Index/product/epsilon/1.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/2.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/3.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/4.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/5.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/6.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/7.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/8.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/9.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/10.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/11.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/12.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/13.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/14.jpg">
+            <img class="explainimg" src="images/Index/product/epsilon/15.jpg">
         </div>
-   
+
     </div>
-
+  
 </body>
-<script>
-    $(window).scroll(function() {
-        var $el = $('.section');
+  
+    <a class="gobutton gotop" style="bottom: 90px;" href="#">
+        <div class="arrow" style="transform: rotate(-135deg);
+-webkit-transform: rotate(-135deg);"></div>
+    </a>
 
-        if ($(this).scrollTop() >= 20) $el.addClass('section0');
-        else $el.removeClass('section0');
-    });
-</script>
+    <a onclick="goBack()" class="gobutton" href="#" >
+        <div class="arrow" style="transform: rotate(135deg);
+-webkit-transform: rotate(135deg);"></div>
+    </a>
 
-
+<script type="text/javascript" src="js/fadeout.js"></script>
 </html>

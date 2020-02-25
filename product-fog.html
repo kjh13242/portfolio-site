@@ -17,8 +17,7 @@
 
 <!-- 배경 -->
 <style>
-    body {
-    }
+    body {}
 
     .gallery-menu {
         padding-top: 4vh;
@@ -88,12 +87,17 @@
         margin-bottom: 400px;
         transition: 6s ease-out;
     }
-    
+
     .explainimg-group {
         background-color: #e0e0e0;
-    }        
-
+    }
 </style>
+
+<div class="bigPictureWrapper">
+    <div class="bigPicture">
+    </div>
+</div>
+
 <div class="section">
 
     <div class="boxlink">
@@ -110,12 +114,6 @@
 </div>
 
 <body class="commandcenter">
-
-    <!--메인으로-->
-    <a id="gomain" href="index.html">
-        <img class="gomain" src="images/%EB%AC%B4%EC%A0%9C-1.png">
-    </a>
-    <!--본문-->
 
 
     <!--메뉴-->
@@ -162,12 +160,22 @@
     </div>
 
 </body>
+  
+    <a class="gobutton gotop" style="bottom: 90px;" href="#">
+        <div class="arrow" style="transform: rotate(-135deg);
+-webkit-transform: rotate(-135deg);"></div>
+    </a>
+
+    <a onclick="goBack()" class="gobutton" href="#" >
+        <div class="arrow" style="transform: rotate(135deg);
+-webkit-transform: rotate(135deg);"></div>
+    </a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            <script type="text/javascript" src="js/fadeout.js"></script>
+<script type="text/javascript" src="js/fadeout.js"></script>
 
 <script>
     /* 스크롤 탐지 */
