@@ -154,7 +154,7 @@ video {
     object-position: top;
     height: 100%;
     width: 100%;
-    transition: .5s linear;
+    transition: .3s all;
     filter: blur(100px);
 }
 
@@ -453,7 +453,7 @@ video {
 /* ---------------------------------- */
 
 .welcome-section {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;

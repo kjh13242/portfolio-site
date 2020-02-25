@@ -181,6 +181,11 @@ body {
     margin-bottom: 5%;
     padding-bottom: 5%;
     text-align: center;
+    overflow: scroll;
+    width: auto;
+    height: auto;
+    transition: 1s all;
+
 }
 
 .explainimg {

@@ -9,38 +9,45 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/explaincss.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung|Playfair+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
-    
+
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noto+Sans+KR:100,400,700|Roboto:700|Playfair+Display:400,500&display=swap&subset=korean" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <script type="text/javascript" src="js/fullpage.js"></script>
 
 </head>
 <style>
     .explainimg {
         margin: 0;
     }
-    
+
     a {
         color: white;
     }
 </style>
 
-<div class="section">
+<body>
+    <div class="section">
+        <div class="boxlink">
+            <p class="namemiddle">프로젝트 앱실론
+                <p class="name" href="product-epsilon.html">Project Epsilon
+                    <p class="namesub">2018 Laptop | With Mingyu Seo | 2019 JAN Yanko design Published
 
-    <div class="boxlink">
-        <p class="namemiddle">프로젝트 앱실론
-            <p class="name" href="product-epsilon.html">Project Epsilon
-                <p class="namesub">2018 Laptop | With Mingyu Seo | 2019 JAN Yanko design Published
+        </div>
 
+        <img class="boximg" src="images/Index/product/epsilon/main.jpg">
+
+        <p class="scrolltxt">SCROLL</p>
+        <div class="scroll"></div>
     </div>
 
-    <img class="boximg" src="images/Index/product/epsilon/main.jpg">
-
-    <p class="scrolltxt">SCROLL</p>
-    <div class="scroll"></div>
-</div>
-
-<body>
-
+    <!--메인으로-->
+    <a id="gomain" href="index.html">
+        <img class="gomain" src="images/%EB%AC%B4%EC%A0%9C-1.png">
+    </a>
 
     <!--메뉴-->
     <div class="gallery-menu">
@@ -73,19 +80,18 @@
         <img class="explainimg" src="images/Index/product/epsilon/15.jpg">
 
     </div>
-
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="js/fadeout.js"></script>
+<script>
+    $(window).scroll(function() {
+        var $el = $('.section');
+
+        if ($(this).scrollTop() >= 20) $el.addClass('section0');
+        else $el.removeClass('section0');
+    });
+
+</script>
 
 
-<!--
-<footer>
-  <p>Jinhyuk Kwon<br>User experience designer</p>
-</footer>
--->
 
 </html>
