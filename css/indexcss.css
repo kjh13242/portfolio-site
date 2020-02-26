@@ -385,7 +385,7 @@ video {
 }
 
 .menubox {
-    margin-top: 25vh;
+    margin-top: 20vh;
     margin-left: 25vw;
     width: 75vw;
     height: 50vh;
@@ -579,9 +579,7 @@ video {
 
 }
 
-.hmlink:hover .hmlinkimg {
-    opacity: 1;
-}
+
 
 .menubox:hover a:hover {
     opacity: 1;
