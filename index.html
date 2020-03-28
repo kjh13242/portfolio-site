@@ -186,11 +186,11 @@
 
             </div>
 
-            <a class="moday" style="position: absolute; 
+            <a class="moday" style="position: absolute;
             left: 50%; top: 50%;
-            transform: translate(-50%) translateY(-50%); 
+            transform: translate(-50%) translateY(-50%);
 
-            font-size: 14em; 
+            font-size: 14em;
             color: white;" href="aboutme.html">Moday</a>
 
             <div class="scroll" onclick="gotoFirstSession()"></div>
@@ -240,16 +240,24 @@
     <script type="text/javascript">
         $(function() {
             var welcomeSection = $('.welcome-section'),
-                enterButton = welcomeSection.find('.enter-button');
+                enterButton = welcomeSection.find('.enter-button'),
+                visitedWelcomeSection = sessionStorage.getItem('visitedWelcomeSection');
 
-            setTimeout(function() {
-                welcomeSection.removeClass('content-hidden');
-            }, 800);
+            if (visitedWelcomeSection) {
+                welcomeSection.fadeOut();
+            } else {
+                setTimeout(function() {
+                    welcomeSection.removeClass('content-hidden');
 
-            enterButton.on('click', function(e) {
-                e.preventDefault();
-                welcomeSection.addClass('content-hidden').fadeOut();
-            });
+                    // welcome-section을 본 경우 현재 시간을 저장
+                    sessionStorage.setItem('visitedWelcomeSection', Date.now().toString());
+                }, 800);
+
+                enterButton.on('click', function(e) {
+                    e.preventDefault();
+                    welcomeSection.addClass('content-hidden').fadeOut();
+                });
+            }
         });
     </script>
 
