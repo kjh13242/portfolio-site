@@ -305,8 +305,8 @@ video {
 
 .btn {
     position: absolute;
-    top: 50%;
-    left: 5vw;
+    top: 6vh;
+    right: 5vw;
     width: 25px;
     height: 25px;
     z-index: 1;
@@ -318,9 +318,8 @@ video {
 
 .closebtn {
     position: absolute;
-    top: 50%;
-    left: 5vw;
-    width: 25px;
+    top: 6vh;
+    right: 5vw;    width: 25px;
     height: 25px;
     z-index: 999;
     cursor: pointer;
