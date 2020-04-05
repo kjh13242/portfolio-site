@@ -155,7 +155,7 @@ video {
     height: 100%;
     width: 100%;
     transition: .3s all;
-    filter: blur(100px);
+    filter: blur(60px);
 }
 
 .boxh1txt {
@@ -292,11 +292,20 @@ video {
 
 @keyframes glow {
     50% {
-    text-shadow: 0 0 .02em, 0 0 .1em;
+        text-shadow: 0 0 .02em, 0 0 .1em;
     }
 
-    100% {
-    }
+    100% {}
+}
+
+.moday {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%) translateY(-50%);
+
+    font-size: 14em;
+    color: white;
 }
 
 /* ---------------------------------- */
@@ -319,7 +328,8 @@ video {
 .closebtn {
     position: absolute;
     top: 6vh;
-    right: 5vw;    width: 25px;
+    right: 5vw;
+    width: 25px;
     height: 25px;
     z-index: 999;
     cursor: pointer;
@@ -492,17 +502,17 @@ video {
     text-align: center;
     font-size: 1em;
     text-decoration: none;
-        
+
     color: black;
-    
+
     opacity: 1;
     margin-top: 30px;
-      
+
     border: 1px white solid;
-    
+
     transition: all 1s ease 3s;
-    
-    
+
+
 }
 
 .enter-button:hover {
@@ -591,4 +601,65 @@ video {
 
 .moday:hover {
     text-shadow: 0 0 .1em, 0 0 .6em;
+}
+
+
+/* ---------------------------------- */
+/* 반응형 */
+/* ---------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+    .toptext,
+    .btn,
+    .closebtn {
+        top: 20px;
+    }
+
+    .scrolltxt {
+        left: 58vw;
+    }
+
+    .navi {
+        left: -500vw;
+    }
+
+    .namemiddle {
+        font-size: 3vw;
+    }
+
+    .name {
+        font-size: 10vw;
+    }
+
+    .boxh1con {
+        top: 10vh;
+    }
+
+    .boxh1 {
+        width: 90vw;
+        height: 40vh;
+        margin: 0 5vw 5vh 5vw;
+    }
+
+    .h1sub {
+        width: 100vw;
+    }
+
+    .archive {
+        top: 30vh;
+        left: 10vw;
+        display: block;
+        transform: translate(0);
+        transform: rotate(90deg);
+    }
+
+    .archivet {
+        color: white;
+
+    }
+
+    .moday {
+        font-size: 10vw;
+    }
 }

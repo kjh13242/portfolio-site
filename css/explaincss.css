@@ -235,3 +235,44 @@
 .yktxt  {
     color: black;
 }
+
+/* ---------------------------------- */
+/* 반응형 */
+/* ---------------------------------- */
+
+@media screen and (max-width: 768px) {
+    .boximg{
+        top: 0;
+        left: 0;
+        height: 50vh;
+        width: 100vw;
+    }
+    
+    .boxlink {
+        top: 50vh;
+        height: 50vh;
+        width: 100vw;
+    }
+    
+    .name{
+        top:0;
+        width: 100vw;
+    }
+    
+    .namemiddle {
+    position: relative;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    text-align: center;
+    margin-top: -4vh;
+    }
+    
+    .namesub {
+        width: 80vw;
+    }
+    
+    .scroll, .scrolltxt {
+        opacity: 0;
+    }
+}
