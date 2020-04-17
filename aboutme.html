@@ -4,39 +4,19 @@
 <head>
     <meta charset="utf-8">
     <title>MODAY</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/indexcss.css">
 
 
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung|Playfair+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noto+Sans+KR:100,400,700|Roboto:400,700|Playfair+Display:400,500&display=swap&subset=korean" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/backgroundTransition.css" />
 </head>
 
 <!-- 배경 -->
 <style>
-    body {
-        font-family: "Playfair Display";
-
-    }
-
-    a:link,
-    a:visited,
-    a:active {
-        text-decoration: none;
-        color: gray
-    }
-
-    a:hover {
-        text-decoration: none;
-        color: black
-    }
-
-
     .mine {
         position: fixed;
         top: 50%;
@@ -51,12 +31,30 @@
     }
 
     .gallery-menu2 {
-        display: flex;
-        white-space: nowrap;
-
         position: absolute;
-        margin-left: 200px;
-        margin-top: 22vw;
+        top: 600px;
+        left: 20vw;
+
+        width: 40vw;
+
+        font-family: 'Noto+Sans+KR';
+        font-weight: 700;
+        z-index: 500;
+
+        animation-duration: 3s;
+        animation-name: slidein;
+    }
+
+
+    .gallery-menu3 {
+        position: absolute;
+        top: 600px;
+        left: 60vw;
+
+        width: 40vw;
+
+        font-family: 'Noto+Sans+KR';
+        font-weight: 700;
         z-index: 500;
 
         animation-duration: 3s;
@@ -65,19 +63,18 @@
 
     @keyframes slidein {
         from {
-            margin-left: 300px;
+            top: 700px;
             opacity: 0;
         }
 
         to {
-            margin-left: 200px;
+            top: 600px;
             opacity: 1;
         }
     }
 
     .explaintext {
-        float: left;
-        margin-right: 200px;
+        margin-bottom: 100px;
         overflow-x: hidden;
     }
 
@@ -90,12 +87,15 @@
     }
 
     .mine2 {
+        position: absolute;
+        top: 1600px;
+        left: 50%;
         height: 200px;
         width: 500px;
         object-fit: cover;
         position: flex;
-        margin-left: 1000px;
-        margin-top: -50px;
+        transform: translate(-50%);
+        margin-bottom: 300px;
     }
 
     .img-1_text {
@@ -103,48 +103,96 @@
         margin-left: 200px;
         margin-top: 12%;
     }
+
+
+    .name {
+        top: 300px;
+        color: black;
+        border-top: 2px black solid;
+        letter-spacing: normal;
+    }
+    
+    .name:hover{
+        color: black;
+    }
 </style>
 
 <body class="commandcenter">
 
     <!--메인으로-->
-    <a class="toptext" href="index.html">Jinhyuk Kwon</a>
+    <a class="toptext" href="index.html">Kwon<p class="toptexthover">
+            JinHyuk<br>UX Designer</p></a>
 
     <img class="mine" src="images/mine.jpg">
 
     <!--메뉴-->
 
-    <p class="img-1_text">Jinhyuk Kwon</p>
+    <div class="boxlink">
+        <a class="name" href="research-holdrive.html">kjh13242@naver.com</a>
+    </div>
 
     <div class="gallery-menu2">
-        <p class="explaintext">Resercher,<br> Graphic designer <br><br> 1991 -</p>
+        <p class="explaintext">권진혁<br>연구자, 디자이너</p>
 
         <p class="explaintext">
-            kjh13242@naver.com<br>
-            +82 1099095393<br><br><br>
+            경험 <br><br>
+
+            광주과학기술원 GIST<br>
+            스마트 3D 프린팅 연구소, 연구원<br>
+            2016 - 2017, 대한민국 광주광역시 <br><br>
+
+            아스트로닉스<br>
+            제품디자인, 인턴<br>
+            2015 - 2016, 대한민국 군산시
         </p>
 
         <p class="explaintext">
-            EDUCATION <br><br>
-            IDAS, Hongik University / Master of Digital Media <br>
-            2017 - , South Korea<br><br>
+            학위 <br><br>
+            홍익대학교 국제디자인전문대학원<br>석사, 디지털미디어디자인 <br>
+            2017 - 2020<br><br>
 
-            Aalto University / Exchange student - COID <br>
-            2018 Fall - Winter, Finland <br><br>
+            알토 대학교<br>석사 교환학생 - COID <br>
+            2018 가을 - 겨울, 핀란드 <br><br>
 
-            Kunsan National University / BA, Industrial Design <br>
-            2010 - 2016, South Korea <br><br>
-
-            Damyang technical high school / Architecture <br>
-            2008 - 2010, South Korea
+            국립군산대학교<br>학사, 산업디자인 <br>
+            2010 - 2016
         </p>
+
+        <p class="explaintext">
+            자격<br><br>
+
+            시각디자인기사<br>
+            2018<br><br>
+            건축도장기능사<br>
+            2009
+        </p>
+    </div>
+
+    <div class="gallery-menu3">
+        <p class="explaintext">Jinhyuk Kwon<br>Resercher, Designer</p>
 
         <p class="explaintext">
             WORK EXPERIENCE <br><br>
 
             Gwangju Institute of Science and Technology<br>
             Resercher in Smart 3D Printing Laboratory <br>
-            2016 - 2017, South Korea
+            2016 - 2017, South Korea <br><br>
+
+            Astronix<br>
+            Product Design, Intern<br>
+            2015 - 2016, South Korea
+        </p>
+
+        <p class="explaintext">
+            EDUCATION <br><br>
+            IDAS, Hongik University<br>Master of Digital Media <br>
+            2017 - 2020, South Korea<br><br>
+
+            Aalto University<br>Exchange student - COID <br>
+            2018 Fall - Winter, Finland <br><br>
+
+            Kunsan National University<br>BA, Industrial Design <br>
+            2010 - 2016, South Korea
         </p>
 
         <p class="explaintext">
@@ -155,43 +203,23 @@
             Craftsman Architectural Painting<br>
             2009, South Korea
         </p>
-        <img class="mine2" src="images/mine2.jpg">
 
     </div>
     
-     <div class="navi">
-            <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14">FACEBOOK /</a>
-            <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/">LINKED IN /</a>
-            <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas">BEHANCE /</a>
-            <a class="snsicon" href="https://www.instagram.com/moday_floating/">INSTAGRAM /</a>
-            <a class="snsicon" href="mailto:kjh13242@naver.com">MAIL</a>
-        </div>
+    <img class="mine2" src="images/mine2.jpg">
+
+    <div class="navi">
+        <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14">FACEBOOK /</a>
+        <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/">LINKED IN /</a>
+        <a class="snsicon" href="https://www.behance.net/zzzzzzzsafafas">BEHANCE /</a>
+        <a class="snsicon" href="https://www.instagram.com/moday_floating/">INSTAGRAM /</a>
+        <a class="snsicon" href="mailto:kjh13242@naver.com">MAIL</a>
+    </div>
 
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<script>
-    (function() {
-        function scrollHorizontally(e) {
-            e = window.event || e;
-            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-            document.documentElement.scrollLeft -= (delta * 80); // Multiplied by 40
-            document.body.scrollLeft -= (delta * 80); // Multiplied by 40
-            e.preventDefault();
-        }
-        if (window.addEventListener) {
-            // IE9, Chrome, Safari, Opera
-            window.addEventListener("mousewheel", scrollHorizontally, false);
-            // Firefox
-            window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-        } else {
-            // IE 6/7/8
-            window.attachEvent("onmousewheel", scrollHorizontally);
-        }
-    })();
-</script>
 
 </html>

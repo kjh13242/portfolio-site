@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/explaincss.css">
+    <link rel="stylesheet" href="css/indexcss.css">
+
 
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung|Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
@@ -18,7 +20,38 @@
 <body class="commandcenter">
 
     <!--메인으로-->
-        <a class="toptext" href="index.html">Jinhyuk Kwon</a>
+    <header>
+
+        <div class="btn">
+            <div class="menubar m1"></div>
+            <div class="menubar m2"></div>
+            <div class="menubar m3"></div>
+        </div>
+        <div onclick="history.back();" class="page_cover"></div>
+
+        <div id="menu">
+            <div class="menubox">
+                <a class="hmlink" href="index.html#firstPage">HOME</a>
+                <a class="hmlink" href="index.html#secondPage">WORKS</a>
+                <a class="hmlink" href="research.html">ARCHIVE</a>
+                <a class="hmlink" href="aboutme.html">ABOUT ME</a>
+
+            </div>
+            <div onclick="history.back();" class="closebtn">
+                <div class="menubar x1"></div>
+                <div class="menubar x2"></div>
+            </div>
+        </div>
+
+        <a class="toptext" href="index.html">Kwon<p class="toptexthover">
+                JinHyuk<br>UX Designer</p></a>
+
+        <div class="navi">
+            <a class="snsicon" href="aboutme.html">Contact
+            </a>
+        </div>
+
+    </header>
 
     <!--본문-->
 
@@ -28,10 +61,7 @@
         <a class="box" href="product.html">-</a><br>
         <a class="box" href="webapp.html">WEB/APP</a><br>
         <a class="box" href="editorial.html">EDITORIAL</a><br>
-        <a class="box" href="aboutme.html">I am designer.</a><br><br>
-
-        <a class="box" href="art.html">ARTISTIC</a>
-        <div id="target"></div>
+    <div id="target"></div>
     </div>
 
     <!--메뉴-->
@@ -76,11 +106,20 @@
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
+<script>
+    $(document).ready(function() {
+        $(".btn").click(function() {
+            $("#menu,.page_cover,html").addClass("open");
+            window.location.hash = "#open";
+        });
 
-<!--
-<footer>
-  <p>Jinhyuk Kwon<br>User experience designer</p>
-</footer>
--->
+        window.onhashchange = function() {
+            if (location.hash != "#open") {
+                $("#menu,.page_cover,html").removeClass("open");
+            }
+        };
+
+    });
+</script>
 
 </html>
