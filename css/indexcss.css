@@ -470,7 +470,7 @@ video {
 }
 
 @keyframes enter {
-    50%{    letter-spacing: .08em;
+    50%{    letter-spacing: .05em;
     }100%{letter-spacing: normal;}}
 
 .enter-button:hover {
