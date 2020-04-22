@@ -456,27 +456,31 @@ video {
 }
 
 .enter-button {
+
     display: block;
     text-align: center;
     font-size: 1em;
+    letter-spacing: .1em;
     text-decoration: none;
 
-    color: white;
+    color: black;
 
     opacity: 1;
     margin-top: 30px;
 
     transition: all 1s ease 3s;
-        animation: enter 3s infinite;
+        animation: enter 20s infinite;
+   
+    background-color: white;
+    padding: 6px;
+    opacity: .8;
 }
 
-@keyframes enter {
-    50%{    letter-spacing: .05em;
-    }100%{letter-spacing: normal;}}
 
 .enter-button:hover {
-    color: white;
-    font-style: italic;
+    letter-spacing: .4em;
+    opacity: 1;
+    color: red;
 }
 
 .content-hidden .fly-in-text li {
