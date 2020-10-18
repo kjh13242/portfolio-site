@@ -6,62 +6,65 @@
     <title>MODAY</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/explaincss.css">
-    <link rel="stylesheet" href="css/indexcss.css">
+    <link rel="stylesheet" href="css/css2.css">
+    <link rel="stylesheet" href="css/indexcss2.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung|Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/link"></script>
 </head>
 
+<style>
+
+</style>
 <!-- 배경 -->
 
 <body class="commandcenter">
 
-    <!--메인으로-->
-       <header>
+    <div class="header1">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <!--전체 메뉴 버튼-->
+    <header>
 
         <div class="btn">
             <div class="menubar m1"></div>
             <div class="menubar m2"></div>
-            <div class="menubar m3"></div>
         </div>
-        <div onclick="history.back();" class="page_cover"></div>
 
         <div id="menu">
             <div class="menubox">
-                <a class="hmlink" href="index.html#firstPage">HOME</a><br>
-                <a class="hmlink" href="index.html#secondPage">WORKS</a><br>
+        <a class="hmlink" href="index.html">HOME</a><br>
                 <a class="hmlink" href="research.html">ARCHIVE</a><br>
                 <a class="hmlink" href="aboutme.html">ABOUT ME</a>
 
                 <a class="email" href="mailto:kjh13242@naver.com">UX Designer<br>Jinhyuk Kwon<br><br><br><br><br>Based in Seoul, South Korea<br>
                     kjh13242@naver.com</a>
             </div>
+
             <div onclick="history.back();" class="closebtn">
                 <div class="menubar x1"></div>
                 <div class="menubar x2"></div>
             </div>
         </div>
 
-        <a class="toptext" href="index.html">Kwon<p class="toptexthover">
-                JinHyuk<br>UX Designer</p></a>
+        <!-- 상단 로고 -->
 
-        <div class="navi">
-            <a class="snsicon" href="aboutme.html">Contact
-            </a>
-        </div>
+        <a class="toptext" href="index.html">KWON<p class="toptexthover">JinHyuk</p></a>
+
 
     </header>
-    <!--본문-->
+    <!--좌측 네비-->
 
     <div class="mainlinksub">
-        <p class="AR">ARCHIVE</p><br><br>
-        <a class="box" href="research.html">RESEARCH</a><br>
-        <a class="box" href="product.html">PRODUCT</a><br>
-        <a class="box" href="webapp.html">-</a><br>
-        <a class="box" href="editorial.html">EDITORIAL</a><br>
-        <div id="target"></div>
+        <a class="box" href="research.html">RESEARCH</a>
+        <a class="box" href="product.html">PRODUCT</a>
+        <a class="box" href="webapp.html">WEB/APP</a>
+        <a class="box" href="editorial.html">EDITORIAL</a>
     </div>
 
     <!--메뉴-->
@@ -78,23 +81,4 @@
     </div>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $(".btn").click(function() {
-            $("#menu,.page_cover,html").addClass("open");
-            window.location.hash = "#open";
-        });
-
-        window.onhashchange = function() {
-            if (location.hash != "#open") {
-                $("#menu,.page_cover,html").removeClass("open");
-            }
-        };
-
-    });
-</script>
 </html>

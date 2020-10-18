@@ -1,0 +1,26 @@
+    $(document).ready(function() {
+        $(".btn").click(function() {
+            $("#menu,html").addClass("open");
+            window.location.hash = "#open";
+        });
+
+        window.onhashchange = function() {
+            if (location.hash != "#open") {
+                $("#menu,html").removeClass("open");
+            }
+        };
+
+    });
+
+
+    $(window).scroll(function() {
+
+        var wins = $(this).scrollTop();
+        var hei = $('.archivemenu').outerHeight();
+        var hei2 = $(window).outerHeight();
+        var height = hei - hei2;
+        var bar = (wins / height) * 100;
+
+        $('#myBar').css('width', bar + '%');
+
+    });
