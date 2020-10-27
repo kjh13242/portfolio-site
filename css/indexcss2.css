@@ -11,21 +11,20 @@ html.open {
 .toptext {
     position: fixed;
     font-size: 1.2em;
-    font-family: 'Roboto';
+    font-family: 'NeueMontreal';
     top: 22vh;
     left: 5vw;
     width: 20vw;
     line-height: 1.4em;
-    font-weight: 700;
-    z-index: 500;
+    letter-spacing: 1px;
+    font-weight: bold;
     color: #17202A;
     float: left;
     transition: .5s ease-out;
 }
 
 .toptexthover {
-    font-family: 'Roboto';
-    font-weight: 400;
+    font-weight: normal;
 
     opacity: 0;
     transition: 1s all;
@@ -72,7 +71,7 @@ html.open {
 
 .menubar {
     position: absolute;
-    background-color: white;
+    background-color: #fbfbfb;
     transition: .2s all;
 }
 
@@ -166,7 +165,7 @@ html.open {
     display: inline-block;
     font-size: 6em;
     letter-spacing: .06em;
-    color: white;
+    color: #fbfbfb;
     transition: 1s all;
     margin-bottom: 16px;
 }
@@ -175,11 +174,11 @@ html.open {
     position: absolute;
     bottom: 20vh;
     left: 80vw;
-    color: white;
-    font-family: 'Noto Sans KR';
+    color: #fbfbfb;
+    font-family: 'NeueMontreal';
     font-size: 1em;
-    font-weight: 400;
-    border-left: 1px solid white;
+    font-weight: normal;
+    border-left: 1px solid #fbfbfb;
     padding-left: 20px;
     cursor: pointer;
 }
@@ -187,17 +186,17 @@ html.open {
 
 
 .toptext:hover {
-    color: black;
+    color: #17202A;
 }
 
 .snsicon:hover {
     color: black;
-    text-decoration: underline;
+    background-color: white;
 }
 
 .toptext:hover .toptexthover {
     opacity: 1;
-    color: black;
+    color: #17202A;
 }
 
 
@@ -206,6 +205,7 @@ html.open {
     color: black;
 
 }
+
 
 /* ---------------------------------- */
 /* 반응형 */
@@ -268,4 +268,3 @@ html.open {
         margin-right: 10px;
     }
 
-}

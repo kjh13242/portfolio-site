@@ -6,167 +6,203 @@
     <title>MODAY</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/indexcss.css">
+    <link rel="stylesheet" href="css/css2.css">
+    <link rel="stylesheet" href="css/indexcss2.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noto+Sans+KR:100,400,700|Roboto:400,700|Playfair+Display:400,500&display=swap&subset=korean" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="css/backgroundTransition.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/link"></script>
 </head>
+
 
 <!-- 배경 -->
 <style>
-    .mine {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        margin-top: -250px;
-        margin-left: -150px;
 
-        width: 300px;
-        height: 500px;
-        object-fit: cover;
-        z-index: -1;
-    }
-
-    .gallery-menu2 {
-        position: absolute;
-        top: 600px;
-        left: 20vw;
-
-        width: 40vw;
-
-        font-family: 'Noto+Sans+KR';
-        font-weight: 700;
-        z-index: 500;
-
-        animation-duration: 3s;
-        animation-name: slidein;
-    }
-
-
-    .gallery-menu3 {
-        position: absolute;
-        top: 600px;
-        left: 60vw;
-
-        width: 40vw;
-
-        font-family: 'Noto+Sans+KR';
-        font-weight: 700;
-        z-index: 500;
-
-        animation-duration: 3s;
-        animation-name: slidein;
-    }
-
-    @keyframes slidein {
-        from {
-            top: 700px;
-            opacity: 0;
-        }
-
-        to {
-            top: 600px;
-            opacity: 1;
-        }
-    }
-
-    .explaintext {
-        margin-bottom: 100px;
-        overflow-x: hidden;
-    }
-
-    .sns {
-        position: fixed;
-        margin-left: 200px;
-        margin-bottom: 10vh;
-        z-index: 900;
-        bottom: 0;
-    }
-
-    .mine2 {
-        position: absolute;
-        top: 1600px;
-        left: 50%;
-        height: 200px;
-        width: 500px;
-        object-fit: cover;
-        position: flex;
-        transform: translate(-50%);
-        margin-bottom: 300px;
-    }
-
-    .img-1_text {
-        position: fixed;
-        margin-left: 200px;
-        margin-top: 12%;
-    }
-
-
-    .name {
-        top: 300px;
-        color: black;
-        border-top: 2px black solid;
-        letter-spacing: normal;
-    }
-    
-    .name:hover{
-        color: black;
-    }
 </style>
+
+<!-- 배경 -->
 
 <body class="commandcenter">
 
-    <!--메인으로-->
-    <a class="toptext" href="index.html">Kwon<p class="toptexthover">
-            JinHyuk<br>UX Designer</p></a>
+    <div class="header1">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <!--전체 메뉴 버튼-->
+    <header>
 
-    <img class="mine" src="images/mine.jpg">
+        <div class="btn">
+            <div class="menubar m1"></div>
+            <div class="menubar m2"></div>
+        </div>
+
+        <div id="menu">
+            <div class="menubox">
+                <a class="hmlink" href="index.html">HOME</a><br>
+                <a class="hmlink" href="research.html">ARCHIVE</a><br>
+                <a class="hmlink" href="aboutme.html">ABOUT ME</a>
+                <a class="email" href="mailto:kjh13242@naver.com">UX Designer<br>Jinhyuk Kwon<br><br><br><br><br>Based in Seoul, South Korea<br>
+                    kjh13242@naver.com</a>
+            </div>
+
+            <div onclick="history.back();" class="closebtn">
+                <div class="menubar x1"></div>
+                <div class="menubar x2"></div>
+            </div>
+        </div>
+
+        <!-- 상단 로고 -->
+
+        <a class="toptext" href="index.html">KWON<p class="toptexthover">JinHyuk</p></a>
+
+
+    </header>
+    <!--좌측 네비-->
+
+    <div class="mainlinksub">
+        <a class="box" href="webapp.html">INTERFACE</a>
+        <a class="box" href="research.html">RESEARCH</a>
+        <a class="box" href="product.html">PRODUCT</a>
+        <a class="box" href="editorial.html">GRAPHIC</a>
+    </div>
+
+
 
     <!--메뉴-->
 
-    <div class="boxlink">
-        <a class="name" href="research-holdrive.html">kjh13242@naver.com</a>
+    <div class="allcontent">
+        <div class="chapter">
+            <p class="explaintext" style="border-color: lightgray;">Jinhyuk Kwon</p>
+
+            <p class="explaintext">2020</p>
+            <p class="explaintext">2019</p>
+            <p class="explaintext">2018</p>
+            <p class="explaintext">2017</p>
+            <p class="explaintext">2016</p>
+            <p class="explaintext" style="margin-bottom: 300px;">2015</p>
+            <p class="explaintext">1991</p>
+        </div>
+        <div class="line v1">
+            <p class="linetxt li1">Master, Digital Media Design</p>
+            <p class="linetxt li2">Hongik University International Design Advanced School</p>
+        </div>
+        <div class="line v2">
+            <p class="linetxt li1">Master Course exchange student
+            <p class="linetxt li2">Aalto University, Finland</p>
+        </div>
+        <div class="line v3">
+            <p class="linetxt li1">BA, Industrial Design
+            <p class="linetxt li2">Kunsan National University</p>
+        </div>
+
+
+        <div class="line v4">
+            <p class="linetxt li1">International Online Internship
+            <p class="linetxt li2">VDAS, Vietnam Design Association</p>
+        </div>
+        <div class="line v5">
+            <p class="linetxt li1">BK21 Reserch Assistace</p>
+        </div>
+        <div class="line v55">
+        </div>
+        <div class="line v6">
+            <p class="linetxt li1">UX Designer
+            <p class="linetxt li2">Gwangju Institute of Science of Technology</p>
+        </div>
+        <div class="line v7">
+            <p class="linetxt li1">Product Design intern
+            <p class="linetxt li2">Astronix</p>
+        </div>
     </div>
 
-    <div class="gallery-menu2">
-        <p class="explaintext">권진혁<br>연구자, 디자이너</p>
+    <!--
+           <div class="gallery-menu">
+            <div class="chapter">
+                <p class="explaintext t1">2020</p>
+                <p class="explaintext t2">Gwangju Institute of Science and Technology</p>
 
-        <p class="explaintext">
-            경험 <br><br>
+                <p class="explaintext t3">Resercher in Smart 3D Printing Laboratory</p>
+            </div>
+            <div class="chapter">
+                <p class="explaintext t2">12312321202131231221</p>
+                <p class="explaintext t3">광주과학기술원 GIST</p>
+            </div>
+        </div>
+        <div class="gallery-menu">
+            <p class="explaintext t1">2019</p>
+            <p class="explaintext t2">광주과학기술원 GIST</p>
+            <p class="explaintext t3">스마트 3D 프린팅 연구소, 연구원</p>
+            <p class="explaintext t4">2016 - 2017, 대한민국 광주광역시</p>
+        </div>
+        <div class="gallery-menu">
+            <p class="explaintext t1">2018</p>
+            <p class="explaintext t2">광주과학기술원 GIST</p>
+            <p class="explaintext t3">스마트 3D 프린팅 연구소, 연구원</p>
+            <p class="explaintext t4">2016 - 2017, 대한민국 광주광역시</p>
+        </div>
+        <div class="gallery-menu">
+            <p class="explaintext t1">2017</p>
+            <p class="explaintext t2">광주과학기술원 GIST</p>
+            <p class="explaintext t3">스마트 3D 프린팅 연구소, 연구원</p>
+            <p class="explaintext t4">2016 - 2017, 대한민국 광주광역시</p>
+        </div>
+        <div class="gallery-menu">
+            <p class="explaintext t1">2016</p>
+            <p class="explaintext t2">광주과학기술원 GIST</p>
+            <p class="explaintext t3">스마트 3D 프린팅 연구소, 연구원</p>
+            <p class="explaintext t4">2016 - 2017, 대한민국 광주광역시</p>
+        </div>
 
-            광주과학기술원 GIST<br>
-            스마트 3D 프린팅 연구소, 연구원<br>
-            2016 - 2017, 대한민국 광주광역시 <br><br>
 
-            아스트로닉스<br>
-            제품디자인, 인턴<br>
-            2015 - 2016, 대한민국 군산시
-        </p>
+        <div class="gallery-menu">
+            <p class="explaintext t1">이름<br>Name</p>
+            <p class="explaintext t2">경험</p>
+            <p class="explaintext t3">경험</p>
 
-        <p class="explaintext">
-            학위 <br><br>
-            홍익대학교 국제디자인전문대학원<br>석사, 디지털미디어디자인 <br>
-            2017 - 2020<br><br>
+        </div>
+        <div class="gallery-menu">
+            <p>권진혁<br>연구자, 디자이너</p>
+            <p class="explaintext">
+                경험 <br><br>
 
-            알토 대학교<br>석사 교환학생 - COID <br>
-            2018 가을 - 겨울, 핀란드 <br><br>
 
-            국립군산대학교<br>학사, 산업디자인 <br>
-            2010 - 2016
-        </p>
 
-        <p class="explaintext">
-            자격<br><br>
+                아스트로닉스<br>
+                제품디자인, 인턴<br>
+                2015 - 2016, 대한민국 군산시
+            </p>
+        </div>
+        <div class="gallery-menu">
+            <p class="explaintext">
+                학위 <br><br>
+                홍익대학교 국제디자인전문대학원<br>석사, 디지털미디어디자인 <br>
+                2017 - 2020<br><br>
 
-            시각디자인기사<br>
-            2018<br><br>
-            건축도장기능사<br>
-            2009
-        </p>
+                알토 대학교<br>석사 교환학생 - COID <br>
+                2018 가을 - 겨울, 핀란드 <br><br>
+
+                국립군산대학교<br>학사, 산업디자인 <br>
+                2010 - 2016
+            </p>
+        </div>
+
     </div>
+
+
+
+    <!--
+    <p class="explaintext">
+        자격<br><br>
+
+        시각디자인기사<br>
+        2018<br><br>
+        건축도장기능사<br>
+        2009
+    </p>
 
     <div class="gallery-menu3">
         <p class="explaintext">Jinhyuk Kwon<br>Resercher, Designer</p>
@@ -205,9 +241,6 @@
         </p>
 
     </div>
-    
-    <img class="mine2" src="images/mine2.jpg">
-
     <div class="navi">
         <a class="snsicon" href="https://www.facebook.com/jinhyuk.kwon.14">FACEBOOK /</a>
         <a class="snsicon" href="https://www.linkedin.com/in/jinhyuk-kwon-008370146/">LINKED IN /</a>
@@ -215,11 +248,8 @@
         <a class="snsicon" href="https://www.instagram.com/moday_floating/">INSTAGRAM /</a>
         <a class="snsicon" href="mailto:kjh13242@naver.com">MAIL</a>
     </div>
+-->
 
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 </html>

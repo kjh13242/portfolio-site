@@ -2,6 +2,20 @@
 /* 정의 */
 /* ---------------------------------- */
 
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('../fonts/NeueMontreal-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('../fonts/NeueMontreal-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .progress-bar {
     position: fixed;
     top: 0;
@@ -16,7 +30,8 @@
     display: none;
 }
 
-html,body {
+html,
+body {
     height: 100%;
 }
 
@@ -65,7 +80,7 @@ body {
 }
 
 .box {
-    margin-bottom: 14px;
+    margin-bottom: 18px;
 }
 
 /* ---------------------------------- */
@@ -78,7 +93,6 @@ body {
     left: 34vw;
     width: 66vw;
     min-height: 100%;
-    background-color: #fbfbfb;
     z-index: 1;
 }
 
@@ -306,13 +320,13 @@ a {
     display: none;
     justify-content: center;
     align-items: center;
-    top: 0%;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: gray;
+    background-color: #17202A;
     z-index: 100;
     background: rgba(255, 255, 255, 0.5);
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .bigPicture {
@@ -320,7 +334,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #17202A;
 
 }
 
@@ -330,17 +344,140 @@ a {
 
 
 
-
-.nununu:hover {
-    letter-spacing: .5px;
+.nununu {
+    font-family: 'NeueMontreal';
+    font-weight: bold;
+    letter-spacing: -2px;
+    font-size: 44px;
+    line-height: 64px;
+    color: #1b1d1f;
 }
 
-.vresearch, .vproduct, .vwebapp, .veditorial {
-display: none;}
+.nununu:hover {}
 
-.turn {
-display: block;}
+.aa1 {
+    position: absolute;
+    top: -30px;
+    left: 250px;
+    height: 400px;
+    width: 400px;
+    z-index: -1;
+    transform: rotate(128deg);
+    object-fit: contain;
+}
 
-.archivemnenu.turn {
-    display: none;
+.blank {
+    background: #1b1d1f;
+    font-family: 'Playfair display';
+    font-style: italic;
+    font-size: 34px;
+    letter-spacing: 0;
+    padding: 0 14px;
+    transition: 1s ease-out;
+}
+
+.blank:hover {
+    background: white;
+    color: #1b1d1f;
+}
+
+.backface {
+    z-index: -999;
+}
+
+/*-----------------------------------
+자기소개 공간
+--------------------------------*/
+
+.allcontent {
+    position: absolute;
+    top: 20vh;
+    left: 34vw;
+    font-family: 'NeueMontreal';
+    font-weight: bold;
+}
+
+.explaintext {
+    width: 66vw;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 200px;
+}
+
+.line {
+    width: 4px;
+    position: absolute;
+}
+
+.linetxt {
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 4px;
+    background-color: #fbfbfb;
+    padding: 1px 8px;
+}
+
+.li1{
+    padding-bottom: 0px; 
+    margin-bottom: 0;
+}
+
+.li2{
+    padding-top: 0;
+    font-weight: normal;
+}
+.v1 {
+    background-color: darkblue;
+    top: 250px;
+    left: 200px;
+    height: 600px;
+}
+
+.v2 {
+    background-color: greenyellow;
+    top: 493px;
+    left: 260px;
+    height: 110px;
+}
+
+.v3 {
+    background-color: green;
+    top: 1170px;
+    left: 200px;
+    height: 400px;
+}
+
+.v4 {
+    background-color: red;
+    top: 0;
+    left: 300px;
+    height: 140px;
+}
+
+.v5 {
+    background-color: dimgray;
+    top: 380px;
+    left: 400px;
+    height: 113px;
+}
+
+.v55 {
+    background-color: dimgray;
+    top: 600px;
+    left: 400px;
+    height: 220px;
+}
+
+.v6 {
+    background-color: orangered;
+    top: 850px;
+    left: 300px;
+    height: 240px;
+}
+
+.v7 {
+    background-color: darkgray;
+    top: 1170px;
+    left: 500px;
+    height: 140px;
 }
