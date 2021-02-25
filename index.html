@@ -111,7 +111,39 @@
             font-size: 38px;
             line-height: 56px;
             letter-spacing: 1.4px;
+        }
 
+        @keyframes fade {
+            100% {
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+
+        .nutxt {
+            opacity: 0;
+            animation: fade 1s;
+            animation-fill-mode: forwards;
+            margin-bottom: 18px;
+        }
+
+        .nu1 {
+            animation-delay: .2s;
+        }
+
+        .nu2 {
+            animation-delay: .4s;
+        }
+
+        .nu3 {
+            animation-delay: .6s;
+        }
+        
+        .scroll {
+            opacity: 0;
+            animation: fade 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
         }
 
 
@@ -196,11 +228,11 @@
 
         .t8 {
             position: absolute;
-       
+
             width: 82vw;
             height: 10vw;
             object-fit: cover;
-            
+
             transition: opacity 2s ease-out;
         }
 
@@ -216,8 +248,11 @@
 
     <div class="section" style="width: 100%; height: 100vh; overflow: hidden; background-color: white;">
 
-        <p class="nununu" style="border: 0px; z-index: 1;">Designer. Jinhyuk Kwon<br>Seoul, South Korea<br>User Experience, Service Design<br>
-        </p>
+        <div class="nununu" style="border: 0px; z-index: 1;">
+            <p class="nutxt nu1">Designer. Jinhyuk Kwon</p>
+            <p class="nutxt nu2">Seoul, South Korea</p>
+            <p class="nutxt nu3">User Experience, Service Design</p>
+        </div>
 
 
 
@@ -225,7 +260,7 @@
 
         <img class="nununu" style="position: absolute; width: 99%; max-width: 1920px;" src="images/Index/editorial/moday/test.png">
 
-        <p class="nununu" style=" top: 92vh; font-size: 14px; z-index: 1; display: inline-block;">Scroll Down<img style="display: block;" src="images/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EC%9D%8C-1.png" typr="png">
+        <p class="nununu scroll" style="top: 92vh; font-size: 14px; z-index: 1; display: inline-block;">Scroll Down<img style="display: block;" src="images/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EC%9D%8C-1.png" typr="png">
         </p>
     </div>
 
@@ -271,7 +306,7 @@
                 <div class="archivet t7" style="margin-right: 0;">E</div>
 
             </div>
-   <video autoplay class="t8" muted="muted" loop="loop" width="100%; height=100%; object-position: center;" style="filter: grayscale(100%) contrast(150%)">
+            <video autoplay class="t8" muted="muted" loop="loop" width="100%; height=100%; object-position: center;" style="filter: grayscale(100%) contrast(150%)">
                 <source src="images/Index/art/trail.mp4" type="video/mp4">
             </video>
 

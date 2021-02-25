@@ -31,6 +31,8 @@
     transition: 1s all;
     animation: line 3s;
     animation-fill-mode: forwards;
+    
+    margin: 0;
 
 }
 
