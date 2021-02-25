@@ -2,120 +2,301 @@
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>MODAY</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/css2.css">
-    <link rel="stylesheet" href="css/indexcss2.css">
+    <!--<link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/indexcss.css">-->
+    <link rel="stylesheet" href="css/font.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,400,700|Roboto:700|Playfair+Display:400,500&display=swap&subset=korean" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/link"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165692092-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-165692092-1');
+    </script>
+
+    <style>
+        body,
+        div,
+        p {
+            margin: 0;
+            padding: 0;
+            line-height: 36px;
+        }
+
+        body {
+            background-color: white;
+            -webkit-font-smoothing: antialiased;
+
+        }
+
+        .allcom {
+            margin: 8vw;
+            width: 84vw;
+        }
+
+        .maincontent {
+            width: 26vw;
+            height: 26vw;
+            margin: 1vw;
+            float: left;
+            background-color: black;
+            overflow: hidden;
+            transition: .5s ease;
+        }
+
+        .boximg {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: contain;
+            transition: .5s ease;
+
+        }
+
+        .boxnormal {
+            object-fit: cover;
+        }
+
+        .ub {
+            font-family: "Noto+Sans+KR";
+            font-size: 14px;
+            letter-spacing: -.3px;
+        }
+
+        .ublink {
+            margin-left: 10px;
+            color: darkslategray;
+            text-decoration: underline;
+        }
+
+        .ublink a:visited {
+            color: darkslategray;
+        }
+
+        footer {
+            display: inline-block;
+            height: 400px;
+            background-color: aliceblue;
+            color: white
+        }
+
+        .maincontent:hover .boximg {
+            transform: scale(1.04);
+            cursor: pointer;
+        }
+
+        .nununu {
+            font-family: 'Migra';
+            position: absolute;
+            top: 48vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 38px;
+            line-height: 56px;
+            letter-spacing: 1.4px;
+
+        }
+
+
+        /* ---------------------------------- */
+        /*-- 아카이브 --*/
+        /* ---------------------------------- */
+
+        .archive {
+            font-family: 'Migra';
+            font-size: 5vw;
+
+            position: absolute;
+
+            left: 50vw;
+            transform: translateX(-50%);
+
+            transition: 1s all;
+            z-index: 500;
+
+            margin-top: 4.3vw;
+        }
+
+        .archivet {
+            color: white;
+            float: left;
+            margin-right: 16px;
+            animation: glow 3s infinite;
+        }
+
+        @keyframes glow {
+            50% {
+                text-shadow: 0 0 .01em, 0 0 .2em;
+            }
+
+            100% {}
+        }
+
+        .archiveone:hover .t1 {
+            color: black;
+            transition-duration: 0s;
+        }
+
+        .archiveone:hover .t2 {
+            color: black;
+            transition-duration: .2s;
+        }
+
+        .archiveone:hover .t3 {
+            color: black;
+            transition-duration: .4s;
+        }
+
+        .archiveone:hover .t4 {
+            color: black;
+            transition-duration: .6s;
+        }
+
+        .archiveone:hover .t5 {
+            color: black;
+            transition-duration: .8s;
+        }
+
+        .archiveone:hover .t6 {
+            color: black;
+            transition-duration: 1s;
+        }
+
+        .archiveone:hover .t7 {
+            color: black;
+            transition-duration: 1.2s;
+        }
+
+        .t1,
+        .t2,
+        .t3,
+        .t4,
+        .t5,
+        .t6,
+        .t7 {
+            transition: color 1s ease-out;
+        }
+
+        .t8 {
+            position: absolute;
+       
+            width: 82vw;
+            height: 10vw;
+            object-fit: cover;
+            
+            transition: opacity 2s ease-out;
+        }
+
+        .archiveone:hover .t8 {
+            opacity: 1;
+        }
+    </style>
 </head>
 
-<style>
-
-</style>
-<!-- 배경 -->
-
-<body class="commandcenter">
-
-    <div class="header1">
-        <div class="progress-bar" id="myBar"></div>
-    </div>
-    <!--전체 메뉴 버튼-->
+<body>
     <header>
-
-        <div class="btn">
-            <div class="menubar m1"></div>
-            <div class="menubar m2"></div>
-        </div>
-
-        <div id="menu">
-            <div class="menubox">
-                <a class="hmlink" href="index.html">HOME</a><br>
-                <a class="hmlink" href="research.html">ARCHIVE</a><br>
-                <a class="hmlink" href="about2.html">ABOUT ME</a>
-
-                <a class="email" href="mailto:kjh13242@naver.com">UX Designer<br>Jinhyuk Kwon<br><br><br><br><br>Based in Seoul, South Korea<br>
-                    kjh13242@naver.com</a>
-            </div>
-
-            <div onclick="history.back();" class="closebtn">
-                <div class="menubar x1"></div>
-                <div class="menubar x2"></div>
-            </div>
-        </div>
-
-        <!-- 상단 로고 -->
-
-        <a class="toptext" href="index.html">KWON<p class="toptexthover">JinHyuk</p></a>
-
-
     </header>
-    <!--좌측 네비-->
 
-    <div class="mainlinksub">
-        <a class="box" href="webapp.html">INTERFACE</a>
-        <a class="box" href="research.html">RESEARCH</a>
-        <a class="box" href="product.html">PRODUCT</a>
-        <a class="box" href="editorial.html">GRAPHIC</a>
+    <div class="section" style="width: 100%; height: 100vh; overflow: hidden; background-color: white;">
+
+        <p class="nununu" style="border: 0px; z-index: 1;">Designer. Jinhyuk Kwon<br>Seoul, South Korea<br>User Experience, Service Design<br>
+        </p>
+
+
+
+
+
+        <img class="nununu" style="position: absolute; width: 99%; max-width: 1920px;" src="images/Index/editorial/moday/test.png">
+
+        <p class="nununu" style=" top: 92vh; font-size: 14px; z-index: 1; display: inline-block;">Scroll Down<img style="display: block;" src="images/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EC%9D%8C-1.png" typr="png">
+        </p>
     </div>
 
-    <!--메뉴 내용들-->
-    <div class="archivemenu">
-        <div class="ananan">
-            <p class="img-1_text nununu" style="border: 0px;">#Jinhyuk Kwon <span class="blank">Philosophize</span> #UX Designer<br>#Seoul #South Korea <span class="blank">Currently, In Iksan city</span><br>#User Experience <span class="blank">Art Works</span> #Service Design<br><span class="blank">Side Project</span>
-                <span class="backface">#Design Thinking #New Project</span>
-            </p>
-            <div style="position: absolute; top:-30px; left: 250px; width: 200px; height: 200px; background-color: forestgreen; border-radius: 200px; z-index: -1;"></div>
-            <img class="aa1" src="images/aa1.png">
+
+    <div class="allcom">
+        <a class="maincontent" href="research-asap.html">
+            <img class="boximg" src="images/Index/research/asap/01-coverpage.gif">
+        </a>
+
+        <a class="maincontent" href="webapp-vmark.html">
+            <video autoplay class="boximg boxnormal" muted="muted" loop="loop" width="100%; height=100%; object-position: center;">
+                <source src="images/vmark.mp4" type="video/mp4">
+            </video>
+        </a>
+
+        <a class="maincontent" href="research-holdrive.html">
+            <img class="boximg" src="images/Index/research/holdrive/HOLDRIVE1.gif" type="video/mp4">
+        </a>
+
+        <a class="maincontent" href="product-epsilon.html">
+            <video autoplay class="boximg boxnormal" muted="muted" loop="loop" width="100%; height=100%; object-position: center;">
+                <source src="images/epsilon.mp4" type="video/mp4">
+            </video>
+        </a>
+
+        <a class="maincontent" href="research-3d.html">
+            <img class="boximg boxnormal" src="images/MAC%20PRO%202019%20cut.png">
+        </a>
+
+        <a class="maincontent" href="research-broadcasting.html">
+            <img class="boximg" src="images/%EC%9D%B8%EB%B0%A9.png" type="video/mp4">
+        </a>
+
+        <a class="maincontent archiveone" style="width: 82vw; height: 10vw; margin-top: 20vw; background-color: black;" href="product 2 ko.html">
+
+            <div class="archive">
+                <div class="archivet t1">A</div>
+                <div class="archivet t2">R</div>
+                <div class="archivet t3">C</div>
+                <div class="archivet t4">H</div>
+                <div class="archivet t5">I</div>
+                <div class="archivet t6">V</div>
+                <div class="archivet t7" style="margin-right: 0;">E</div>
+
+            </div>
+   <video autoplay class="t8" muted="muted" loop="loop" width="100%; height=100%; object-position: center;" style="filter: grayscale(100%) contrast(150%)">
+                <source src="images/Index/art/trail.mp4" type="video/mp4">
+            </video>
+
+        </a>
+
+
+
+        <div class="maincontent" style=" width: 40vw; background-color: white; margin-top: 20vw;">
+            <p class="ub" style="font-size: 28px; font-family: 'Migra'; font-weight: bold;">Collaboration + Hiring. <br>Feel free to contact me.</p>
         </div>
 
-        <p class="img-1_subtext" style="margin: 160px 0px 160px 0; font-family: 'NeueMontreal'; font-size: 12px; font-weight: normal; transform: rotate(-90deg) translatey(-20px);">Scroll down</p>
+        <div class="maincontent" style=" width: 39vw; background-color: white; margin-top: 20vw; letter-spacing: px;">
 
-
-        <a class="link-1" href="research-holdrive.html">
-            <img class="menuimg" src="images/Index/research/holdrive/b1.jpg">
-
-            <p class="img-1_text">HOLDRIVE</p>
-            <p class="img-1_subtext">2020 MASTER DEGREE PROJECT</p>
-            <p class="img-1_subtext2">IDAS Hongik University</p>
-
-        </a>
-
-        <a class="link-1" href="research-3d.html">
-            <img class="menuimg" src="images/Index/research/3d/simul.jpg">
-
-            <p class="img-1_text">Smart material printing simulator</p>
-            <p class="img-1_subtext">2017-2018 SIMULATOR UI</p>
-            <p class="img-1_subtext2">Gwangju Institute of Science and Technology</p>
-        </a>
-
-        <a class="link-1" href="webapp-seed.html">
-            <img class="menuimg" src="images/Index/webapp/seed/b1.jpg">
-
-            <p class="img-1_text">The Seed of typography</p>
-            <p class="img-1_subtext">2017 APPLICATION</p>
-            <p class="img-1_subtext2">HICCA, IDAS Hongik University</p>
-        </a>
-
-        <a class="link-1" href="product-epsilon.html">
-            <img class="menuimg" src="images/Index/product/epsilon/b1.jpg">
-
-            <p class="img-1_text">Project Epsilon</p>
-            <p class="img-1_subtext">2018 LAPTOP</p>
-            <p class="img-1_subtext2">Team Project with Mingyu Seo, Finland</p>
-        </a>
-
+            <p class="ub" style="font-size: 18px; font-weight: 700; margin-bottom: 2vw;">Jinhyuk Kwon</p>
+            <p class="ub">Mail <a class="ublink" href="mailto:kjh13242@naver.com">kjh13242@naver.com</a> </p>
+            <p class="ub">Behance<a class="ublink" href="https://www.behance.net/moday">behance.net/moday</a></p>
+            <p class="ub">Linked in<a class="ublink" href="https://www.linkedin.com/in/kjh13242/">linkedin.com/in/kjh13242/</a></p>
+        </div>
     </div>
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/fadeout.js"></script>
 
 </html>

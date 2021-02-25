@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('../fonts/NeueMontreal-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Migra';
+    src: url('../fonts/Migra-Extralight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Migra';
+    src: url('../fonts/Migra-Extrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hatton';
+    src: url('../fonts/Hatton-Medium.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}

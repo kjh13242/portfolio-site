@@ -1,0 +1,404 @@
+@import url("font-awesome.min.css");
+
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+.nanummyeongjo * {
+ font-family: 'Nanum Myeongjo', serif;
+}
+/* ---------------------------------- */
+/* 정의 */
+/* ---------------------------------- */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: gray
+}
+
+a {
+    display: block;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Playfair Display';
+}
+
+/* ---------------------------------- */
+/* 메인 */
+/* ---------------------------------- */
+.AR {
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+
+.title {
+
+    font-size: 2em;
+    line-height: 1.4em;
+    overflow: hidden;
+    font-family: 'Playfair Display';
+    float: left;
+}
+
+.mainlink {
+    font-size: 1em;
+    line-height: 1.2em;
+    margin: 200px 0 0 0;
+}
+
+/* ---------------------------------- */
+/* 1차 메뉴 */
+/* ---------------------------------- */
+
+/* 레프트 네비게이션 */
+
+#gomain {
+    position: fixed;
+    margin: 5vh 0 0 5vw;
+    z-index: 600;
+}
+
+.gomain {
+    height: 50px;
+}
+
+.mainlinksub {
+    position: fixed;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin: 20vh 0 0 5vw;
+}
+
+/* 목차 */
+
+.archivemenu {
+    padding: 20vh 0 0 30vw;
+    font-family: "Nanum Myeongjo";
+    -webkit-font-smoothing: antialiased;
+}
+
+.link-1 {
+    margin-bottom: 140px;
+
+    width: 100%;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.img-1_text {
+    font-size: 32pt;
+    margin-bottom: 10px;
+    padding-right: 2vw;
+
+    border-bottom: 1px;
+    border-bottom-color: #D3D3D3;
+    border-bottom-style: solid;
+    padding-bottom: 8px;
+    color: darkslategray;
+    
+    letter-spacing: -1.2px;
+}
+
+.img-1_subtext {
+    display: inline-block;
+    font-size: 10pt;
+    padding: 2px 6px;
+    color: darkslategray;
+}
+
+.img-1_subtext2 {
+    display: inline-block;
+    font-size: 10pt;
+    padding: 2px 6px;
+    color: white
+}
+
+.menuimg {
+    position: absolute;
+    margin-left: -80px;
+    margin-top: -55px;
+    width: 300px;
+    height: 90px;
+    z-index: -999;
+    opacity: 0;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+/* ---------------------------------- */
+/* 컨텐츠 */
+/* ---------------------------------- */
+
+.explainimg-group {
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    overflow: scroll;
+    width: auto;
+    height: auto;
+    transition: 1s all;
+
+}
+
+.explainimg {
+    object-fit: cover;
+    width: 80vw;
+    margin-bottom: 40px;
+}
+
+.big {
+    width: 100vw;
+    margin-top: -20%;
+    margin-bottom: -5%;
+    padding-bottom: -5%;
+}
+
+.fixedtitle {
+    opacity: 0;
+}
+
+.infotxt {
+    margin-top: 160px;
+}
+
+/* ---------------------------------- */
+/* 이미지, 영상 요소*/
+/* ---------------------------------- */
+
+
+.videobcg {
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+.download {
+    display: inline-block;
+}
+
+/* ---------------------------------- */
+/* bottom */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/* 에니메이션 */
+/* ---------------------------------- */
+
+a {
+    transition: .1s all;
+}
+
+footer {
+    transition: 1s all;
+}
+
+
+.img-1_subtext,
+.img-1_subtext2 {
+    transition: 1s all;
+}
+
+.menuimg {
+    transition: 0.3s all;
+}
+
+.img-1_text {
+    overflow-x: hidden;
+    transition: .5s all;
+}
+
+.mainlinksub:hover a {
+    filter: blur(0.5px);
+    opacity: .5;
+    transform: scale(.98);
+}
+
+.mainlinksub:hover a:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    color: black
+}
+
+
+.link-1:hover .img-1_text {
+    transform: translateX(2vw);
+    background-color: white;
+    padding-left: 20px;
+    color: red;
+    border-bottom: 1px solid gray;
+}
+
+.link-1:hover .img-1_subtext {
+    transform: translateX(3vw);
+    color: gray;
+}
+
+.link-1:hover .img-1_subtext2 {
+    transform: translateX(3vw);
+    color: gray;
+}
+
+.link-1:hover .menuimg {
+    opacity: 1;
+}
+
+.re,
+.dis2 {
+    transition: 5s all;
+}
+
+.re.scrolltransx {
+    transform: translatey(-700px)
+}
+
+.re.scrollblur {
+    filter: blur(8px)
+}
+
+.fogtext {
+    transition: 2s all;
+}
+
+.fogtext.dis {
+    filter: blur(5px);
+    opacity: 0;
+}
+
+.pre3.dis2 {
+    filter: blur(2px);
+}
+
+.videobcg.videofog {
+    filter: blur(10px);
+    opacity: 0.2;
+}
+
+.videobcg.bright {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.fog2.bright2 {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.graph.glow {
+    filter: blur(5px);
+    opacity: 0;
+    transform: translateX(-200px)
+}
+
+.yklong:hover {
+    transition: 1s all;
+    filter: grayscale(0);
+}
+
+
+
+
+.boximg,
+#movies {
+    transition: .3s all;
+}
+
+.btn:hover .menubar {}
+
+.archive:hover .t1 {
+    color: white;
+}
+
+.archive:hover .t2 {
+    color: white;
+    transition-duration: .2s;
+}
+
+.archive:hover .t3 {
+    color: white;
+    transition-duration: .4s;
+}
+
+.archive:hover .t4 {
+    color: white;
+    transition-duration: .6s;
+}
+
+.archive:hover .t5 {
+    color: white;
+    transition-duration: .8s;
+}
+
+.archive:hover .t6 {
+    color: white;
+    transition-duration: 1s;
+}
+
+.archive:hover .t7 {
+    color: white;
+    transition-duration: 1.2s;
+}
+
+.archive {
+    transition: 1s ease-out;
+}
+
+/*-----------------------------------
+이미지 확대
+--------------------------------*/
+
+.bigPictureWrapper {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.5);
+    overflow: scroll;
+}
+
+.bigPicture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+}
+
+.bigPicture img {
+    height: 90vh;
+}

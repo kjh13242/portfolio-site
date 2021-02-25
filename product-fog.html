@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="utf-8">
+    <title>MODAY</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/explaincss.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung|Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<!-- 배경 -->
+<style>
+    body {}
+
+    .gallery-menu {
+        padding-top: 4vh;
+    }
+
+    .re {
+        position: absolute;
+        z-index: 500;
+        left: 70vw;
+        margin-top: 1200px;
+        width: 18vw;
+    }
+
+    .fogtext {
+        display: inline-block;
+        font-family: 'Song Myung';
+
+        margin-bottom: 200px;
+        margin-top: 200px;
+
+        width: 60%;
+        line-height: 1.8em;
+        font-size: 24px;
+    }
+
+    .explainimg {
+        margin-bottom: 400px;
+    }
+
+    .pre3 {
+        display: block;
+        position: absolute;
+        width: 32vw;
+        left: 10vw;
+        margin-top: -560px;
+    }
+
+    .beyondthefog {
+        z-index: 500;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 5vw;
+    }
+
+    .videobcg {
+        transition: 2s all;
+        margin-top: 300px;
+    }
+
+    .fog2 {
+        transition: 0.5s all;
+
+        margin-left: 25%;
+        font-size: 20px;
+        filter: blur(5px)
+    }
+
+    .explainimgend {
+        object-fit: cover;
+        width: 80vw;
+        margin-bottom: 100px;
+    }
+
+    .graph {
+        text-align: center;
+        margin-bottom: 400px;
+        transition: 6s ease-out;
+    }
+
+    .explainimg-group {
+        background-color: #e0e0e0;
+    }
+</style>
+
+<div class="bigPictureWrapper">
+    <div class="bigPicture">
+    </div>
+</div>
+
+<div class="section">
+
+    <div class="boxlink">
+        <p class="namemiddle">안개를 넘어
+            <p class="name" href="product-epsilon.html">Beyond the fog
+                <p class="namesub">2018 cowork with Fiskars | With Mingyu Seo | 2019 아리비아 센터에서 전시
+
+    </div>
+
+    <img class="boximg" src="images/Index/product/fog/type3.jpg">
+
+    <p class="scrolltxt">SCROLL</p>
+    <div class="scroll"></div>
+</div>
+
+<body class="commandcenter">
+
+
+    <!--메뉴-->
+    <div class="gallery-menu">
+        <div class="fixedtitle">
+            <p class="img-1_text">Beyond the Fog</p>
+            <p class="img-1_subtext">2018 ART PIECE / Team Project with Mingyu Seo, Fiskars, Finland</p>
+        </div>
+
+        <div class="ykcon">
+            <img class="yklong" src="images/Index/product/fiskars.png"><br>
+            <img class="yklong" src="images/Index/product/Aalto.png">
+        </div>
+    </div>
+
+    <div class="explainimg-group">
+
+        <p class="fogtext">We got a problem.</p>
+        <img class="re" src="images/Index/product/fog/re.png">
+
+        <img class="explainimg" src="images/Index/product/fog/pre1.jpg">
+
+
+        <p class="graph">84.6% of people are not aware of ceramic factory wastes<br>(39 people has answered the survey)</p>
+        <div class="linegraph"></div>
+        <div class="linegraph2"></div>
+
+        <img class="explainimg" src="images/Index/product/fog/pre2.jpg">
+        <img class="pre3" src="images/Index/product/fog/pre3.png">
+        <p class="fog2">The mist clears away.</p>
+
+
+        <video class="videobcg" preload="auto" loop="loop" volume="5" controls="controls">
+            <source src="images/Index/product/fog/001%20intro%20door%20fornt.mp4" type="video/mp4">
+        </video>
+
+        <p>From there we found a mountain, that made with disintegrated pieces.</p>
+        <div class="beyondthefog">
+            <p>BEYOND THE FOG</p>
+        </div>
+
+        <img class="explainimgend" src="images/Index/product/fog/type3.jpg">
+
+    </div>
+
+</body>
+  
+    <a class="gobutton gotop" style="bottom: 90px;" href="#">
+        <div class="arrow" style="transform: rotate(-135deg);
+-webkit-transform: rotate(-135deg);"></div>
+    </a>
+
+    <a onclick="goBack()" class="gobutton" href="#" >
+        <div class="arrow" style="transform: rotate(135deg);
+-webkit-transform: rotate(135deg);"></div>
+    </a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="js/fadeout.js"></script>
+
+<script>
+    /* 스크롤 탐지 */
+    $(window).scroll(function() {
+        var $el = $('.re');
+
+        if ($(this).scrollTop() >= 200) $el.addClass('scrolltransx');
+        if ($(this).scrollTop() >= 500) $el.addClass('scrollblur');
+    });
+
+    $(window).scroll(function() {
+        var $el = $('.fogtext');
+
+        if ($(this).scrollTop() >= 20) $el.addClass('dis');
+        else $el.removeClass('dis');
+
+    });
+
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 2600) {
+            $(".pre3").addClass("dis2");
+        } else {
+            $(".pre3").removeClass("dis2");
+        }
+        if (scroll >= 50) {
+            $(".videobcg").addClass("videofog");
+        } else {
+            $(".videobcg").removeClass("videofog");
+        }
+    });
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 3400) {
+            $(".fog2").addClass("bright2");
+        } else {
+            $(".fog2").removeClass("bright2");
+        }
+    });
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 3800) {
+            $(".videobcg").addClass("bright");
+        }
+    });
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 1800) {
+            $(".graph").addClass("glow");
+        } else {
+            $(".graph").removeClass("glow");
+        }
+    });
+</script>
+
+</html>
