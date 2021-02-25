@@ -6,12 +6,17 @@
     <title>MODAY</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/explaincss.css">
-    <link rel="stylesheet" href="css/indexcss.css">
+    <link rel="stylesheet" href="css/css2.css">
+    <link rel="stylesheet" href="css/indexcss2.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Song+Myung|Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/link"></script>
 </head>
 
 <style>
@@ -21,70 +26,62 @@
 
 <body class="commandcenter">
 
-    <!--메인으로-->
+    <div class="header1">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <!--전체 메뉴 버튼-->
     <header>
 
         <div class="btn">
             <div class="menubar m1"></div>
             <div class="menubar m2"></div>
-            <div class="menubar m3"></div>
         </div>
-        <div onclick="history.back();" class="page_cover"></div>
 
         <div id="menu">
             <div class="menubox">
-                <a class="hmlink" href="index.html#firstPage">HOME</a><br>
-                <a class="hmlink" href="index.html#secondPage">WORKS</a><br>
+                        <a class="hmlink" href="index.html">HOME</a><br>
                 <a class="hmlink" href="research.html">ARCHIVE</a><br>
                 <a class="hmlink" href="aboutme.html">ABOUT ME</a>
-
                 <a class="email" href="mailto:kjh13242@naver.com">UX Designer<br>Jinhyuk Kwon<br><br><br><br><br>Based in Seoul, South Korea<br>
                     kjh13242@naver.com</a>
             </div>
+
             <div onclick="history.back();" class="closebtn">
                 <div class="menubar x1"></div>
                 <div class="menubar x2"></div>
             </div>
         </div>
 
-        <a class="toptext" href="index.html">Kwon<p class="toptexthover">
-                JinHyuk<br>UX Designer</p></a>
+        <!-- 상단 로고 -->
 
-        <div class="navi">
-            <a class="snsicon" href="aboutme.html">Contact
-            </a>
-        </div>
+        <a class="toptext" href="index.html">KWON<p class="toptexthover">JinHyuk</p></a>
+
 
     </header>
-    <!--본문-->
+    <!--좌측 네비-->
 
-    <div class="mainlinksub">
-        <p class="AR">ARCHIVE</p><br><br>
-        <a href="research.html">-</a><br>
-        <a class="box" href="product.html">PRODUCT</a><br>
-        <a class="box" href="webapp.html">WEB/APP</a><br>
-        <a class="box" href="editorial.html">EDITORIAL</a><br>
-        <div id="target"></div>
+     <div class="mainlinksub">
+        <a class="box" href="webapp.html">INTERFACE</a>
+        <a class="box" href="research.html">RESEARCH</a>
+        <a class="box" href="product.html">PRODUCT</a>
+        <a class="box" href="editorial.html">GRAPHIC</a>
     </div>
+
+
+
+
 
 
     <!--메뉴-->
     <div class="archivemenu">
 
-        <a class="link-1" href="research-holdrive.html">
-            <img class="menuimg" src="images/Index/research/holdrive/b1.jpg">
-
-            <p class="img-1_text">HOLDRIVE</p>
-            <p class="img-1_subtext">2020 Degree Project</p>
-            <p class="img-1_subtext2">IDAS Hongik University</p>
-
-        </a>
+ 
 
         <a class="link-1" href="research-asap.html">
-            <img class="menuimg" src="images/Index/research/asap/asap5.jpg">
+            <img class="menuimg" src="images/Index/research/asap/asapf.png">
 
-            <p class="img-1_text">As Soon As Posible</p>
-            <p class="img-1_subtext">2020 Research</p>
+            <p class="img-1_text">KOPE</p>
+            <p class="img-1_subtext">2021 UX RESEARCH & UI/UX</p>
             <p class="img-1_subtext2">Team Project</p>
 
         </a>
@@ -93,7 +90,7 @@
             <img class="menuimg" src="images/Index/research/UX/b1.jpg">
 
             <p class="img-1_text">Study on the UX of Internet Broadcasting</p>
-            <p class="img-1_subtext">2018 PAPER</p>
+            <p class="img-1_subtext">2018 UX PAPER</p>
             <p class="img-1_subtext2">Journal of Digital Convergence Vol. 16. No. 3, pp. 407-413</p>
 
         </a>
@@ -101,8 +98,8 @@
         <a class="link-1" href="research-alley.html">
             <img class="menuimg" src="images/Index/research/alley/b1.jpg">
 
-            <p class="img-1_text">Changing the information sharing environment of alley culture and future alley culture</p>
-            <p class="img-1_subtext">2018 PAPER</p>
+            <p class="img-1_text">Changing the information sharing of alley culture and future alley culture</p>
+            <p class="img-1_subtext">2018 SERVICE DESIGN PAPER</p>
             <p class="img-1_subtext2">Journal of Service Design Convergence Vol. 2 No. 2 pp. 9-16</p>
         </a>
 
@@ -110,7 +107,7 @@
             <img class="menuimg" src="images/Index/research/social/b1.jpg">
 
             <p class="img-1_text">Industrial and social innovation design service BM support model precedent research</p>
-            <p class="img-1_subtext">2018 RESEARCH PROJECT</p>
+            <p class="img-1_subtext">2018 SERVICE DESIGN</p>
             <p class="img-1_subtext2">Service Design Council, IDAS Hongik University</p>
         </a>
 
@@ -122,35 +119,7 @@
             <p class="img-1_subtext2">HICCA, IDAS Hongik University</p>
         </a>-->
 
-        <a class="link-1" href="research-3d.html">
-            <img class="menuimg" src="images/Index/research/3d/4ds.jpg">
-
-            <p class="img-1_text">4D Simulator</p>
-            <p class="img-1_subtext">2017-2018 RESEARCH PROJECT</p>
-            <p class="img-1_subtext2">Gwangju Institute of Science and Technology</p>
-        </a>
 
     </div>
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $(".btn").click(function() {
-            $("#menu,.page_cover,html").addClass("open");
-            window.location.hash = "#open";
-        });
-
-        window.onhashchange = function() {
-            if (location.hash != "#open") {
-                $("#menu,.page_cover,html").removeClass("open");
-            }
-        };
-
-    });
-</script>
-
 </html>

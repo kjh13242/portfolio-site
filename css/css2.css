@@ -1,0 +1,483 @@
+/* ---------------------------------- */
+/* 정의 */
+/* ---------------------------------- */
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('../fonts/NeueMontreal-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('../fonts/NeueMontreal-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    height: 8px;
+    background: #17202A;
+    width: 1%;
+    transition: all .5s ease-out;
+    z-index: 998;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: gray;
+    transition: 1s all;
+}
+
+a {
+    color: #17202A;
+    display: block;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #fbfbfb;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Playfair Display';
+    overflow-x: hidden;
+}
+
+
+
+/* ---------------------------------- */
+/* 1차 메뉴 */
+/* ---------------------------------- */
+
+.mainlinksub {
+    position: fixed;
+    font-size: 1em;
+    margin: 34vh 0 0 5vw;
+}
+
+.box {
+    margin-bottom: 18px;
+}
+
+/* ---------------------------------- */
+/* 가운데 메인 메뉴들 */
+/* ---------------------------------- */
+
+.archivemenu {
+    position: absolute;
+    top: 20vh;
+    left: 34vw;
+    width: 66vw;
+    min-height: 100%;
+    z-index: 1;
+}
+
+.link-1 {
+    margin-bottom: 140px;
+    overflow: hidden;
+}
+
+.menuimg {
+    position: absolute;
+    margin-left: -80px;
+    margin-top: -55px;
+    width: 300px;
+    height: 90px;
+    z-index: -999;
+    opacity: 0;
+    object-fit: cover;
+    object-position: top;
+}
+
+.img-1_text {
+    font-size: 32pt;
+    margin-bottom: 10px;
+    padding-right: 2vw;
+
+    border-bottom: 1px;
+    border-bottom-color: #D3D3D3;
+    border-bottom-style: solid;
+    padding-bottom: 8px;
+}
+
+.img-1_subtext {
+    display: inline-block;
+    font-size: 10pt;
+    padding: 2px 6px;
+    color: #17202A;
+}
+
+.img-1_subtext2 {
+    display: inline-block;
+    font-size: 10pt;
+    padding: 2px 6px;
+    opacity: 0;
+}
+
+
+/* ---------------------------------- */
+/* 개별 컨텐츠들 정리 */
+/* ---------------------------------- */
+
+.explainimg-group {
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    overflow: scroll;
+    width: auto;
+    height: auto;
+    transition: 1s all;
+
+}
+
+.explainimg {
+    object-fit: cover;
+    width: 80vw;
+    margin-bottom: 40px;
+}
+
+.big {
+    width: 100vw;
+    margin-top: -20%;
+    margin-bottom: -5%;
+    padding-bottom: -5%;
+}
+
+.fixedtitle {
+    opacity: 0;
+}
+
+.infotxt {
+    margin-top: 160px;
+}
+
+/* ---------------------------------- */
+/* 이미지, 영상 요소*/
+/* ---------------------------------- */
+
+
+.videobcg {
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+.download {
+    display: inline-block;
+}
+
+/* ---------------------------------- */
+/* 전체 에니메이션 */
+/* ---------------------------------- */
+
+a {
+    transition: .1s all;
+}
+
+/* ---------------------------------- */
+/* 좌측 네비게이션 인터렉션 */
+/* ---------------------------------- */
+
+.mainlinksub:hover a {
+    filter: blur(0.5px);
+    opacity: .5;
+    transform: scale(.98);
+}
+
+.mainlinksub:hover a:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    color: #17202A;
+}
+
+/* ---------------------------------- */
+/* 가운데 메인 콘텐츠들 인터렉션 */
+/* ---------------------------------- */
+
+.img-1_subtext,
+.img-1_subtext2 {
+    transition: 1s all;
+}
+
+.menuimg {
+    transition: 0.3s all;
+}
+
+.img-1_text {
+    overflow-x: hidden;
+    transition: .5s all;
+}
+
+.link-1:hover .img-1_text {
+    transform: translateX(40px);
+    background-color: #fbfbfb;
+    padding-left: 20px;
+    color: red;
+    opacity: 0.85;
+    border-bottom: 1px solid #17202A;
+}
+
+.link-1:hover .img-1_subtext {
+    transform: translateX(50px);
+    color: gray;
+}
+
+.link-1:hover .img-1_subtext2 {
+    transform: translateX(50px);
+    color: gray;
+    opacity: 1;
+}
+
+.link-1:hover .menuimg {
+    opacity: 1;
+}
+
+
+
+.re,
+.dis2 {
+    transition: 5s all;
+}
+
+.re.scrolltransx {
+    transform: translatey(-700px)
+}
+
+.re.scrollblur {
+    filter: blur(8px)
+}
+
+.fogtext {
+    transition: 2s all;
+}
+
+.fogtext.dis {
+    filter: blur(5px);
+    opacity: 0;
+}
+
+.pre3.dis2 {
+    filter: blur(2px);
+}
+
+.videobcg.videofog {
+    filter: blur(10px);
+    opacity: 0.2;
+}
+
+.videobcg.bright {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.fog2.bright2 {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.graph.glow {
+    filter: blur(5px);
+    opacity: 0;
+    transform: translateX(-200px)
+}
+
+.yklong:hover {
+    transition: 1s all;
+    filter: grayscale(0);
+}
+
+
+/*-----------------------------------
+이미지 확대
+--------------------------------*/
+
+.bigPictureWrapper {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #17202A;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+.bigPicture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17202A;
+
+}
+
+.bigPicture img {
+    height: 90vh;
+}
+
+
+
+.nununu {
+    font-family: 'NeueMontreal';
+    font-weight: bold;
+    letter-spacing: -2px;
+    font-size: 44px;
+    line-height: 64px;
+    color: #1b1d1f;
+}
+
+.nununu:hover {}
+
+.aa1 {
+    position: absolute;
+    top: -30px;
+    left: 250px;
+    height: 400px;
+    width: 400px;
+    z-index: -1;
+    transform: rotate(128deg);
+    object-fit: contain;
+}
+
+.blank {
+    background: #1b1d1f;
+    font-family: 'Playfair display';
+    font-style: italic;
+    font-size: 34px;
+    letter-spacing: 0;
+    padding: 0 14px;
+    transition: 1s ease-out;
+}
+
+.blank:hover {
+    background: white;
+    color: #1b1d1f;
+}
+
+.backface {
+    z-index: -999;
+}
+
+/*-----------------------------------
+자기소개 공간
+--------------------------------*/
+
+.allcontent {
+    position: absolute;
+    top: 20vh;
+    left: 34vw;
+    font-family: 'NeueMontreal';
+    font-weight: bold;
+}
+
+.explaintext {
+    width: 66vw;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 200px;
+}
+
+.line {
+    width: 4px;
+    position: absolute;
+}
+
+.linetxt {
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 4px;
+    background-color: #fbfbfb;
+    padding: 1px 8px;
+}
+
+.li1{
+    padding-bottom: 0px; 
+    margin-bottom: 0;
+}
+
+.li2{
+    padding-top: 0;
+    font-weight: normal;
+}
+.v1 {
+    background-color: darkblue;
+    top: 250px;
+    left: 200px;
+    height: 600px;
+}
+
+.v2 {
+    background-color: greenyellow;
+    top: 493px;
+    left: 260px;
+    height: 110px;
+}
+
+.v3 {
+    background-color: green;
+    top: 1170px;
+    left: 200px;
+    height: 400px;
+}
+
+.v4 {
+    background-color: red;
+    top: 0;
+    left: 300px;
+    height: 140px;
+}
+
+.v5 {
+    background-color: dimgray;
+    top: 380px;
+    left: 400px;
+    height: 113px;
+}
+
+.v55 {
+    background-color: dimgray;
+    top: 600px;
+    left: 400px;
+    height: 220px;
+}
+
+.v6 {
+    background-color: orangered;
+    top: 850px;
+    left: 300px;
+    height: 240px;
+}
+
+.v7 {
+    background-color: darkgray;
+    top: 1170px;
+    left: 500px;
+    height: 140px;
+}

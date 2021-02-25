@@ -1,0 +1,270 @@
+html.open {
+    overflow: hidden;
+}
+
+
+
+/* ---------------------------------- */
+/*-- MODAY --*/
+/* ---------------------------------- */
+
+.toptext {
+    position: fixed;
+    font-size: 1.2em;
+    font-family: 'NeueMontreal';
+    top: 22vh;
+    left: 5vw;
+    width: 20vw;
+    line-height: 1.4em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #17202A;
+    float: left;
+    transition: .5s ease-out;
+}
+
+.toptexthover {
+    font-weight: normal;
+
+    opacity: 0;
+    transition: 1s all;
+}
+
+
+/* ---------------------------------- */
+/*-- 오른쪽 하단 메뉴 --*/
+/* ---------------------------------- */
+
+.btn {
+    position: fixed;
+    left: 5vw;
+    bottom: 10vh;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    background-color: #17202A;
+    z-index: 1;
+    cursor: pointer;
+
+    border-radius: 0;
+    transition: .6s ease-out;
+}
+
+.closebtn {
+    position: absolute;
+    left: 5vw;
+    bottom: 10vh;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    
+    background-color: b#17202A;
+    z-index: 999;
+    cursor: pointer;
+
+    border-radius: 0;
+    transition: .6s ease-out;
+}
+
+.menubar {
+    position: absolute;
+    background-color: #fbfbfb;
+    transition: .2s all;
+}
+
+
+.m1 {
+    top: 18px;
+    height: 4px;
+
+    left: 12px;
+    width: 16px;
+}
+
+.btn:hover .m1 {
+    top: 22px;
+}
+
+.m2 {
+    top: 12px;
+    height: 16px;
+    
+    left: 18px;
+    width: 4px;
+}
+
+.btn:hover .m2 {
+    top: 14px;
+    left: 12px;
+    width: 16px;
+    height: 4px;
+}
+
+.x1 {
+    top: 18px;
+    left: 12px;
+    width: 16px;
+    height: 4px;
+    transform: rotate(45deg);
+}
+
+.closebtn:hover .x1 {
+    top: 22px;
+    transform: rotate(0);
+}
+
+.x2 {
+    top: 12px;
+    left: 18px;
+    width: 4px;
+    height: 16px;
+    transform: rotate(45deg);
+}
+
+.closebtn:hover .x2 {
+    top: 14px;
+    left: 12px;
+    width: 16px;
+    height: 4px;
+    transform: rotate(0);
+}
+
+
+
+#menu {
+    position: fixed;
+    left: -120vw;
+    height: 100vh;
+    width: 100vw;
+    z-index: 499;
+    background-color: black;
+    transition: All 1s ease-out;
+    overflow-y: auto;
+}
+
+#menu.open {
+    left: 0px;
+}
+
+
+
+.hmlink:hover {
+    color: red;
+    margin-left: 10px;
+}
+
+.menubox {
+    margin-top: 18vh;
+    margin-left: 20vw;
+}
+
+.hmlink {
+    display: inline-block;
+    font-size: 6em;
+    letter-spacing: .06em;
+    color: #fbfbfb;
+    transition: 1s all;
+    margin-bottom: 16px;
+}
+
+.email {
+    position: absolute;
+    bottom: 20vh;
+    left: 80vw;
+    color: #fbfbfb;
+    font-family: 'NeueMontreal';
+    font-size: 1em;
+    font-weight: normal;
+    border-left: 1px solid #fbfbfb;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+
+
+.toptext:hover {
+    color: #17202A;
+}
+
+.snsicon:hover {
+    color: black;
+    background-color: white;
+}
+
+.toptext:hover .toptexthover {
+    opacity: 1;
+    color: #17202A;
+}
+
+
+.navi:hover .toptexthover {
+    opacity: 1;
+    color: black;
+
+}
+
+
+/* ---------------------------------- */
+/* 반응형 */
+/* ---------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+    .fly-in-text {
+        font-size: .3em;
+    }
+
+    .toptext,
+    .btn,
+    .closebtn {
+        top: 20px;
+    }
+
+    .scrolltxt {
+        left: 58vw;
+    }
+
+    .navi {
+        left: -500vw;
+    }
+
+    .namemiddle {
+        font-size: 3vw;
+    }
+
+    .name {
+        font-size: 10vw;
+    }
+
+    .boxh1con {
+        top: 10vh;
+    }
+
+    .boxh1 {
+        width: 80vw;
+        height: 26vh;
+        margin: 0 0 1vh 0;
+    }
+
+    .boxh1txt {
+        font-size: 1.2em;
+    }
+
+    .h1sub {
+        width: 100vw;
+        font-size: .8em;
+    }
+
+    .archive {
+        position: absolute;
+        display: block;
+        font-size: 1em;
+    }
+
+    .archivet {
+        margin-right: 10px;
+    }
+

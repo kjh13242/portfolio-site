@@ -2,228 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>MODAY</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/indexcss.css">
+    <link rel="stylesheet" href="css/css2.css">
+    <link rel="stylesheet" href="css/indexcss2.css">
 
-
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noto+Sans+KR:100,400,700|Roboto:700|Playfair+Display:400,500&display=swap&subset=korean" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&amp;subset=korean" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/link"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
-    <script type="text/javascript" src="js/fullpage.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165692092-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-165692092-1');
-</script>
 </head>
 
-<body>
+<style>
+
+</style>
+<!-- 배경 -->
+
+<body class="commandcenter">
+
+    <div class="header1">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <!--전체 메뉴 버튼-->
     <header>
 
         <div class="btn">
             <div class="menubar m1"></div>
             <div class="menubar m2"></div>
-            <div class="menubar m3"></div>
         </div>
-        <div onclick="history.back();" class="page_cover"></div>
 
         <div id="menu">
             <div class="menubox">
-                <a class="hmlink" href="index.html#firstPage">HOME</a><br>
-                <a class="hmlink" href="index.html#secondPage">WORKS</a><br>
+                <a class="hmlink" href="index.html">HOME</a><br>
                 <a class="hmlink" href="research.html">ARCHIVE</a><br>
-                <a class="hmlink" href="aboutme.html">ABOUT ME</a>
+                <a class="hmlink" href="about2.html">ABOUT ME</a>
 
                 <a class="email" href="mailto:kjh13242@naver.com">UX Designer<br>Jinhyuk Kwon<br><br><br><br><br>Based in Seoul, South Korea<br>
                     kjh13242@naver.com</a>
             </div>
+
             <div onclick="history.back();" class="closebtn">
                 <div class="menubar x1"></div>
                 <div class="menubar x2"></div>
             </div>
         </div>
 
-        <a class="toptext" href="index.html">Kwon<p class="toptexthover">
-                JinHyuk<br>UX Designer</p></a>
+        <!-- 상단 로고 -->
 
-        <div class="navi">
-            <a class="snsicon" href="aboutme.html">Contact
-            </a>
-        </div>
+        <a class="toptext" href="index.html">KWON<p class="toptexthover">JinHyuk</p></a>
+
 
     </header>
+    <!--좌측 네비-->
 
-    <div class="welcome-section content-hidden">
-        <div class="content-wrap">
-            <ul class="fly-in-text">
-                <li>F</li>
-                <li>l</li>
-                <li>o</li>
-                <li>a</li>
-                <li>t</li>
-            </ul>
-            <a href="#" class="enter-button">ENTER</a>
-        </div>
-        <video autoplay class="boximgmainvideo" id="movies" autobuffer="true" muted="muted" loop="loop" poster="images/Index/art/trail.jpg">
-            <source src="images/Index/art/trail-fix.mp4" type="video/mp4"></video>
+    <div class="mainlinksub">
+        <a class="box" href="webapp.html">INTERFACE</a>
+        <a class="box" href="research.html">RESEARCH</a>
+        <a class="box" href="product.html">PRODUCT</a>
+        <a class="box" href="editorial.html">GRAPHIC</a>
     </div>
 
-    <div id="fullpage">
-        <div class="section">
-
-            <a class="boxlink">
-                <p class="namemiddle">New Project</p>
-                <a class="name" href="research-holdrive.html">HOLDRIVE</a>
-                <video autoplay class="boximg" id="movies" muted="muted" loop="loop">
-                    <source data-src="images/Index/research/holdrive/Adobe%20XD%202019-10-28%2002-26-2811.mp4" type="video/mp4"></video>
-            </a>
+    <!--메뉴 내용들-->
+    <div class="archivemenu">
+        <div class="ananan">
+            <p class="img-1_text nununu" style="border: 0px;">#Jinhyuk Kwon <span class="blank">Philosophize</span> #UX Designer<br>#Seoul #South Korea <span class="blank">Currently, In Iksan city</span><br>#User Experience <span class="blank">Art Works</span> #Service Design<br><span class="blank">Side Project</span>
+                <span class="backface">#Design Thinking #New Project</span>
+            </p>
+            <div style="position: absolute; top:-30px; left: 250px; width: 200px; height: 200px; background-color: forestgreen; border-radius: 200px; z-index: -1;"></div>
+            <img class="aa1" src="images/aa1.png">
         </div>
 
-        <div class="box section">
-
-            <div class="boxh1con">
-                <a class="boxh1" href="product-epsilon.html">
-                    <p class="boxh1txt">Project Epsilon</p>
-                    <img class="boxh1img" src="images/Index/product/epsilon/epsilon.webp">
-                    <p class="h1sub">프로젝트 앱실론</p>
-                </a>
-
-                <a class="boxh1" href="product-fog.html">
-                    <p class="boxh1txt">Beyond the fog</p>
-                    <video class="boxh1img" id="movies" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true" muted="muted" loop="loop">
-                        <source src="images/Index/product/fog/001 intro door fornt cut11.mp4" type="video/mp4"></video>
-                    <p class="h1sub">안개를 넘어</p>
-                </a>
-                <a class="boxh1" href="research-asap.html">
-                    <p class="boxh1txt">ASAP</p>
-                    <div class="boxh1img" style="overflow: hidden;"><img style="margin-top: 40%; margin-left: 20%; width: 60%;" src="images/Index/research/asap/asap.webp"></div>
-                    <p class="h1sub">오토바이 E-call 시스템</p>
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="box section">
-
-            <div class="boxh1con">
-
-                <a class="boxh1" href="product-torch.html">
-                    <p class="boxh1txt">Torch</p>
-                    <img class="boxh1img" src="images/Index/product/torch/long%20shot%202%20fire.jpg">
-                    <p class="h1sub">횃불</p>
-                </a>
-
-                <a class="boxh1" href="research-3d.html">
-                    <p class="boxh1txt">4D Simulator</p>
-                    <img class="boxh1img" src="images/Index/research/3d/4ds.jpg">
-                    <p class="h1sub">4차원 형상변형 시뮬레이터</p>
-                </a>
-
-                <a class="boxh1" href="webapp-seed.html">
-                    <p class="boxh1txt">Seed of Typography</p>
-                    <img class="boxh1img" src="images/Index/webapp/seed/seed.webp">
-                    <p class="h1sub">글씨</p>
-                </a>
-
-            </div>
-
-        </div>
+        <p class="img-1_subtext" style="margin: 160px 0px 160px 0; font-family: 'NeueMontreal'; font-size: 12px; font-weight: normal; transform: rotate(-90deg) translatey(-20px);">Scroll down</p>
 
 
-        <div class="box section">
+        <a class="link-1" href="research-holdrive.html">
+            <img class="menuimg" src="images/Index/research/holdrive/b1.jpg">
 
-            <a class="archive" href="research.html">
-                <div class="archivet t1">A</div>
-                <div class="archivet t2">R</div>
-                <div class="archivet t3">C</div>
-                <div class="archivet t4">H</div>
-                <div class="archivet t5">I</div>
-                <div class="archivet t6">V</div>
-                <div class="archivet t7">E</div>
-            </a>
+            <p class="img-1_text">HOLDRIVE</p>
+            <p class="img-1_subtext">2020 MASTER DEGREE PROJECT</p>
+            <p class="img-1_subtext2">IDAS Hongik University</p>
 
-            <video id="movies" autoplay="true" muted="muted" loop="loop" style="position: absolute; top: 30vh; left: 25vw; width: 50vw; height: 40vh;">
-                <source src="images/Index/art/sky.webm" type="video/webm"></video>
-        </div>
+        </a>
+
+        <a class="link-1" href="research-3d.html">
+            <img class="menuimg" src="images/Index/research/3d/simul.jpg">
+
+            <p class="img-1_text">Smart material printing simulator</p>
+            <p class="img-1_subtext">2017-2018 SIMULATOR UI</p>
+            <p class="img-1_subtext2">Gwangju Institute of Science and Technology</p>
+        </a>
+
+        <a class="link-1" href="webapp-seed.html">
+            <img class="menuimg" src="images/Index/webapp/seed/b1.jpg">
+
+            <p class="img-1_text">The Seed of typography</p>
+            <p class="img-1_subtext">2017 APPLICATION</p>
+            <p class="img-1_subtext2">HICCA, IDAS Hongik University</p>
+        </a>
+
+        <a class="link-1" href="product-epsilon.html">
+            <img class="menuimg" src="images/Index/product/epsilon/b1.jpg">
+
+            <p class="img-1_text">Project Epsilon</p>
+            <p class="img-1_subtext">2018 LAPTOP</p>
+            <p class="img-1_subtext2">Team Project with Mingyu Seo, Finland</p>
+        </a>
 
     </div>
-
-    <script>
-        var isLastSection = false;
-        var timeout = null;
-
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                //options here
-                licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-                autoScrolling: true,
-                lazyLoading: true,
-                loopBottom: true,
-                navigation: true,
-
-                onLeave: function(origin, destination, direction) {
-                    var fullpageData = fullpage_api.getFullpageData() || {};
-                    clearTimeout(timeout);
-                    if (destination.isLast) {
-                        timeout = setTimeout(function() {
-                            isLastSection = true;
-                        }, (fullpageData.scrollingSpeed || 700) * 2);
-                    } else {
-                        isLastSection = false;
-                    }
-                },
-            });
-
-            $(".btn").click(function() {
-                $("#menu,.page_cover,html").addClass("open");
-                window.location.hash = "#open";
-            });
-
-            window.onhashchange = function() {
-                if (location.hash != "#open") {
-                    $("#menu,.page_cover,html").removeClass("open");
-                }
-            };
-
-        });
-    </script>
-
-    <script type="text/javascript">
-        $(function() {
-            var welcomeSection = $('.welcome-section'),
-                enterButton = welcomeSection.find('.enter-button'),
-                visitedWelcomeSection = sessionStorage.getItem('visitedWelcomeSection');
-
-            if (visitedWelcomeSection) {
-                welcomeSection.fadeOut();
-            } else {
-                setTimeout(function() {
-                    welcomeSection.removeClass('content-hidden');
-
-                    // welcome-section을 본 경우 현재 시간을 저장
-                    sessionStorage.setItem('visitedWelcomeSection', Date.now().toString());
-                }, 800);
-
-                enterButton.on('click', function(e) {
-                    e.preventDefault();
-                    welcomeSection.addClass('content-hidden').fadeOut();
-                });
-            }
-        });
-    </script>
 
 </body>
 
