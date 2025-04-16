@@ -42,22 +42,27 @@
         body {
             background-color: white;
             -webkit-font-smoothing: antialiased;
-
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
         }
 
         .allcom {
             margin: 8vw;
             width: 84vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2vw;
+            box-sizing: border-box;
         }
 
         .maincontent {
-            width: 26vw;
-            height: 26vw;
-            margin: 1vw;
-            float: left;
+            width: 100%;
+            aspect-ratio: 1;
             background-color: black;
             overflow: hidden;
             transition: .5s ease;
+            position: relative;
         }
 
         .boximg {
@@ -155,31 +160,33 @@
         .archive {
             font-family: 'Migra';
             font-size: 5vw;
-
             position: absolute;
-
-            left: 50vw;
-            transform: translateX(-50%);
-
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
             transition: 1s all;
             z-index: 500;
-
-            margin-top: 4.3vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
         }
 
         .archivet {
             color: white;
-            float: left;
             margin-right: 16px;
             animation: glow 3s infinite;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
         }
 
-        @keyframes glow {
-            50% {
-                text-shadow: 0 0 .01em, 0 0 .2em;
-            }
-
-            100% {}
+        .archivet:last-child {
+            margin-right: 0;
         }
 
         .archiveone:hover .t1 {
@@ -229,11 +236,12 @@
 
         .t8 {
             position: absolute;
-
-            width: 82vw;
-            height: 10vw;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             filter: grayscale(100%) contrast(180%);
+            top: 0;
+            left: 0;
         }
 
         .section {
@@ -246,6 +254,58 @@
 
         .section.section0 {
             opacity: 0;
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 1024px) {
+            .allcom {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Tablet/Mobile Styles */
+        @media (max-width: 1023px) {
+            .allcom {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .archiveone {
+            width: 100% !important;
+            height: 10vw !important;
+            margin-top: 20vw !important;
+            grid-column: 1 / -1;
+        }
+
+        .contact-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2vw;
+            grid-column: 1 / -1;
+            margin-top: 20vw;
+            margin-bottom: 0;
+            height: auto;
+        }
+
+        .contact-section .maincontent {
+            width: 100%;
+            height: auto;
+            min-height: 0;
+            aspect-ratio: initial;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-section .ub {
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-section .ublink {
+            margin-left: 10px;
+            color: darkslategray;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -302,8 +362,7 @@
             <img class="boximg" src="images/%EC%9D%B8%EB%B0%A9.png" type="video/mp4">
         </a>
 
-        <a class="maincontent archiveone" style="width: 82vw; height: 10vw; margin-top: 20vw; background-color: black;" href="product 2 ko.html">
-
+        <a class="maincontent archiveone" style="background-color: black;" href="product 2 ko.html">
             <div class="archive">
                 <div class="archivet t1">A</div>
                 <div class="archivet t2">R</div>
@@ -312,28 +371,24 @@
                 <div class="archivet t5">I</div>
                 <div class="archivet t6">V</div>
                 <div class="archivet t7" style="margin-right: 0;">E</div>
-
             </div>
-            <video autoplay class="t8" muted="muted" loop="loop" width="100%; height=100%; object-position: center;">
+            <video autoplay class="t8" muted loop playsinline>
                 <source src="images/Index/art/trail-fix.mp4" type="video/mp4">
             </video>
-
         </a>
 
+        <div class="contact-section">
+            <div class="maincontent" style="background-color: white;">
+                <p class="ub" style="font-size: 28px; font-family: 'Migra'; font-weight: bold;">Contact</p>
+            </div>
 
-
-        <div class="maincontent" style=" width: 40vw; background-color: white; margin-top: 20vw;">
-            <p class="ub" style="font-size: 28px; font-family: 'Migra'; font-weight: bold;">Contact</p>
-        </div>
-
-        <div class="maincontent" style=" width: 39vw; background-color: white; margin-top: 20vw; letter-spacing: px;">
-
-            <p class="ub" style="font-size: 18px; font-weight: 700; margin-bottom: 2vw;">Jinhyuk Kwon</p>
-            <p class="ub">Mail <a class="ublink" href="mailto:kjh13242@naver.com">kjh13242@naver.com</a> </p>
-            <p class="ub">Behance<a class="ublink" href="https://www.behance.net/moday">behance.net/moday</a></p>
-            <p class="ub">Linked in<a class="ublink" href="https://www.linkedin.com/in/kjh13242/">linkedin.com/in/kjh13242/</a></p>
-            <p class="ub">Brunch<a class="ublink" href="https://brunch.co.kr/@kjh13242">https://brunch.co.kr/@kjh13242</a></p>
-
+            <div class="maincontent" style="background-color: white;">
+                <p class="ub" style="font-size: 18px; font-weight: 700; margin-bottom: 1vw;">Jinhyuk Kwon</p>
+                <p class="ub">Mail <a class="ublink" href="mailto:kjh13242@naver.com">kjh13242@naver.com</a></p>
+                <p class="ub">Behance <a class="ublink" href="https://www.behance.net/moday">behance.net/moday</a></p>
+                <p class="ub">LinkedIn <a class="ublink" href="https://www.linkedin.com/in/kjh13242/">linkedin.com/in/kjh13242/</a></p>
+                <p class="ub">Brunch <a class="ublink" href="https://brunch.co.kr/@kjh13242">brunch.co.kr/@kjh13242</a></p>
+            </div>
         </div>
     </div>
 <script type="text/javascript">
