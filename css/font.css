@@ -1,3 +1,7 @@
+/* ---------------------------------- */
+/* FONT DEFINITIONS */
+/* ---------------------------------- */
+
 @font-face {
     font-family: 'NeueMontreal';
     src: url('../fonts/NeueMontreal-Regular.woff') format('woff');
@@ -24,4 +28,279 @@
     src: url('../fonts/Hatton-Medium.otf') format('otf');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* ---------------------------------- */
+/* GENERAL STYLES */
+/* ---------------------------------- */
+
+body, div, p {
+    margin: 0;
+    padding: 0;
+    line-height: 36px;
+}
+
+body {
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    font-family: 'Pretendard', sans-serif;
+}
+
+/* ---------------------------------- */
+/* INTRO SECTION */
+/* ---------------------------------- */
+
+.section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    transition: opacity 0.8s;
+}
+
+.section.section0 {
+    opacity: 0;
+}
+
+.nununu {
+    font-family: 'Migra';
+    position: absolute;
+    top: 48vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 38px;
+    line-height: 56px;
+    letter-spacing: 1.4px;
+}
+
+.nutxt {
+    opacity: 0;
+    animation: fade 1s;
+    animation-fill-mode: forwards;
+    margin-bottom: 18px;
+}
+
+.nu1 {
+    animation-delay: 0.2s;
+}
+
+.nu2 {
+    animation-delay: 0.4s;
+}
+
+.nu3 {
+    animation-delay: 0.6s;
+}
+
+.scroll {
+    opacity: 0;
+    animation: fade 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fade {
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+/* ---------------------------------- */
+/* MAIN CONTENT GRID */
+/* ---------------------------------- */
+
+.allcom {
+    margin: 8vw;
+    width: 84vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    box-sizing: border-box;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .allcom {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet/Mobile Styles */
+@media (max-width: 1023px) {
+    .allcom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.maincontent {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: black;
+    overflow: hidden;
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.boximg {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+    transition: 0.5s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.boxnormal {
+    object-fit: cover;
+}
+
+.maincontent:hover .boximg {
+    transform: scale(1.04);
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+/* ---------------------------------- */
+/* ARCHIVE SECTION */
+/* ---------------------------------- */
+
+.archiveone {
+    width: 100% !important;
+    height: 10vw !important;
+    margin-top: 20vw !important;
+    grid-column: 1 / -1;
+}
+
+.archive {
+    font-family: 'Migra';
+    font-size: 5vw;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    transition: 1s all;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.archivet {
+    color: white;
+    margin-right: 16px;
+    animation: glow 3s infinite;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.archivet:last-child {
+    margin-right: 0;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(255, 255, 255, 0.6),
+                     0 0 40px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.t1, .t2, .t3, .t4, .t5, .t6, .t7 {
+    transition: color 1s ease-out;
+}
+
+.archiveone:hover .t1 { color: black; transition-duration: 0s; }
+.archiveone:hover .t2 { color: black; transition-duration: 0.2s; }
+.archiveone:hover .t3 { color: black; transition-duration: 0.4s; }
+.archiveone:hover .t4 { color: black; transition-duration: 0.6s; }
+.archiveone:hover .t5 { color: black; transition-duration: 0.8s; }
+.archiveone:hover .t6 { color: black; transition-duration: 1s; }
+.archiveone:hover .t7 { color: black; transition-duration: 1.2s; }
+
+.t8 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(180%) brightness(50%);
+    top: 0;
+    left: 0;
+}
+
+/* ---------------------------------- */
+/* CONTACT SECTION */
+/* ---------------------------------- */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    grid-column: 1 / -1;
+    margin-top: 20vw;
+    margin-bottom: 30vh;
+    height: auto;
+}
+
+.contact-section .maincontent {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: initial;
+    margin: 0;
+    padding: 0;
+}
+
+.ub {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+}
+
+.contact-section .ub {
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+.ublink {
+    margin-left: 10px;
+    color: darkslategray;
+    text-decoration: underline;
+}
+
+.ublink a:visited {
+    color: darkslategray;
 }

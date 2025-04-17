@@ -86,7 +86,7 @@ body {
     left: 5vw;
 
     font-size: 1em;
-    font-family: 'Noto Sans KR';
+    font-family: 'Pretendard';
     line-height: 1.2em;
     color: white;
     font-weight: 400;
@@ -189,7 +189,7 @@ video {
 
     bottom: 8%;
     font-size: 1.1em;
-    font-family: 'Noto Sans KR';
+    font-family: 'Pretendard';
     font-weight: 700;
     color: white;
 
@@ -369,7 +369,7 @@ video {
     bottom: 20vh;
     left: 80vw;
     color: black;
-    font-family: 'Noto Sans KR';
+    font-family: 'Pretendard';
     font-size: 1em;
     font-weight: 400;
     border-left: 3px solid black;

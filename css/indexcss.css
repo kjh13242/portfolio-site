@@ -86,7 +86,7 @@ body {
     left: 5vw;
 
     font-size: 1em;
-    font-family: 'Noto Sans KR';
+    font-family: 'Pretendard';
     line-height: 1.2em;
     color: white;
     font-weight: 400;
@@ -189,7 +189,7 @@ video {
 
     bottom: 8%;
     font-size: 1.1em;
-    font-family: 'Noto Sans KR';
+    font-family: 'Pretendard';
     font-weight: 700;
     color: white;
 
@@ -241,6 +241,62 @@ video {
 
     transition: 1s all;
     z-index: 500;
+}
+
+.archivetitle {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+    color: #000;
+}
+
+.archivecontent {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: normal;
+    font-size: 1vw;
+    color: #000;
+    margin-bottom: 0.5vw;
+}
+
+.archivecontent2 {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: normal;
+    font-size: 0.8vw;
+    color: #000;
+    margin-bottom: 0.5vw;
+}
+
+.archivecontent3 {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: normal;
+    font-size: 0.8vw;
+    color: #000;
+    margin-bottom: 0.5vw;
+}
+
+.archivecontent4 {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    color: #000;
+    margin-bottom: 0.5vw;
+}
+
+.archivecontent5 {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    color: #000;
+    margin-bottom: 0.5vw;
+}
+
+.archivecontent6 {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: normal;
+    font-size: 0.8vw;
+    color: #000;
+    margin-bottom: 0.5vw;
 }
 
 .archivet {
@@ -369,7 +425,7 @@ video {
     bottom: 20vh;
     left: 80vw;
     color: black;
-    font-family: 'Noto Sans KR';
+    font-family: 'Pretendard';
     font-size: 1em;
     font-weight: 400;
     border-left: 3px solid black;
