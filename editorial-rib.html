@@ -27,13 +27,6 @@
 
 <body class="commandcenter">
 
-    <!--메인으로-->
-    <a id="gomain" href="index.html">
-        <img class="gomain" src="images/%EB%AC%B4%EC%A0%9C-1.png">
-    </a>
-    <!--본문-->
-
-
     <!--메뉴-->
     <div class="gallery-menu">
         <div class="fixedtitle">
@@ -64,11 +57,22 @@
         <img class="explainimg" src="images/Index/editorial/rib/1%20(17).jpg">
     </div>
 
+
+    <a class="gobutton gotop" style="bottom: 90px;" href="#">
+        <div class="arrow" style="transform: rotate(-135deg);
+-webkit-transform: rotate(-135deg);"></div>
+    </a>
+
+    <a onclick="goBack()" class="gobutton" href="#" >
+        <div class="arrow" style="transform: rotate(135deg);
+-webkit-transform: rotate(135deg);"></div>
+    </a>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/fadeout.js"></script>
 
 <!--
 <footer>
