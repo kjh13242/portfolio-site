@@ -19,6 +19,66 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/fadeout.js"></script>
     
+    <style>
+        .locked-project {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .locked-project::after {
+            content: '🔒 보안 프로젝트';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-family: 'Pretendard', sans-serif;
+            font-size: 18px;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        .locked-project:hover::after {
+            opacity: 1;
+        }
+        
+        .locked-project.locked::after {
+            opacity: 1;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lockedProjects = document.querySelectorAll('.locked-project');
+            
+            lockedProjects.forEach(project => {
+                project.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.toggle('locked');
+                });
+                
+                project.addEventListener('mouseenter', function() {
+                    if (this.classList.contains('locked')) {
+                        this.classList.remove('locked');
+                    }
+                });
+                
+                project.addEventListener('mouseleave', function() {
+                    if (this.classList.contains('locked')) {
+                        this.classList.remove('locked');
+                    }
+                });
+            });
+        });
+    </script>
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165692092-1"></script>
     <script>
@@ -64,11 +124,11 @@
 
 
     <div class="allcom">
-        <a class="maincontent" href="webapp-case.html">
+        <a class="maincontent locked-project" href="#" data-project="webapp-case">
             <img class="boximg" src="images/Index/webapp/case/main.jpg" alt="DeepDx Case Management">
         </a>
 
-        <a class="maincontent" href="webapp-report.html">
+        <a class="maincontent locked-project" href="#" data-project="webapp-report">
             <img class="boximg" src="images/Index/webapp/report/main.jpg" alt="DeepDx Global Pilot">
         </a>
 
